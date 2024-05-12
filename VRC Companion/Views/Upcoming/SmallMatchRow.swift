@@ -7,18 +7,21 @@
 
 import SwiftUI
 
-struct SmallMatchRow: View {
+struct SmallMatchRow: View, HoldsMatchInfo {
+    var matchIdentifier: String
+    var matchTime: Date
+    
     var body: some View {
         HStack {
-            Text("Match Identifier")
+            Text(matchIdentifier)
                 .font(.headline)
             Spacer()
-            Text("10:17am")
+            Text(matchTime.formatted(date: .omitted, time: .shortened))
                 .font(.subheadline)
         }
     }
 }
 
 #Preview {
-    SmallMatchRow()
+    SmallMatchRow(matchIdentifier: "Qualification 5", matchTime: Date.now.addingTimeInterval(+7200))
 }

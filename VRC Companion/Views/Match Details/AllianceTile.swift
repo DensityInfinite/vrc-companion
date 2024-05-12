@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AllianceTile: View {
     var height: CGFloat
+    
     var isBlueAlliance: Bool
     
     var body: some View {
@@ -24,6 +25,7 @@ struct AllianceTile: View {
                     Text("0/0/0")
                         .font(.subheadline)
                 }
+                .padding(.bottom, 1)
                 HStack {
                     Text("Team 2")
                         .font(.headline)

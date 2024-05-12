@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31FBF6A2B82FDBF00850E8A /* AllianceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF692B82FDBF00850E8A /* AllianceTile.swift */; };
+		B31FBF6C2B83047A00850E8A /* SmallMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF6B2B83047A00850E8A /* SmallMatchRow.swift */; };
+		B31FBF6E2B83054800850E8A /* Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF6D2B83054800850E8A /* Upcoming.swift */; };
+		B31FBF742B83077800850E8A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF732B83077800850E8A /* Event.swift */; };
+		B31FBF762B8308D600850E8A /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF752B8308D600850E8A /* Watchlist.swift */; };
+		B31FBF782B8308E100850E8A /* MyTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF772B8308E100850E8A /* MyTeam.swift */; };
+		B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341CA682B881DCD002E1856 /* MatchDetails.swift */; };
+		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
+		B3B7F7392B89648500AA9BDF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7F7382B89648500AA9BDF /* Protocols.swift */; };
+		B3B7F73B2B8967D600AA9BDF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7F73A2B8967D600AA9BDF /* Team.swift */; };
 		B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */; };
 		B3C72D0B2B82F71600AAE764 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D0A2B82F71600AAE764 /* ContentView.swift */; };
-		B3C72D0D2B82F71600AAE764 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D0C2B82F71600AAE764 /* Item.swift */; };
 		B3C72D0F2B82F71800AAE764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C72D0E2B82F71800AAE764 /* Assets.xcassets */; };
 		B3C72D122B82F71800AAE764 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C72D112B82F71800AAE764 /* Preview Assets.xcassets */; };
 		B3C72D1C2B82F71900AAE764 /* VRC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D1B2B82F71900AAE764 /* VRC_CompanionTests.swift */; };
@@ -35,10 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B31FBF692B82FDBF00850E8A /* AllianceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTile.swift; sourceTree = "<group>"; };
+		B31FBF6B2B83047A00850E8A /* SmallMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMatchRow.swift; sourceTree = "<group>"; };
+		B31FBF6D2B83054800850E8A /* Upcoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming.swift; sourceTree = "<group>"; };
+		B31FBF732B83077800850E8A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B31FBF752B8308D600850E8A /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
+		B31FBF772B8308E100850E8A /* MyTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeam.swift; sourceTree = "<group>"; };
+		B341CA682B881DCD002E1856 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
+		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
+		B3B7F7382B89648500AA9BDF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B3B7F73A2B8967D600AA9BDF /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B3C72D052B82F71600AAE764 /* VRC Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VRC Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRC_CompanionApp.swift; sourceTree = "<group>"; };
 		B3C72D0A2B82F71600AAE764 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B3C72D0C2B82F71600AAE764 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B3C72D0E2B82F71800AAE764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3C72D112B82F71800AAE764 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3C72D172B82F71900AAE764 /* VRC CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VRC CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +91,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31FBF6F2B83073D00850E8A /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				B31FBF6D2B83054800850E8A /* Upcoming.swift */,
+				B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */,
+				B31FBF6B2B83047A00850E8A /* SmallMatchRow.swift */,
+			);
+			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		B31FBF702B83075100850E8A /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B31FBF732B83077800850E8A /* Event.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		B31FBF712B83075900850E8A /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				B31FBF752B8308D600850E8A /* Watchlist.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		B31FBF722B83076000850E8A /* My team */ = {
+			isa = PBXGroup;
+			children = (
+				B31FBF772B8308E100850E8A /* MyTeam.swift */,
+			);
+			path = "My team";
+			sourceTree = "<group>";
+		};
+		B341CA672B881DA3002E1856 /* Match Details */ = {
+			isa = PBXGroup;
+			children = (
+				B31FBF692B82FDBF00850E8A /* AllianceTile.swift */,
+				B341CA682B881DCD002E1856 /* MatchDetails.swift */,
+				B3B7F73A2B8967D600AA9BDF /* Team.swift */,
+			);
+			path = "Match Details";
+			sourceTree = "<group>";
+		};
+		B34B835A2B82F88A008F83CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3C72D0A2B82F71600AAE764 /* ContentView.swift */,
+				B31FBF6F2B83073D00850E8A /* Upcoming */,
+				B31FBF702B83075100850E8A /* Event */,
+				B31FBF712B83075900850E8A /* Watchlist */,
+				B31FBF722B83076000850E8A /* My team */,
+				B341CA672B881DA3002E1856 /* Match Details */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B34B835B2B82F8A5008F83CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3B7F7352B89644800AA9BDF /* Computation */ = {
+			isa = PBXGroup;
+			children = (
+				B3B7F7382B89648500AA9BDF /* Protocols.swift */,
+			);
+			path = Computation;
+			sourceTree = "<group>";
+		};
 		B3C72CFC2B82F71600AAE764 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */,
-				B3C72D0A2B82F71600AAE764 /* ContentView.swift */,
-				B3C72D0C2B82F71600AAE764 /* Item.swift */,
+				B34B835A2B82F88A008F83CD /* Views */,
+				B34B835B2B82F8A5008F83CD /* Model */,
+				B3B7F7352B89644800AA9BDF /* Computation */,
 				B3C72D0E2B82F71800AAE764 /* Assets.xcassets */,
 				B3C72D102B82F71800AAE764 /* Preview Content */,
 			);
@@ -260,9 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B7F73B2B8967D600AA9BDF /* Team.swift in Sources */,
 				B3C72D0B2B82F71600AAE764 /* ContentView.swift in Sources */,
-				B3C72D0D2B82F71600AAE764 /* Item.swift in Sources */,
+				B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */,
 				B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */,
+				B3B7F7392B89648500AA9BDF /* Protocols.swift in Sources */,
+				B31FBF6C2B83047A00850E8A /* SmallMatchRow.swift in Sources */,
+				B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */,
+				B31FBF6A2B82FDBF00850E8A /* AllianceTile.swift in Sources */,
+				B31FBF762B8308D600850E8A /* Watchlist.swift in Sources */,
+				B31FBF782B8308E100850E8A /* MyTeam.swift in Sources */,
+				B31FBF742B83077800850E8A /* Event.swift in Sources */,
+				B31FBF6E2B83054800850E8A /* Upcoming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

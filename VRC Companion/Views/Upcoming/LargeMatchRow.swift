@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct LargeMatchRow: View {
+struct LargeMatchRow: View, HoldsMatchInfo {
+    var matchIdentifier: String
+    var matchTime: Date
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Match Identifier")
+                Text(matchIdentifier)
                     .font(.headline)
                 Spacer()
-                Text("in 5 mins")
+                Text(matchTime.formatted(.relative(presentation: .numeric)))
                     .font(.subheadline)
             }
             HStack {
@@ -26,5 +29,5 @@ struct LargeMatchRow: View {
 }
 
 #Preview {
-    LargeMatchRow()
+    LargeMatchRow(matchIdentifier: "Qualification 1", matchTime: Date(timeIntervalSinceNow: +300))
 }

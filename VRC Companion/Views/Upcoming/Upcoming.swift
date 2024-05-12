@@ -9,15 +9,13 @@ import SwiftUI
 
 struct Upcoming: View {
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
-                LargeMatchRow()
-                SmallMatchRow()
-                SmallMatchRow()
+                LargeMatchRow(matchIdentifier: "Qualification 1", matchTime: Date.now.addingTimeInterval(+300))
+                SmallMatchRow(matchIdentifier: "Qualification 5", matchTime: Date.now.addingTimeInterval(+7200))
+                SmallMatchRow(matchIdentifier: "Qualification 7", matchTime: Date.now.addingTimeInterval(+7800))
             }
             .navigationTitle("Upcoming")
-        } detail: {
-            Text("Select a match to see details.")
         }
     }
 }

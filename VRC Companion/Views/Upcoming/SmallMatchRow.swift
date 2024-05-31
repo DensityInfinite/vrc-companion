@@ -14,10 +14,9 @@ struct SmallMatchRow: View, HoldsMatchInfo {
     var body: some View {
         HStack {
             Text(matchIdentifier)
-                .font(.headline)
             Spacer()
             Text(matchTime.formatted(date: .omitted, time: .shortened))
-                .font(.subheadline)
+                .foregroundStyle(.gray)
         }
     }
 }

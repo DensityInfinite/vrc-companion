@@ -10,15 +10,19 @@ import SwiftUI
 struct LargeMatchRow: View, HoldsMatchInfo {
     var matchIdentifier: String
     var matchTime: Date
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text(matchIdentifier)
-                    .font(.headline)
                 Spacer()
-                Text(matchTime.formatted(.relative(presentation: .numeric)))
-                    .font(.subheadline)
+                if matchTime.timeIntervalSinceNow.isLess(than: 300) {
+                    Text("Queue now")
+                        .foregroundStyle(.gray)
+                } else {
+                    Text(matchTime.formatted(.relative(presentation: .numeric)))
+                        .foregroundStyle(.gray)
+                }
             }
             HStack {
                 AllianceTile(height: 70, isBlueAlliance: true)

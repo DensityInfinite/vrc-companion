@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Upcoming: View {
+struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             List {
@@ -21,5 +21,5 @@ struct Upcoming: View {
 }
 
 #Preview {
-    Upcoming()
+    UpcomingView()
 }

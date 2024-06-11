@@ -11,24 +11,28 @@ import SwiftData
 struct ContentView: View {
     var body: some View {
         TabView {
-            Upcoming()
+            UpcomingView()
                 .tabItem {
                     Label("Upcoming", systemImage: "chevron.forward.2")
                 }
             
-            Event()
+            EventView()
                 .tabItem {
                     Label("Event", systemImage: "calendar")
                 }
             
-            Watchlist()
+            WatchlistView()
                 .tabItem {
                     Label("Watchlist", systemImage: "star")
                 }
             
-            MyTeam()
+            MyTeamView()
                 .tabItem {
-                    Label("My team", systemImage: "person.circle")
+                    Label("My team", systemImage: "person")
+                }
+            LookupView()
+                .tabItem {
+                    Label("Lookup", systemImage: "magnifyingglass")
                 }
         }
     }

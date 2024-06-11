@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyTeam: View {
+struct MyTeamView: View {
     var body: some View {
         NavigationStack {
             List {
@@ -19,5 +19,5 @@ struct MyTeam: View {
 }
 
 #Preview {
-    MyTeam()
+    MyTeamView()
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Event: View {
+struct EventView: View {
     var body: some View {
         NavigationSplitView {
             List {
@@ -21,5 +21,5 @@ struct Event: View {
 }
 
 #Preview {
-    Event()
+    EventView()
 }

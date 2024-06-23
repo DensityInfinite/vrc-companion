@@ -9,28 +9,27 @@ import SwiftUI
 
 struct AllianceTile: View {
     var height: CGFloat
-    
-    var isBlueAlliance: Bool
+    var alliance: AllianceModel
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 6.0)
-                .foregroundStyle(isBlueAlliance ? Color("BlueAlliance").opacity(0.34) : Color("RedAlliance").opacity(0.34))
+                .foregroundStyle(alliance.color == "blue" ? Color("BlueAlliance").opacity(0.34) : Color("RedAlliance").opacity(0.34))
                 .frame(height: height)
             VStack {
                 HStack {
-                    Text("Team 1")
+                    Text(alliance.teams[0].number)
                         .font(.headline)
                     Spacer()
-                    Text("0/0/0")
+                    Text("0/0/0") //TODO: Add actual data from WLT
                         .font(.subheadline)
                 }
                 .padding(.bottom, 1)
                 HStack {
-                    Text("Team 2")
+                    Text(alliance.teams[1].number)
                         .font(.headline)
                     Spacer()
-                    Text("0/0/0")
+                    Text("0/0/0") //TODO: Add actual data from WLT
                         .font(.subheadline)
                 }
             }
@@ -40,5 +39,5 @@ struct AllianceTile: View {
 }
 
 #Preview {
-    AllianceTile(height: 70.0, isBlueAlliance: true)
+    AllianceTile(height: 70.0, alliance: "blue")
 }

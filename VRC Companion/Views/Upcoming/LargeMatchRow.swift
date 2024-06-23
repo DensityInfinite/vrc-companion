@@ -7,31 +7,32 @@
 
 import SwiftUI
 
-struct LargeMatchRow: View, HoldsMatchInfo {
-    var matchIdentifier: String
-    var matchTime: Date
+struct LargeMatchRow: View {
+    var match: MatchModel
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(matchIdentifier)
+                Text(match.name)
                 Spacer()
-                if matchTime.timeIntervalSinceNow.isLess(than: 300) {
-                    Text("Queue now")
-                        .foregroundStyle(.gray)
-                } else {
-                    Text(matchTime.formatted(.relative(presentation: .numeric)))
-                        .foregroundStyle(.gray)
+                if let time = match.scheduledTime{
+                    if time.timeIntervalSinceNow.isLess(than: 300) {
+                        Text("Queue now")
+                            .foregroundStyle(.gray)
+                    } else {
+                        Text(time.formatted(.relative(presentation: .numeric)))
+                            .foregroundStyle(.gray)
+                    }
                 }
             }
             HStack {
-                AllianceTile(height: 70, isBlueAlliance: true)
-                AllianceTile(height: 70, isBlueAlliance: false)
+                AllianceTile(height: 70, alliance: match.alliances[0])
+                AllianceTile(height: 70, alliance: match.alliances[1])
             }
         }
     }
 }
 
 #Preview {
-    LargeMatchRow(matchIdentifier: "Qualification 1", matchTime: Date(timeIntervalSinceNow: +300))
+    LargeMatchRow(name: "Qualification 1", time: Date(timeIntervalSinceNow: +300))
 }

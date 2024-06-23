@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct UpcomingView: View {
+    @State var matchlist: MatchlistModel
+    
     var body: some View {
         NavigationStack {
             List {
-                LargeMatchRow(matchIdentifier: "Qualification 1", matchTime: Date.now.addingTimeInterval(+300))
-                SmallMatchRow(matchIdentifier: "Qualification 5", matchTime: Date.now.addingTimeInterval(+7200))
-                SmallMatchRow(matchIdentifier: "Qualification 7", matchTime: Date.now.addingTimeInterval(+7800))
+                LargeMatchRow(match: matchlist.matches[0])
+                ForEach(matchlist.matches[1...]) {match in
+                    SmallMatchRow(match: match)
+                }
             }
             .navigationTitle("Upcoming")
         }

@@ -1,0 +1,969 @@
+{
+    "meta": {
+        "current_page": 1,
+        "first_page_url": "https://www.robotevents.com/api/v2/teams/150122/matches?page=1",
+        "from": 1,
+        "last_page": 1,
+        "last_page_url": "https://www.robotevents.com/api/v2/teams/150122/matches?page=1",
+        "next_page_url": null,
+        "path": "https://www.robotevents.com/api/v2/teams/150122/matches",
+        "per_page": 50,
+        "prev_page_url": null,
+        "to": 14,
+        "total": 14
+    },
+    "data": [
+        {
+            "id": 61158693,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 1,
+            "scheduled": "2023-12-01T18:30:00-05:00",
+            "started": "2023-12-01T18:31:52-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 34,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 160143,
+                                "name": "13818A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 141032,
+                                "name": "78887B",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 108,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 139374,
+                                "name": "75477M",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158710,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 18,
+            "scheduled": "2023-12-01T20:12:00-05:00",
+            "started": "2023-12-01T20:06:57-05:00",
+            "field": "SAPN",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #18",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 110,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 153348,
+                                "name": "79419X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 104085,
+                                "name": "34565C",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 122,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 128725,
+                                "name": "96498D",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158714,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 22,
+            "scheduled": "2023-12-01T21:06:00-05:00",
+            "started": "2023-12-01T21:06:11-05:00",
+            "field": "SAPN",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #22",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 133,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 139372,
+                                "name": "12223E",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 75,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 154965,
+                                "name": "52050D",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 139183,
+                                "name": "12906A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158727,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 35,
+            "scheduled": "2023-12-01T22:24:00-05:00",
+            "started": "2023-12-01T22:22:31-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #35",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 112,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 143407,
+                                "name": "41103T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 91,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 97178,
+                                "name": "52050A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 128435,
+                                "name": "1002X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158735,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 43,
+            "scheduled": "2023-12-01T23:12:00-05:00",
+            "started": "2023-12-01T23:10:30-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #43",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 91,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 104086,
+                                "name": "34565B",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 79,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 112051,
+                                "name": "12223A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 128201,
+                                "name": "7479C",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158739,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 47,
+            "scheduled": "2023-12-01T23:36:00-05:00",
+            "started": "2023-12-01T23:35:42-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #47",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 91,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 141031,
+                                "name": "78887A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 153841,
+                                "name": "1831F",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 120,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 70312,
+                                "name": "97230A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158752,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 60,
+            "scheduled": "2023-12-02T17:54:00-05:00",
+            "started": "2023-12-02T17:54:31-05:00",
+            "field": "SAPN",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #60",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 116,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 154731,
+                                "name": "46131E",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 112703,
+                                "name": "1002F",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 117,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 154359,
+                                "name": "7479Y",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158756,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 64,
+            "scheduled": "2023-12-02T18:18:00-05:00",
+            "started": "2023-12-02T18:31:58-05:00",
+            "field": "SAPN",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #64",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 94,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 103789,
+                                "name": "34565A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 115,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 129368,
+                                "name": "4557A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158765,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 73,
+            "scheduled": "2023-12-02T19:12:00-05:00",
+            "started": "2023-12-02T19:34:57-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #73",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 103,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 128562,
+                                "name": "58A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 120,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 110192,
+                                "name": "4613R",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 154733,
+                                "name": "46131G",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158782,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 3,
+            "instance": 1,
+            "matchnum": 1,
+            "scheduled": null,
+            "started": "2023-12-02T23:10:37-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "QF #1-1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 90,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 154733,
+                                "name": "46131G",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 110192,
+                                "name": "4613R",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 123,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158786,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 4,
+            "instance": 1,
+            "matchnum": 1,
+            "scheduled": null,
+            "started": "2023-12-02T23:40:19-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "SF #1-1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 0,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 104086,
+                                "name": "34565B",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 104085,
+                                "name": "34565C",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 86,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158788,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 5,
+            "instance": 1,
+            "matchnum": 1,
+            "scheduled": null,
+            "started": "2023-12-03T00:16:39-05:00",
+            "field": "SAPN",
+            "session": 1,
+            "scored": false,
+            "name": "Final #1-1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 125,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 128562,
+                                "name": "58A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 128435,
+                                "name": "1002X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 98,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158789,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 5,
+            "instance": 1,
+            "matchnum": 2,
+            "scheduled": null,
+            "started": "2023-12-03T00:30:12-05:00",
+            "field": null,
+            "session": 1,
+            "scored": false,
+            "name": "Final #1-2",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 114,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 128562,
+                                "name": "58A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 128435,
+                                "name": "1002X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 107,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 61158774,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "round": 6,
+            "instance": 1,
+            "matchnum": 1,
+            "scheduled": null,
+            "started": "2023-12-02T22:34:15-05:00",
+            "field": "IFI",
+            "session": 1,
+            "scored": false,
+            "name": "R16 #1-1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 82,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 137898,
+                                "name": "7479D",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 153841,
+                                "name": "1831F",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 135,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 135580,
+                                "name": "1002T",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

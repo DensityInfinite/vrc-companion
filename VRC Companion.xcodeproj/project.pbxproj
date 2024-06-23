@@ -17,7 +17,8 @@
 		B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341CA682B881DCD002E1856 /* MatchDetails.swift */; };
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
 		B3502EC02C279C5B00A65640 /* UpcomingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */; };
-		B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchList.json in Resources */ = {isa = PBXBuildFile; fileRef = B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchList.json */; };
+		B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */; };
+		B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */; };
 		B39B3F822C26B3BF00249F7D /* MatchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F812C26B3BF00249F7D /* MatchModels.swift */; };
 		B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */; };
 		B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F852C26BA3B00249F7D /* TeamModels.swift */; };
@@ -60,7 +61,8 @@
 		B341CA682B881DCD002E1856 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
 		B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPreview.swift; sourceTree = "<group>"; };
-		B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeWorldsMatchList.json; sourceTree = "<group>"; };
+		B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsMatchlist.json; sourceTree = "<group>"; };
+		B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeWorldsMatchlist.json; sourceTree = "<group>"; };
 		B39B3F812C26B3BF00249F7D /* MatchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModels.swift; sourceTree = "<group>"; };
 		B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotEventsMeta.swift; sourceTree = "<group>"; };
 		B39B3F852C26BA3B00249F7D /* TeamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModels.swift; sourceTree = "<group>"; };
@@ -224,8 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				B3C72D112B82F71800AAE764 /* Preview Assets.xcassets */,
-				B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchList.json */,
 				B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */,
+				B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */,
+				B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -351,9 +354,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchList.json in Resources */,
+				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,
 				B3C72D122B82F71800AAE764 /* Preview Assets.xcassets in Resources */,
 				B3C72D0F2B82F71800AAE764 /* Assets.xcassets in Resources */,
+				B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

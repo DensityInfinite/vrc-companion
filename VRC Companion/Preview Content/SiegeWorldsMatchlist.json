@@ -1,0 +1,765 @@
+{
+    "meta": {
+        "current_page": 1,
+        "first_page_url": "https://www.robotevents.com/api/v2/teams/150122/matches?page=1",
+        "from": 1,
+        "last_page": 1,
+        "last_page_url": "https://www.robotevents.com/api/v2/teams/150122/matches?page=1",
+        "next_page_url": null,
+        "path": "https://www.robotevents.com/api/v2/teams/150122/matches",
+        "per_page": 50,
+        "prev_page_url": null,
+        "to": 11,
+        "total": 11
+    },
+    "data": [
+        {
+            "id": 81658866,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 6,
+            "scheduled": null,
+            "started": null,
+            "field": "NASA",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #6",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 44,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 168694,
+                                "name": "93771C",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 95,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 85800,
+                                "name": "945A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 146725,
+                                "name": "7580P",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658890,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 30,
+            "scheduled": null,
+            "started": null,
+            "field": "NASA",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #30",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 52,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 70335,
+                                "name": "7983S",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 120350,
+                                "name": "51548A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 149,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 50480,
+                                "name": "6627A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658911,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 51,
+            "scheduled": null,
+            "started": null,
+            "field": "NASA",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #51",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 108,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 165655,
+                                "name": "9231A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 164387,
+                                "name": "1294X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 79,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 241,
+                                "name": "2459C",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658925,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 65,
+            "scheduled": null,
+            "started": null,
+            "field": "NGF",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #65",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 100,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 55401,
+                                "name": "5691X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 53633,
+                                "name": "9080S",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 117,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 14146,
+                                "name": "1115F",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658961,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 101,
+            "scheduled": null,
+            "started": null,
+            "field": "NGF",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #101",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 72,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 119956,
+                                "name": "71909X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 116,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 131001,
+                                "name": "34532B",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 56085,
+                                "name": "7110B",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658978,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 118,
+            "scheduled": null,
+            "started": null,
+            "field": "Eaton",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #118",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 74,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 133046,
+                                "name": "15442B",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 99,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 145555,
+                                "name": "39110C",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 4096,
+                                "name": "12C",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81658995,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 135,
+            "scheduled": null,
+            "started": null,
+            "field": "NASA",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #135",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 173,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 154054,
+                                "name": "10278A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 42,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 104434,
+                                "name": "45250G",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 141824,
+                                "name": "2651A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81659012,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 152,
+            "scheduled": null,
+            "started": null,
+            "field": "NGF",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #152",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 151,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 27289,
+                                "name": "4330R",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 145430,
+                                "name": "502W",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 74,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 98201,
+                                "name": "11442X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81659032,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 172,
+            "scheduled": null,
+            "started": null,
+            "field": "Eaton",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #172",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 125,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 153835,
+                                "name": "4024V",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 138,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 161845,
+                                "name": "106X",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 75499,
+                                "name": "99621B",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81659046,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 2,
+            "instance": 1,
+            "matchnum": 186,
+            "scheduled": null,
+            "started": null,
+            "field": "NASA",
+            "session": 1,
+            "scored": false,
+            "name": "Qualifier #186",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 113,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 139521,
+                                "name": "229V",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 87396,
+                                "name": "47969A",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 70,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 26857,
+                                "name": "5155A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81659068,
+            "event": {
+                "id": 53690,
+                "name": "2024 VEX Robotics World Championship - VEX Robotics Competition High School Event",
+                "code": "RE-VRC-23-3690"
+            },
+            "division": {
+                "id": 2,
+                "name": "Research",
+                "code": null
+            },
+            "round": 6,
+            "instance": 3,
+            "matchnum": 1,
+            "scheduled": null,
+            "started": null,
+            "field": null,
+            "session": 1,
+            "scored": false,
+            "name": "R16 #3-1",
+            "alliances": [
+                {
+                    "color": "blue",
+                    "score": 111,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 165655,
+                                "name": "9231A",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 150122,
+                                "name": "1051X",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                },
+                {
+                    "color": "red",
+                    "score": 125,
+                    "teams": [
+                        {
+                            "team": {
+                                "id": 146725,
+                                "name": "7580P",
+                                "code": null
+                            },
+                            "sitting": false
+                        },
+                        {
+                            "team": {
+                                "id": 154040,
+                                "name": "2084K",
+                                "code": null
+                            },
+                            "sitting": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -23,5 +23,5 @@ struct SmallMatchRow: View {
 }
 
 #Preview {
-    SmallMatchRow(name: "Qualification 5", time: Date.now.addingTimeInterval(+7200))
+    SmallMatchRow(match: .preview)
 }

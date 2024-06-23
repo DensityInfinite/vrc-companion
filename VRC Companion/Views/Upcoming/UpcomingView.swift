@@ -24,5 +24,5 @@ struct UpcomingView: View {
 }
 
 #Preview {
-    UpcomingView()
+    UpcomingView(matchlist: .preview)
 }

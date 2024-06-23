@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
     var body: some View {
         TabView {
-            UpcomingView()
+            UpcomingView(matchlist: .preview)
                 .tabItem {
                     Label("Upcoming", systemImage: "chevron.forward.2")
                 }

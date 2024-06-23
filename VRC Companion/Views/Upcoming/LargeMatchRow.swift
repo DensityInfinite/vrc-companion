@@ -26,13 +26,13 @@ struct LargeMatchRow: View {
                 }
             }
             HStack {
-                AllianceTile(height: 70, alliance: match.alliances[0])
-                AllianceTile(height: 70, alliance: match.alliances[1])
+                AllianceTile(alliance: match.alliances[0])
+                AllianceTile(alliance: match.alliances[1])
             }
         }
     }
 }
 
 #Preview {
-    LargeMatchRow(name: "Qualification 1", time: Date(timeIntervalSinceNow: +300))
+    LargeMatchRow(match: .preview)
 }

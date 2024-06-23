@@ -32,7 +32,7 @@ extension Meta: Decodable {
         case lastPage = "last_page"
         case lastPageURL = "last_page_url"
         case nextPageURL = "next_page_url"
-        case path = "source"
+        case source = "path"
         case entriesPerPage = "per_page"
         case prevPageURL = "prev_page_url"
         case toEntry = "to"
@@ -42,20 +42,20 @@ extension Meta: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        currentPage = try container.decode(Int.self, forKey: .currentPage)
-        source = try container.decode(URL.self, forKey: .path)
+        self.currentPage = try container.decode(Int.self, forKey: .currentPage)
+        self.source = try container.decode(URL.self, forKey: .source)
         
-        lastPage = try container.decode(Int.self, forKey: .lastPage)
-        lastPageURL = try container.decodeIfPresent(URL.self, forKey: .lastPageURL)
+        self.lastPage = try container.decode(Int.self, forKey: .lastPage)
+        self.lastPageURL = try container.decodeIfPresent(URL.self, forKey: .lastPageURL)
         
-        firstPageURL = try container.decode(URL.self, forKey: .firstPageURL)
-        prevPageURL = try container.decodeIfPresent(URL.self, forKey: .prevPageURL)
-        nextPageURL = try container.decodeIfPresent(URL.self, forKey: .nextPageURL)
+        self.firstPageURL = try container.decode(URL.self, forKey: .firstPageURL)
+        self.prevPageURL = try container.decodeIfPresent(URL.self, forKey: .prevPageURL)
+        self.nextPageURL = try container.decodeIfPresent(URL.self, forKey: .nextPageURL)
         
-        entriesPerPage = try container.decode(Int.self, forKey: .entriesPerPage)
-        fromEntry = try container.decode(Int.self, forKey: .fromEntry)
-        toEntry = try container.decode(Int.self, forKey: .toEntry)
-        totalEntries = try container.decode(Int.self, forKey: .totalEntries)
+        self.entriesPerPage = try container.decode(Int.self, forKey: .entriesPerPage)
+        self.fromEntry = try container.decode(Int.self, forKey: .fromEntry)
+        self.toEntry = try container.decode(Int.self, forKey: .toEntry)
+        self.totalEntries = try container.decode(Int.self, forKey: .totalEntries)
     }
 }
 

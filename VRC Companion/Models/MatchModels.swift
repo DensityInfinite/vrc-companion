@@ -54,7 +54,14 @@ extension MatchModel: Decodable {
     }
 }
 
-struct MatchlistModel: Decodable {
+struct MatchlistModel {
     let meta: Meta
     let matches: [MatchModel]
+}
+
+extension MatchlistModel: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case matches = "data"
+        case meta
+    }
 }

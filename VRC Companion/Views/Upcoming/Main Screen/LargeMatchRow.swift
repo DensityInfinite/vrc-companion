@@ -15,7 +15,7 @@ struct LargeMatchRow: View {
             HStack {
                 Text(match.name)
                 Spacer()
-                if let time = match.scheduledTime{
+                if let time = match.scheduledTime {
                     if time.timeIntervalSinceNow.isLess(than: 300) {
                         Text("Queue now")
                             .foregroundStyle(.gray)

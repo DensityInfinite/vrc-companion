@@ -31,7 +31,7 @@ struct AllianceTile: View {
         .padding(13)
         .background(
             RoundedRectangle(cornerRadius: 6.0)
-                .foregroundStyle(alliance.color == "blue" ? Color("BlueAlliance").opacity(0.34) : Color("RedAlliance").opacity(0.34))
+                .foregroundStyle(alliance.color == "blue" ? .blueAlliance : .redAlliance)
         )
     }
 }

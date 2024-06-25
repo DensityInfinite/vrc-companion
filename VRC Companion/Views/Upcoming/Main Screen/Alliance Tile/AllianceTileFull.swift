@@ -1,34 +1,36 @@
 //
-//  AllianceTile.swift
+//  AllianceTileFull.swift
 //  VRC Companion
 //
-//  Created by Douglas Jiang on 19/2/2024.
+//  Created by Douglas Jiang on 24/6/2024.
 //
 
 import SwiftUI
 
-struct AllianceTile: View {
+struct AllianceTileFull: View {
     var alliance: AllianceModel
     
     var body: some View {
         VStack {
             HStack {
                 Text(alliance.teams[0].number)
-                    .fontWeight(.medium)
+                    .font(.callout)
                 Spacer()
-                Text("0/0/0") //TODO: Add actual data from WLT
+                Text("0/0/0") // TODO: Add actual data from WLT
                     .font(.subheadline)
             }
-            .padding(.bottom, 1)
             HStack {
                 Text(alliance.teams[1].number)
-                    .fontWeight(.medium)
+                    .font(.callout)
                 Spacer()
-                Text("0/0/0") //TODO: Add actual data from WLT
+                Text("0/0/0") // TODO: Add actual data from WLT
                     .font(.subheadline)
             }
         }
-        .padding(13)
+        .padding(.leading, 13)
+        .padding(.trailing, 13)
+        .padding(.top, 8)
+        .padding(.bottom, 8)
         .background(
             RoundedRectangle(cornerRadius: 6.0)
                 .foregroundStyle(alliance.color == "blue" ? .blueAlliance : .redAlliance)
@@ -37,5 +39,5 @@ struct AllianceTile: View {
 }
 
 #Preview {
-    AllianceTile(alliance: .preview)
+    AllianceTileFull(alliance: .preview)
 }

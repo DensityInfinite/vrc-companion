@@ -23,6 +23,17 @@ struct MatchModel: Identifiable {
     let scored: Bool
     
     let alliances: [AllianceModel]
+    
+    func findTeam(_ id: Int) -> (Int, Int)? {
+        for (allianceIndex, alliance) in alliances.enumerated() {
+            for (teamIndex, team) in alliance.teams.enumerated() {
+                if team.id == Int(id) {
+                    return (allianceIndex, teamIndex)
+                }
+            }
+        }
+        return nil
+    }
 }
 
 extension MatchModel: Decodable {

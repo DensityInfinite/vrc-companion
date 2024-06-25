@@ -13,9 +13,15 @@ struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             List {
-                LargeMatchRow(match: matchlist.matches[0])
-                ForEach(matchlist.matches[1...]) {match in
-                    SmallMatchRow(match: match)
+                ForEach(matchlist.matches[...2]) { match in
+                    NavigationLink(destination: MatchDetails(match: match)) {
+                        LargeMatchRow(match: match)
+                    }
+                }
+                ForEach(matchlist.matches[3...]) {match in
+                    NavigationLink(destination: MatchDetails(match: match)) {
+                        SmallMatchRow(match: match)
+                    }
                 }
             }
             .navigationTitle("Upcoming")

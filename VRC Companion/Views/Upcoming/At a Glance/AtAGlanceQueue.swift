@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct AtAGlanceQueue: View {
+    var match: MatchModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center) {
+            if let time = match.scheduledTime {
+                Text("\(time.formatted(.relative(presentation: .numeric)))")
+                    .fontWidth(.condensed)
+                    .foregroundStyle(Color.primary.opacity(0.4))
+                Text("Queue Now")
+                    .font(.system(size: 65))
+                    .fontWidth(.compressed)
+                    .shadow(radius: 8)
+                if let field = match.field {
+                    Text("At \(field)")
+                        .fontWidth(.condensed)
+                        .foregroundStyle(Color.primary.opacity(0.4))
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .listRowBackground(Color(.warning))
     }
 }
 
 #Preview {
-    AtAGlanceQueue()
+    AtAGlanceQueue(match: .preview)
 }

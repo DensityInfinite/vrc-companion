@@ -11,6 +11,15 @@ struct AllianceModel: Decodable {
     let color: String
     let score: Int
     let teams: [TeamModel]
+    
+    func findTeam(_ id: Int) -> Int? {
+        for (teamIndex, team) in teams.enumerated() {
+            if team.id == Int(id) {
+                return teamIndex
+            }
+        }
+        return nil
+    }
 }
 
 struct TeamModel: Identifiable {

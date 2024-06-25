@@ -19,6 +19,7 @@ struct LargeMatchRow: View {
                     if time.timeIntervalSinceNow.isLess(than: 300) {
                         Text("Queue now")
                             .foregroundStyle(.gray)
+                            .fontWeight(.medium)
                     } else {
                         Text(time.formatted(.relative(presentation: .numeric)))
                             .foregroundStyle(.gray)
@@ -26,8 +27,10 @@ struct LargeMatchRow: View {
                 }
             }
             HStack {
-                AllianceTile(alliance: match.alliances[0])
-                AllianceTile(alliance: match.alliances[1])
+                AllianceTileView(alliance: match.alliances[0])
+                    .environmentObject(StateController())
+                AllianceTileView(alliance: match.alliances[1])
+                    .environmentObject(StateController())
             }
         }
     }

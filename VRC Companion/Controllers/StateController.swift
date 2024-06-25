@@ -8,5 +8,5 @@
 import Foundation
 
 final class StateController: ObservableObject {
-    @Published var userTeamNumber = "1051X"
+    @Published var userTeam: TeamModel = TeamModel(id: 150122, number: "1051X", name: "Siege", sitting: false)
 }

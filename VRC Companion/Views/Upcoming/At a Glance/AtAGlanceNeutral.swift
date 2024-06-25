@@ -7,31 +7,30 @@
 
 import SwiftUI
 
-struct AtAGlance: View {
+struct AtAGlanceNeutral: View {
     var match: MatchModel
     
     var body: some View {
         VStack(alignment: .center) {
-            Text("Scheduled start in")
-                .fontWidth(.condensed)
-                .foregroundStyle(.gray)
-            Text("36 Minutes")
-                .font(.system(size: 65))
-                .fontWidth(.compressed)
-                .shadow(radius: 8)
-            Text("9:36 am")
-                .fontWidth(.condensed)
-                .foregroundStyle(.gray)
+            if let time = match.scheduledTime {
+                Text("Scheduled start")
+                    .fontWidth(.condensed)
+                    .foregroundStyle(Color.primary.opacity(0.4))
+                Text(time.formatted(.relative(presentation: .numeric)).capitalized)
+                    .font(.system(size: 65))
+                    .fontWidth(.compressed)
+                    .shadow(radius: 8)
+                Text(time.formatted(date: .omitted, time: .shortened))
+                    .fontWidth(.condensed)
+                    .foregroundStyle(Color.primary.opacity(0.4))
+            }
         }
         .frame(maxWidth: .infinity)
         .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(.neutral)
-        )
+        .listRowBackground(Color(.neutral))
     }
 }
 
 #Preview {
-    AtAGlance(match: .preview)
+    AtAGlanceNeutral(match: .preview)
 }

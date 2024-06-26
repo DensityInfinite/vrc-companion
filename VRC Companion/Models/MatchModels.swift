@@ -34,6 +34,34 @@ struct MatchModel: Identifiable {
         }
         return nil
     }
+    
+    func findTeamAlliance(_ id: Int) -> String? {
+        for alliance in alliances {
+            for team in alliance.teams {
+                if team.id == Int(id) {
+                    return alliance.color
+                }
+            }
+        }
+        return nil
+    }
+    
+    func findOppositionAlliance(_ id: Int) -> String? {
+        var color = ""
+        for alliance in alliances {
+            for team in alliance.teams {
+                if team.id == Int(id) {
+                    color = alliance.color
+                }
+            }
+        }
+        if color == "red" {
+            return "blue"
+        } else if color == "blue" {
+            return "red"
+        }
+        return nil
+    }
 }
 
 extension MatchModel: Decodable {

@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct SmallTeamRow: View {
+    var team: TeamModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack {
+                Text(team.number)
+                if let name = team.name {
+                    Text(name)
+                        .font(.subheadline)
+                        .foregroundStyle(Color(.gray))
+                }
+            }
+            Spacer()
+            if let ranking = team.localRanking {
+                Text("#\(String(ranking))")
+            }
+        }
     }
 }
 
 #Preview {
-    SmallTeamRow()
+    SmallTeamRow(team: .preview)
 }

@@ -28,9 +28,13 @@ struct MatchDetails: View {
                 .listSectionSpacing(.compact)
                 
                 Section("Opponents - \(match.allianceForTeam(id: state.userTeam.id, side: .opposition)!.color.capitalized) Alliance") {
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeam.id, side: .opposition)!.teams[0])
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeam.id, side: .opposition)!.teams[1])
                 }
                 
                 Section("Your Alliance") {
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeam.id, side: .team)!.teams[0])
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeam.id, side: .team)!.teams[1])
                 }
             }
             .navigationTitle(match.name)

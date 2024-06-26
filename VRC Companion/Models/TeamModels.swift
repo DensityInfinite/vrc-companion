@@ -26,6 +26,7 @@ struct TeamModel: Identifiable {
     let id: Int
     let number: String
     let name: String?
+    let localRanking: Int?
     let sitting: Bool
 }
 
@@ -47,6 +48,7 @@ extension TeamModel: Decodable {
         self.id = try infoContainer.decode(Int.self, forKey: .id)
         self.number = try infoContainer.decode(String.self, forKey: .number)
         self.name = nil
-        #warning("Team names need to be stored")
+        self.localRanking = nil
+        #warning("Team names and rankings need to be stored")
     }
 }

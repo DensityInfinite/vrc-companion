@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MatchDetails: View {
+    @EnvironmentObject var state: StateController
     var match: MatchModel
     
     var body: some View {
@@ -25,6 +26,14 @@ struct MatchDetails: View {
                         .environmentObject(StateController())
                 }
                 .listSectionSpacing(.compact)
+                
+                Section("Opponents - \(match.findOppositionAlliance(state.userTeam.id)!.capitalized) Alliance") {
+                    
+                }
+                
+                Section("Your Alliance") {
+                    
+                }
             }
             .navigationTitle(match.name)
             .navigationBarTitleDisplayMode(.inline)
@@ -35,4 +44,5 @@ struct MatchDetails: View {
 
 #Preview {
     MatchDetails(match: .preview)
+        .environmentObject(StateController())
 }

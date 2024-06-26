@@ -18,7 +18,7 @@ struct BannerView: View {
                     Image(systemName: "info.circle")
                         .foregroundStyle(.blueAllianceSolid)
                         .fontWeight(.bold)
-                    Text("You are part of the \(match.alliances[allianceIndex].color.capitalized) Alliance")
+                    Text("You are part of the Blue Alliance")
                 }
                 .listRowBackground(Color(.blueAlliance).opacity(0.5))
             } else {
@@ -26,7 +26,7 @@ struct BannerView: View {
                     Image(systemName: "info.circle")
                         .foregroundStyle(.redAllianceSolid)
                         .fontWeight(.bold)
-                    Text("You are part of the \(match.alliances[allianceIndex].color.capitalized) Alliance")
+                    Text("You are part of the Red Alliance")
                 }
                 .listRowBackground(Color(.redAlliance).opacity(0.5))
             }

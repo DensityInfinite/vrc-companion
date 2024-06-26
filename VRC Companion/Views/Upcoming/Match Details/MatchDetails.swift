@@ -27,12 +27,10 @@ struct MatchDetails: View {
                 }
                 .listSectionSpacing(.compact)
                 
-                Section("Opponents - \(match.findOppositionAlliance(state.userTeam.id)!.capitalized) Alliance") {
-                    
+                Section("Opponents - \(match.allianceForTeam(id: state.userTeam.id, side: .opposition)!.color.capitalized) Alliance") {
                 }
                 
                 Section("Your Alliance") {
-                    
                 }
             }
             .navigationTitle(match.name)

@@ -12,7 +12,7 @@ struct AllianceTileView: View {
     @EnvironmentObject var state: StateController
 
     var body: some View {
-        if let _ = alliance.findTeam(state.userTeam.id) {
+        if let _ = alliance.indexFor(team: state.userTeam.id) {
             AllianceTileFull(alliance: alliance)
         } else {
             AllianceTileBorder(alliance: alliance)

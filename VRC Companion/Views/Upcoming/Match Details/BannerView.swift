@@ -12,8 +12,8 @@ struct BannerView: View {
     var match: MatchModel
 
     var body: some View {
-        if let (allianceIndex, _) = match.findTeam(state.userTeam.id) {
-            if match.alliances[allianceIndex].color == "blue" {
+        if let alliance = match.allianceForTeam(id: state.userTeam.id, side: .team) {
+            if alliance.color == "blue" {
                 HStack {
                     Image(systemName: "info.circle")
                         .foregroundStyle(.blueAllianceSolid)

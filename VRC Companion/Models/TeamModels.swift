@@ -12,7 +12,7 @@ struct AllianceModel: Decodable {
     let score: Int
     let teams: [TeamModel]
     
-    func findTeam(_ id: Int) -> Int? {
+    func indexFor(team id: Int) -> Int? {
         for (teamIndex, team) in teams.enumerated() {
             if team.id == Int(id) {
                 return teamIndex

@@ -24,7 +24,12 @@ struct MatchModel: Identifiable {
     
     let alliances: [AllianceModel]
     
-    func findTeam(_ id: Int) -> (Int, Int)? {
+    enum MatchSides {
+        case team
+        case opposition
+    }
+    
+    func _indexesFor(team id: Int) -> (Int, Int)? {
         for (allianceIndex, alliance) in alliances.enumerated() {
             for (teamIndex, team) in alliance.teams.enumerated() {
                 if team.id == Int(id) {
@@ -35,30 +40,28 @@ struct MatchModel: Identifiable {
         return nil
     }
     
-    func findTeamAlliance(_ id: Int) -> String? {
-        for alliance in alliances {
-            for team in alliance.teams {
-                if team.id == Int(id) {
-                    return alliance.color
-                }
-            }
+    func team(id: Int) -> TeamModel? {
+        if let (allianceIndex, teamIndex) = _indexesFor(team: id) {
+            return alliances[allianceIndex].teams[teamIndex]
         }
         return nil
     }
     
-    func findOppositionAlliance(_ id: Int) -> String? {
-        var color = ""
-        for alliance in alliances {
-            for team in alliance.teams {
-                if team.id == Int(id) {
-                    color = alliance.color
+    func allianceForTeam(id: Int, side: MatchSides) -> AllianceModel? {
+        if let (allianceIndex, _) = _indexesFor(team: id) {
+            if allianceIndex == 0 {
+                if side == MatchSides.team {
+                    return alliances[0]
+                } else {
+                    return alliances[1]
+                }
+            } else {
+                if side == MatchSides.team {
+                    return alliances[1]
+                } else {
+                    return alliances[0]
                 }
             }
-        }
-        if color == "red" {
-            return "blue"
-        } else if color == "blue" {
-            return "red"
         }
         return nil
     }

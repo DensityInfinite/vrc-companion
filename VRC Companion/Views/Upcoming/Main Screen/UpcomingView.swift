@@ -9,17 +9,17 @@ import SwiftUI
 
 struct UpcomingView: View {
     @State var matchlist: MatchlistModel
-    
+
     var body: some View {
         NavigationStack {
             List {
                 ForEach(matchlist.matches[...2]) { match in
-                    NavigationLink(destination: MatchDetails(match: match)) {
+                    NavigationLink(destination: MatchDetails(match: match).environmentObject(StateController())) {
                         LargeMatchRow(match: match)
                     }
                 }
-                ForEach(matchlist.matches[3...]) {match in
-                    NavigationLink(destination: MatchDetails(match: match)) {
+                ForEach(matchlist.matches[3...]) { match in
+                    NavigationLink(destination: MatchDetails(match: match).environmentObject(StateController())) {
                         SmallMatchRow(match: match)
                     }
                 }

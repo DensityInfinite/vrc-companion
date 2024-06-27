@@ -15,7 +15,9 @@ struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             List(matchlist.matches, id: \.id, rowContent: { match in
-                NavigationLink(destination: MatchDetails(match: match).environmentObject(state)) {
+                NavigationLink {
+                    MatchDetails(match: match).environmentObject(state)
+                } label: {
                     LargeMatchRow(match: match)
                 }
             })

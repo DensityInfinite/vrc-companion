@@ -15,14 +15,14 @@ struct AtAGlanceNeutral: View {
             if let time = match.scheduledTime {
                 Text("Scheduled start")
                     .fontWidth(.condensed)
-                    .foregroundStyle(Color.primary.opacity(0.4))
+                    .opacity(0.4)
                 Text(time.formatted(.relative(presentation: .numeric)).capitalized)
                     .font(.system(size: 65))
                     .fontWidth(.compressed)
                     .shadow(radius: 8)
                 Text(time.formatted(date: .omitted, time: .shortened))
                     .fontWidth(.condensed)
-                    .foregroundStyle(Color.primary.opacity(0.4))
+                    .opacity(0.4)
             }
         }
         .frame(maxWidth: .infinity)

@@ -15,7 +15,7 @@ struct AtAGlanceQueue: View {
             if let time = match.scheduledTime {
                 Text("\(time.formatted(.relative(presentation: .numeric)))")
                     .fontWidth(.condensed)
-                    .foregroundStyle(Color.primary.opacity(0.4))
+                    .opacity(0.4)
                 Text("Queue Now")
                     .font(.system(size: 65))
                     .fontWidth(.compressed)
@@ -23,7 +23,7 @@ struct AtAGlanceQueue: View {
                 if let field = match.field {
                     Text("At \(field)")
                         .fontWidth(.condensed)
-                        .foregroundStyle(Color.primary.opacity(0.4))
+                        .opacity(0.4)
                 }
             }
         }

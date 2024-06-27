@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UpcomingView: View {
     @EnvironmentObject var state: StateController
-    
+
     var matchlist: MatchlistModel
 
     var body: some View {

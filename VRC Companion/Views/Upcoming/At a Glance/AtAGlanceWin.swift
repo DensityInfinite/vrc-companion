@@ -14,7 +14,7 @@ struct AtAGlanceWin: View {
         VStack(alignment: .center) {
             Text("\(match.alliances[0].score) - \(match.alliances[1].score)")
                 .fontWidth(.condensed)
-                .foregroundStyle(Color.primary.opacity(0.4))
+                .opacity(0.4)
             
             if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
                 Text("Victory")
@@ -32,21 +32,21 @@ struct AtAGlanceWin: View {
                 if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
                     Text("+2 WP (and maybe 1 AWP)")
                         .fontWidth(.condensed)
-                        .foregroundStyle(Color.primary.opacity(0.4))
+                        .opacity(0.4)
                 } else {
                     Text("+1 WP (and maybe 1 AWP)")
                         .fontWidth(.condensed)
-                        .foregroundStyle(Color.primary.opacity(0.4))
+                        .opacity(0.4)
                 }
             } else if match.name.localizedStandardContains("Practice") {
                 Text("Keep it up for qualifiers!")
                     .fontWidth(.condensed)
-                    .foregroundStyle(Color.primary.opacity(0.4))
+                    .opacity(0.4)
 
             } else {
                 Text("Great match!") //TODO: Replace with better messages
                     .fontWidth(.condensed)
-                    .foregroundStyle(Color.primary.opacity(0.4))
+                    .opacity(0.4)
             }
         }
         .frame(maxWidth: .infinity)

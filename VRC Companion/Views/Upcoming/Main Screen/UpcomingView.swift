@@ -8,22 +8,17 @@
 import SwiftUI
 
 struct UpcomingView: View {
-    @State var matchlist: MatchlistModel
+    @EnvironmentObject var state: StateController
+    
+    var matchlist: MatchlistModel
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(matchlist.matches[...2]) { match in
-                    NavigationLink(destination: MatchDetails(match: match).environmentObject(StateController())) {
-                        LargeMatchRow(match: match)
-                    }
+            List(matchlist.matches, id: \.id, rowContent: { match in
+                NavigationLink(destination: MatchDetails(match: match).environmentObject(state)) {
+                    LargeMatchRow(match: match)
                 }
-                ForEach(matchlist.matches[3...]) { match in
-                    NavigationLink(destination: MatchDetails(match: match).environmentObject(StateController())) {
-                        SmallMatchRow(match: match)
-                    }
-                }
-            }
+            })
             .navigationTitle("Upcoming")
         }
     }
@@ -31,4 +26,5 @@ struct UpcomingView: View {
 
 #Preview {
     UpcomingView(matchlist: .preview)
+        .environmentObject(StateController())
 }

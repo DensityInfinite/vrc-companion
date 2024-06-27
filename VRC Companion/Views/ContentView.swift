@@ -9,12 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @StateObject var state = StateController()
+    
     var body: some View {
         TabView {
             UpcomingView(matchlist: .preview)
                 .tabItem {
                     Label("Upcoming", systemImage: "chevron.forward.2")
                 }
+                .environmentObject(state)
             
             EventView()
                 .tabItem {

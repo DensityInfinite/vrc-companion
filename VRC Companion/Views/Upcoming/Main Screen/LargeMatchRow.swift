@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LargeMatchRow: View {
     var match: MatchModel
+    @EnvironmentObject var state: StateController
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,10 +28,16 @@ struct LargeMatchRow: View {
                 }
             }
             HStack {
-                AllianceTileView(alliance: match.alliances[0])
-                    .environmentObject(StateController())
-                AllianceTileView(alliance: match.alliances[1])
-                    .environmentObject(StateController())
+                if !match.name.localizedStandardContains("Qualifier") && !match.name.localizedStandardContains("Practice") {
+                    AllianceTileView(alliance: match.allianceForTeam(id: state.userTeam.id, side: .opposition)!)
+                        .environmentObject(state)
+                } else {
+                    AllianceTileView(alliance: match.alliances[0])
+                        .environmentObject(state)
+                    AllianceTileView(alliance: match.alliances[1])
+                        .environmentObject(state)
+
+                }
             }
         }
     }
@@ -38,4 +45,5 @@ struct LargeMatchRow: View {
 
 #Preview {
     LargeMatchRow(match: .preview)
+        .environmentObject(StateController())
 }

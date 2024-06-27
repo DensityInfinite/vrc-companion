@@ -16,14 +16,14 @@ struct MatchDetails: View {
             List {
                 Section {
                     AtAGlanceView(match: match)
-                        .environmentObject(StateController())
+                        .environmentObject(state)
                         .padding(.top, -8)
                         .padding(.bottom, -8)
                 }
                 
                 Section {
                     BannerView(match: match)
-                        .environmentObject(StateController())
+                        .environmentObject(state)
                 }
                 .listSectionSpacing(.compact)
                 

@@ -15,13 +15,39 @@ struct AtAGlanceWin: View {
             Text("\(match.alliances[0].score) - \(match.alliances[1].score)")
                 .fontWidth(.condensed)
                 .foregroundStyle(Color.primary.opacity(0.4))
-            Text("Victory")
-                .font(.system(size: 65))
-                .fontWidth(.compressed)
-                .shadow(radius: 8)
-            Text("+4 WP, 1 AWP") //FIXME: Actual data needed here
-                .fontWidth(.condensed)
-                .foregroundStyle(Color.primary.opacity(0.4))
+            
+            if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
+                Text("Victory")
+                    .font(.system(size: 65))
+                    .fontWidth(.compressed)
+                    .shadow(radius: 8)
+            } else {
+                Text("Tied")
+                    .font(.system(size: 65))
+                    .fontWidth(.compressed)
+                    .shadow(radius: 8)
+            }
+            
+            if match.name.localizedStandardContains("Qualifier") {
+                if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
+                    Text("+2 WP (and maybe 1 AWP)")
+                        .fontWidth(.condensed)
+                        .foregroundStyle(Color.primary.opacity(0.4))
+                } else {
+                    Text("+1 WP (and maybe 1 AWP)")
+                        .fontWidth(.condensed)
+                        .foregroundStyle(Color.primary.opacity(0.4))
+                }
+            } else if match.name.localizedStandardContains("Practice") {
+                Text("Keep it up for qualifiers!")
+                    .fontWidth(.condensed)
+                    .foregroundStyle(Color.primary.opacity(0.4))
+
+            } else {
+                Text("Great match!") //TODO: Replace with better messages
+                    .fontWidth(.condensed)
+                    .foregroundStyle(Color.primary.opacity(0.4))
+            }
         }
         .frame(maxWidth: .infinity)
         .padding()

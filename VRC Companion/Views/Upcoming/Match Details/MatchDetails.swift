@@ -39,7 +39,7 @@ struct MatchDetails: View {
             }
             .navigationTitle(match.name)
             .navigationBarTitleDisplayMode(.inline)
-            .padding(.top, -30)
+            .padding(.top, -18)
         }
     }
 }

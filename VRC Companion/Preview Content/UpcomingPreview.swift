@@ -39,8 +39,26 @@ extension AllianceModel {
     }
 }
 
-extension TeamModel {
-    static var preview: TeamModel {
+extension AllianceTeamModel {
+    static var preview: AllianceTeamModel {
         AllianceModel.preview.teams[0]
+    }
+}
+
+extension RankingsModel {
+    static var preview: RankingsModel {
+        let url = Bundle.main.url(forResource: "SiegeNationalsRanking", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let rankings = try! JSONDecoder.apiDecoder.decode(RankingsModel.self, from: data)
+        return rankings
+    }
+}
+
+extension TeamInfoModel {
+    static var preview: TeamInfoModel {
+        let url = Bundle.main.url(forResource: "SiegeTeam", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let info = try! JSONDecoder.apiDecoder.decode(TeamInfoModel.self, from: data)
+        return info
     }
 }

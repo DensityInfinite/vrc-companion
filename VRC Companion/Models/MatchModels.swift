@@ -40,7 +40,7 @@ struct MatchModel: Identifiable {
         return nil
     }
     
-    func team(id: Int) -> TeamModel? {
+    func team(id: Int) -> AllianceTeamModel? {
         if let (allianceIndex, teamIndex) = _indexesFor(team: id) {
             return alliances[allianceIndex].teams[teamIndex]
         }

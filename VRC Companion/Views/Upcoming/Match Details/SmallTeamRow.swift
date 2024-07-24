@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct SmallTeamRow: View {
-    var team: TeamModel
+    var team: AllianceTeamModel
     
     var body: some View {
         HStack {
             VStack {
                 Text(team.number)
-                if let name = team.name {
-                    Text(name)
-                        .font(.subheadline)
-                        .foregroundStyle(Color(.gray))
-                }
+//                if let name = team.name {
+//                    Text(name)
+//                        .font(.subheadline)
+//                        .foregroundStyle(Color(.gray))
+//                }
             }
             Spacer()
-            if let ranking = team.localRanking {
-                Text("#\(String(ranking))")
-            }
+//            if let ranking = team.localRanking {
+//                Text("#\(String(ranking))")
+//            }
         }
     }
 }

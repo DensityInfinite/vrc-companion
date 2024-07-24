@@ -30,6 +30,7 @@
 		B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F852C26BA3B00249F7D /* TeamModels.swift */; };
 		B39DEB0B2C298E3200A3312A /* AllianceTileFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */; };
 		B39DEB0D2C298E9000A3312A /* AllianceTileBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */; };
+		B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */; };
 		B3AEE7CC2C2A714700788A53 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEE7CB2C2A714700788A53 /* BannerView.swift */; };
 		B3C185FC2C095E68001D6F17 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C185FB2C095E68001D6F17 /* LookupView.swift */; };
 		B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */; };
@@ -82,6 +83,8 @@
 		B39B3F852C26BA3B00249F7D /* TeamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModels.swift; sourceTree = "<group>"; };
 		B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTileFull.swift; sourceTree = "<group>"; };
 		B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTileBorder.swift; sourceTree = "<group>"; };
+		B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsRanking.json; sourceTree = "<group>"; };
+		B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeTeam.json; sourceTree = "<group>"; };
 		B3AEE7CB2C2A714700788A53 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B3C185FB2C095E68001D6F17 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
 		B3C72D052B82F71600AAE764 /* VRC Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VRC Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +280,8 @@
 				B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */,
 				B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */,
 				B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */,
+				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */,
+				B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */,
 				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,
 				B3C72D122B82F71800AAE764 /* Preview Assets.xcassets in Resources */,
 				B3C72D0F2B82F71800AAE764 /* Assets.xcassets in Resources */,

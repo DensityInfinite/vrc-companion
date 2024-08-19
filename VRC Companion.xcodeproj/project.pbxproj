@@ -31,6 +31,7 @@
 		B39DEB0B2C298E3200A3312A /* AllianceTileFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */; };
 		B39DEB0D2C298E9000A3312A /* AllianceTileBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */; };
 		B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */; };
+		B39E65E72C51CBD200FC8D92 /* APIResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E65E62C51CBD200FC8D92 /* APIResources.swift */; };
 		B3AEE7CC2C2A714700788A53 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEE7CB2C2A714700788A53 /* BannerView.swift */; };
 		B3C185FC2C095E68001D6F17 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C185FB2C095E68001D6F17 /* LookupView.swift */; };
 		B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */; };
@@ -85,6 +86,7 @@
 		B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTileBorder.swift; sourceTree = "<group>"; };
 		B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsRanking.json; sourceTree = "<group>"; };
 		B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeTeam.json; sourceTree = "<group>"; };
+		B39E65E62C51CBD200FC8D92 /* APIResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResources.swift; sourceTree = "<group>"; };
 		B3AEE7CB2C2A714700788A53 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B3C185FB2C095E68001D6F17 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
 		B3C72D052B82F71600AAE764 /* VRC Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VRC Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 				B39B3F812C26B3BF00249F7D /* MatchModels.swift */,
 				B39B3F852C26BA3B00249F7D /* TeamModels.swift */,
 				B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */,
+				B39E65E62C51CBD200FC8D92 /* APIResources.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				B31FBF762B8308D600850E8A /* WatchlistView.swift in Sources */,
 				B31FBF782B8308E100850E8A /* MyTeamView.swift in Sources */,
 				B31FBF742B83077800850E8A /* EventView.swift in Sources */,
+				B39E65E72C51CBD200FC8D92 /* APIResources.swift in Sources */,
 				B32554532C2927C6009EEA20 /* AtAGlanceNeutral.swift in Sources */,
 				B31FBF6E2B83054800850E8A /* UpcomingView.swift in Sources */,
 				B32554582C293111009EEA20 /* AtAGlanceWin.swift in Sources */,

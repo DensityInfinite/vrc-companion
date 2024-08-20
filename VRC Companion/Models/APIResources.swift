@@ -1,5 +1,5 @@
 //
-//  APIResource.swift
+//  APIResources.swift
 //  VRC Companion
 //
 //  Created by Douglas Jiang on 25/7/2024.

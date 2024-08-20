@@ -22,6 +22,7 @@
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
 		B3502EC02C279C5B00A65640 /* UpcomingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */; };
 		B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */; };
+		B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959A2C754DF6003F65A0 /* NetworkRequests.swift */; };
 		B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */; };
 		B37F27BD2C2939530045DD27 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */; };
 		B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */; };
@@ -76,6 +77,7 @@
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
 		B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPreview.swift; sourceTree = "<group>"; };
 		B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsMatchlist.json; sourceTree = "<group>"; };
+		B365959A2C754DF6003F65A0 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTeamRow.swift; sourceTree = "<group>"; };
 		B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
 		B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeWorldsMatchlist.json; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				B39B3F852C26BA3B00249F7D /* TeamModels.swift */,
 				B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */,
 				B39E65E62C51CBD200FC8D92 /* APIResources.swift */,
+				B365959A2C754DF6003F65A0 /* NetworkRequests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				B3AEE7CC2C2A714700788A53 /* BannerView.swift in Sources */,
 				B311676B2C191D5900250066 /* StateController.swift in Sources */,
 				B3C72D0B2B82F71600AAE764 /* ContentView.swift in Sources */,
+				B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */,
 				B37F27BD2C2939530045DD27 /* AtAGlanceView.swift in Sources */,
 				B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */,
 				B3C185FC2C095E68001D6F17 /* LookupView.swift in Sources */,

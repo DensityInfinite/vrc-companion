@@ -62,3 +62,14 @@ extension TeamInfoModel {
         return info
     }
 }
+
+extension ErrorWrapper {
+    static var preview: ErrorWrapper {
+        enum SampleError: Error {
+            case errorRequired
+        }
+        
+        return ErrorWrapper(error: SampleError.errorRequired,
+                            image: "wifi.exclamationmark", guidance: "API request failed.")
+    }
+}

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct UpcomingView: View {
     @EnvironmentObject var state: StateController
-    @State private var matchlist = Model()
+    @State private var matchlist = APIModel()
     @State private var error: ErrorWrapper?
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -25,14 +25,14 @@ struct UpcomingView: View {
                 .navigationTitle("Upcoming")
                 .task {
                     do {
-                        try await matchlist.fetchMatchlist()
+                        try await matchlist.fetchMatchlist(state: state)
                         self.error = nil
                     } catch {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "API request failed.")
                     }
                 }
                 .refreshable {
-                    try? await matchlist.fetchMatchlist()
+                    try? await matchlist.fetchMatchlist(state: state)
                 }
                 
                 // Status Feedback
@@ -52,15 +52,15 @@ struct UpcomingView: View {
 }
 
 extension UpcomingView {
-    @Observable class Model {
+    @Observable class APIModel {
         private(set) var matches: [MatchModel] = []
         private(set) var isLoading = false
 
-        @MainActor func fetchMatchlist() async throws {
+        @MainActor func fetchMatchlist(state: StateController) async throws {
             guard !isLoading else { return }
             defer { isLoading = false }
             isLoading = true
-            let resource = MatchlistResource(StateController().userTeam.id)
+            let resource = MatchlistResource(state.userTeam.id, state.focusedCompetitionID)
             let request = MatchlistRequest(resource: resource)
             matches = try await request.execute().matches
         }

@@ -7,15 +7,18 @@
 
 import Foundation
 
-protocol NetworkRequest: AnyObject {
+protocol APIRequest: AnyObject {
     associatedtype ModelType
     func decode(_ data: Data) throws -> ModelType
     func execute() async throws -> ModelType
 }
 
-extension NetworkRequest {
+extension APIRequest {
     func load(_ url: URL) async throws -> ModelType {
-        let (data, _) = try await URLSession.shared.data(from: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let (data, _) = try await URLSession.shared.data(for: request)
         return try decode(data)
     }
 }
@@ -28,11 +31,10 @@ class MatchlistRequest {
     }
 }
 
-extension MatchlistRequest: NetworkRequest {
-    func decode(_ data: Data) throws -> MatchlistRequest.ModelType {
+extension MatchlistRequest: APIRequest {
+    func decode(_ data: Data) throws -> MatchlistResource.ModelType {
         return try JSONDecoder.apiDecoder
             .decode(MatchlistModel.self, from: data)
-
     }
     
     func execute() async throws -> MatchlistResource.ModelType {

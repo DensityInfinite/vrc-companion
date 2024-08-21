@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            UpcomingView(matchlist: .preview)
+            UpcomingView()
                 .tabItem {
                     Label("Upcoming", systemImage: "chevron.forward.2")
                 }

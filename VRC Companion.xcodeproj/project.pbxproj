@@ -20,9 +20,11 @@
 		B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */; };
 		B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341CA682B881DCD002E1856 /* MatchDetails.swift */; };
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
-		B3502EC02C279C5B00A65640 /* UpcomingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */; };
+		B3502EC02C279C5B00A65640 /* Preview Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */; };
 		B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */; };
 		B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959A2C754DF6003F65A0 /* NetworkRequests.swift */; };
+		B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959D2C755F4A003F65A0 /* ErrorView.swift */; };
+		B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */; };
 		B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */; };
 		B37F27BD2C2939530045DD27 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */; };
 		B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */; };
@@ -75,9 +77,11 @@
 		B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceLoss.swift; sourceTree = "<group>"; };
 		B341CA682B881DCD002E1856 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
-		B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPreview.swift; sourceTree = "<group>"; };
+		B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview Extensions.swift"; sourceTree = "<group>"; };
 		B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsMatchlist.json; sourceTree = "<group>"; };
 		B365959A2C754DF6003F65A0 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		B365959D2C755F4A003F65A0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTeamRow.swift; sourceTree = "<group>"; };
 		B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
 		B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeWorldsMatchlist.json; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				B31FBF712B83075900850E8A /* Watchlist */,
 				B31FBF722B83076000850E8A /* My team */,
 				B3C185FA2C095E43001D6F17 /* Lookup */,
+				B365959C2C755F19003F65A0 /* Errors */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,8 +221,17 @@
 				B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */,
 				B39E65E62C51CBD200FC8D92 /* APIResources.swift */,
 				B365959A2C754DF6003F65A0 /* NetworkRequests.swift */,
+				B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B365959C2C755F19003F65A0 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B365959D2C755F4A003F65A0 /* ErrorView.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		B39B3F802C26B36500249F7D /* Controllers */ = {
@@ -283,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				B3C72D112B82F71800AAE764 /* Preview Assets.xcassets */,
-				B3502EBF2C279C5B00A65640 /* UpcomingPreview.swift */,
+				B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */,
 				B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */,
 				B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */,
 				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */,
@@ -453,11 +467,13 @@
 				B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */,
 				B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */,
 				B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */,
+				B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */,
 				B31FBF6C2B83047A00850E8A /* SmallMatchRow.swift in Sources */,
-				B3502EC02C279C5B00A65640 /* UpcomingPreview.swift in Sources */,
+				B3502EC02C279C5B00A65640 /* Preview Extensions.swift in Sources */,
 				B39B3F822C26B3BF00249F7D /* MatchModels.swift in Sources */,
 				B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */,
 				B32554562C2930FC009EEA20 /* AtAGlanceQueue.swift in Sources */,
+				B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */,
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
 				B39DEB0B2C298E3200A3312A /* AllianceTileFull.swift in Sources */,
 				B39DEB0D2C298E9000A3312A /* AllianceTileBorder.swift in Sources */,

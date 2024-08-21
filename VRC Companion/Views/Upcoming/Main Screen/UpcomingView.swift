@@ -15,13 +15,19 @@ struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List(matchlist.matches, id: \.id, rowContent: { match in
-                    NavigationLink {
-                        MatchDetails(match: match).environmentObject(state)
-                    } label: {
-                        LargeMatchRow(match: match)
+                List{
+                    ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
+                        NavigationLink {
+                            MatchDetails(match: match).environmentObject(state)
+                        } label: {
+                            if index < 3 {
+                                LargeMatchRow(match: match)
+                            } else {
+                                SmallMatchRow(match: match)
+                            }
+                        }
                     }
-                })
+                }
                 .navigationTitle("Upcoming")
                 .task {
                     do {
@@ -32,7 +38,12 @@ struct UpcomingView: View {
                     }
                 }
                 .refreshable {
-                    try? await matchlist.fetchMatchlist(state: state)
+                    do {
+                        try await matchlist.fetchMatchlist(state: state)
+                        self.error = nil
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "API request failed.")
+                    }
                 }
                 
                 // Status Feedback

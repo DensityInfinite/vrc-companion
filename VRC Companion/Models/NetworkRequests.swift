@@ -25,7 +25,7 @@ extension APIRequest {
 
 class MatchlistRequest {
     let resource: MatchlistResource
-    
+
     init(resource: MatchlistResource) {
         self.resource = resource
     }
@@ -34,11 +34,29 @@ class MatchlistRequest {
 extension MatchlistRequest: APIRequest {
     func decode(_ data: Data) throws -> MatchlistResource.ModelType {
         return try JSONDecoder.apiDecoder
-            .decode(MatchlistModel.self, from: data)
+            .decode(MatchlistResource.ModelType.self, from: data)
     }
-    
+
     func execute() async throws -> MatchlistResource.ModelType {
         try await load(resource.url)
     }
 }
 
+class RankingsRequest {
+    let resource: RankingsResource
+
+    init(resource: RankingsResource) {
+        self.resource = resource
+    }
+}
+
+extension RankingsRequest: APIRequest {
+    func decode(_ data: Data) throws -> RankingsResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(RankingsResource.ModelType.self, from: data)
+    }
+
+    func execute() async throws -> RankingsResource.ModelType {
+        try await load(resource.url)
+    }
+}

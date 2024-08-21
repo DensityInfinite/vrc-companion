@@ -63,7 +63,7 @@ struct RankingsModel: Decodable {
     let ties: Int?
     
     let highScore: Int?
-    let average: Int?
+    let average: Float?
     let total: Int?
 }
 
@@ -73,6 +73,18 @@ extension RankingsModel {
         case highScore = "high_score"
         case average = "average_points"
         case total = "total_points"
+    }
+}
+
+struct APIRankingsModel: Decodable {
+    let meta: Meta
+    let rankings: [RankingsModel]
+}
+
+extension APIRankingsModel {
+    enum CodingKeys: String, CodingKey {
+        case rankings = "data"
+        case meta
     }
 }
 

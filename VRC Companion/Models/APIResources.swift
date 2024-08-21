@@ -23,15 +23,23 @@ extension APIResource {
 }
 
 struct MatchlistResource: APIResource {
-    var teamID: Int
-    
     typealias ModelType = MatchlistModel
     var methodPath: String
     var eventID: Int?
     
     init(_ teamID: Int, _ eventID: Int? = nil) {
-        self.teamID = teamID
         methodPath = "/teams/\(teamID)/matches"
+        self.eventID = eventID
+    }
+}
+
+struct RankingsResource: APIResource {
+    typealias ModelType = APIRankingsModel
+    var methodPath: String
+    var eventID: Int?
+    
+    init(_ teamID: Int, _ eventID: Int? = nil) {
+        methodPath = "/teams/\(teamID)/rankings"
         self.eventID = eventID
     }
 }

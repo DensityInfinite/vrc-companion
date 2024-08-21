@@ -1,0 +1,27 @@
+{
+    "id": 150122,
+    "number": "1051X",
+    "team_name": "Siege",
+    "robot_name": "Scot",
+    "organization": "The Scots College Sydney",
+    "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sydney",
+        "region": null,
+        "postcode": "2023",
+        "country": "Australia",
+        "coordinates": {
+            "lat": -33.899999999999999,
+            "lon": 151.30000000000001
+        }
+    },
+    "registered": false,
+    "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+    },
+    "grade": "High School"
+}

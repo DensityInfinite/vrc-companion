@@ -1,0 +1,45 @@
+{
+    "meta": {
+        "current_page": 1,
+        "first_page_url": "https://www.robotevents.com/api/v2/teams/150122/rankings?page=1",
+        "from": 1,
+        "last_page": 1,
+        "last_page_url": "https://www.robotevents.com/api/v2/teams/150122/rankings?page=1",
+        "next_page_url": null,
+        "path": "https://www.robotevents.com/api/v2/teams/150122/rankings",
+        "per_page": 25,
+        "prev_page_url": null,
+        "to": 1,
+        "total": 1
+    },
+    "data": [
+        {
+            "id": 18334877,
+            "event": {
+                "id": 52110,
+                "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+                "code": "RE-VRC-23-2110"
+            },
+            "division": {
+                "id": 1,
+                "name": "Default Division",
+                "code": null
+            },
+            "rank": 1,
+            "team": {
+                "id": 150122,
+                "name": "1051X",
+                "code": null
+            },
+            "wins": 8,
+            "losses": 1,
+            "ties": 0,
+            "wp": 18,
+            "ap": 64,
+            "sp": 793,
+            "high_score": 133,
+            "average_points": 113.44,
+            "total_points": 1021
+        }
+    ]
+}

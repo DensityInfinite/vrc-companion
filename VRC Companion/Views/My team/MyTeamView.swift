@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyTeamView: View {
+    @EnvironmentObject var state: StateController
+    
     var body: some View {
         NavigationStack {
             List {
@@ -20,4 +22,5 @@ struct MyTeamView: View {
 
 #Preview {
     MyTeamView()
+        .environmentObject(StateController())
 }

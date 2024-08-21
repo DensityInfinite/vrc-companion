@@ -33,6 +33,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("My team", systemImage: "person")
                 }
+                .environmentObject(state)
+            
             LookupView()
                 .tabItem {
                     Label("Lookup", systemImage: "magnifyingglass")

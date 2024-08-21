@@ -31,8 +31,6 @@
 		B39B3F822C26B3BF00249F7D /* MatchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F812C26B3BF00249F7D /* MatchModels.swift */; };
 		B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */; };
 		B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F852C26BA3B00249F7D /* TeamModels.swift */; };
-		B39DEB0B2C298E3200A3312A /* AllianceTileFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */; };
-		B39DEB0D2C298E9000A3312A /* AllianceTileBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */; };
 		B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */; };
 		B39E65E72C51CBD200FC8D92 /* APIResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E65E62C51CBD200FC8D92 /* APIResources.swift */; };
 		B3AEE7CC2C2A714700788A53 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEE7CB2C2A714700788A53 /* BannerView.swift */; };
@@ -88,8 +86,6 @@
 		B39B3F812C26B3BF00249F7D /* MatchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModels.swift; sourceTree = "<group>"; };
 		B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotEventsMeta.swift; sourceTree = "<group>"; };
 		B39B3F852C26BA3B00249F7D /* TeamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModels.swift; sourceTree = "<group>"; };
-		B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTileFull.swift; sourceTree = "<group>"; };
-		B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceTileBorder.swift; sourceTree = "<group>"; };
 		B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsRanking.json; sourceTree = "<group>"; };
 		B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeTeam.json; sourceTree = "<group>"; };
 		B39E65E62C51CBD200FC8D92 /* APIResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResources.swift; sourceTree = "<group>"; };
@@ -246,8 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				B31FBF692B82FDBF00850E8A /* AllianceTileView.swift */,
-				B39DEB0A2C298E3200A3312A /* AllianceTileFull.swift */,
-				B39DEB0C2C298E9000A3312A /* AllianceTileBorder.swift */,
 			);
 			path = "Alliance Tile";
 			sourceTree = "<group>";
@@ -475,8 +469,6 @@
 				B32554562C2930FC009EEA20 /* AtAGlanceQueue.swift in Sources */,
 				B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */,
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
-				B39DEB0B2C298E3200A3312A /* AllianceTileFull.swift in Sources */,
-				B39DEB0D2C298E9000A3312A /* AllianceTileBorder.swift in Sources */,
 				B31FBF6A2B82FDBF00850E8A /* AllianceTileView.swift in Sources */,
 				B31FBF762B8308D600850E8A /* WatchlistView.swift in Sources */,
 				B31FBF782B8308E100850E8A /* MyTeamView.swift in Sources */,

@@ -42,6 +42,7 @@
 		B3C72D1C2B82F71900AAE764 /* VRC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D1B2B82F71900AAE764 /* VRC_CompanionTests.swift */; };
 		B3C72D262B82F71900AAE764 /* VRC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D252B82F71900AAE764 /* VRC_CompanionUITests.swift */; };
 		B3C72D282B82F71900AAE764 /* VRC_CompanionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D272B82F71900AAE764 /* VRC_CompanionUITestsLaunchTests.swift */; };
+		B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */ = {isa = PBXBuildFile; fileRef = B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +87,7 @@
 		B39B3F812C26B3BF00249F7D /* MatchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModels.swift; sourceTree = "<group>"; };
 		B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotEventsMeta.swift; sourceTree = "<group>"; };
 		B39B3F852C26BA3B00249F7D /* TeamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModels.swift; sourceTree = "<group>"; };
-		B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsRanking.json; sourceTree = "<group>"; };
+		B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsRankings.json; sourceTree = "<group>"; };
 		B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeTeam.json; sourceTree = "<group>"; };
 		B39E65E62C51CBD200FC8D92 /* APIResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResources.swift; sourceTree = "<group>"; };
 		B3AEE7CB2C2A714700788A53 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -294,7 +295,7 @@
 				B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */,
 				B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */,
 				B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */,
-				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRanking.json */,
+				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */,
 				B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */,
 			);
 			path = "Preview Content";
@@ -421,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */,
 				B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */,
 				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,
 				B3C72D122B82F71800AAE764 /* Preview Assets.xcassets in Resources */,

@@ -17,7 +17,7 @@ struct AtAGlanceView: View {
                 if time.timeIntervalSinceNow > 0 {
                     AtAGlanceQueue(match: match)
                 } else {
-                    if let userAlliance = match.allianceForTeam(id: state.userTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userTeam.id, side: .opposition) {
+                    if let userAlliance = match.allianceForTeam(id: state.userAllianceTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userAllianceTeam.id, side: .opposition) {
                         if userAlliance.score >= oppositionAlliance.score {
                             AtAGlanceWin(match: match)
                         } else {
@@ -29,7 +29,7 @@ struct AtAGlanceView: View {
                 AtAGlanceNeutral(match: match)
             }
         } else {
-            if let userAlliance = match.allianceForTeam(id: state.userTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userTeam.id, side: .opposition) {
+            if let userAlliance = match.allianceForTeam(id: state.userAllianceTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userAllianceTeam.id, side: .opposition) {
                 if userAlliance.score >= oppositionAlliance.score {
                     AtAGlanceWin(match: match)
                 } else {

@@ -29,7 +29,7 @@ struct ContentView: View {
                     Label("Watchlist", systemImage: "star")
                 }
             
-            MyTeamView()
+            MyTeamView(teamInfo: .preview, teamRankings: .preview)
                 .tabItem {
                     Label("My team", systemImage: "person")
                 }

@@ -12,7 +12,7 @@ struct BannerView: View {
     var match: MatchModel
 
     var body: some View {
-        if let alliance = match.allianceForTeam(id: state.userTeam.id, side: .team) {
+        if let alliance = match.allianceForTeam(id: state.userAllianceTeam.id, side: .team) {
             if alliance.color == "blue" {
                 HStack {
                     Image(systemName: "info.circle")

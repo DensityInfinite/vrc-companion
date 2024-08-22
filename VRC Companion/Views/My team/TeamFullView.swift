@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct MyTeamView: View {
+struct TeamFullView: View {
     @EnvironmentObject var state: StateController
+    @State private var statsSelection = 0
+    var teamInfo: TeamInfoModel
+    var teamRankings: RankingsModel
     
     var body: some View {
         NavigationStack {
             List {
-                Text("monkey.kaboom")
+                Section("Overview", content: {
+                    TeamOverviewView(teamInfo: teamInfo, teamRankings: teamRankings)
+                })
             }
             .navigationTitle("My Team")
         }
@@ -21,6 +26,6 @@ struct MyTeamView: View {
 }
 
 #Preview {
-    MyTeamView()
+    TeamFullView(teamInfo: .preview, teamRankings: .preview)
         .environmentObject(StateController())
 }

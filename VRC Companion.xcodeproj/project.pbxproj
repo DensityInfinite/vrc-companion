@@ -13,7 +13,7 @@
 		B31FBF6E2B83054800850E8A /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF6D2B83054800850E8A /* UpcomingView.swift */; };
 		B31FBF742B83077800850E8A /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF732B83077800850E8A /* EventView.swift */; };
 		B31FBF762B8308D600850E8A /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF752B8308D600850E8A /* WatchlistView.swift */; };
-		B31FBF782B8308E100850E8A /* MyTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF772B8308E100850E8A /* MyTeamView.swift */; };
+		B31FBF782B8308E100850E8A /* TeamFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FBF772B8308E100850E8A /* TeamFullView.swift */; };
 		B32554532C2927C6009EEA20 /* AtAGlanceNeutral.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554522C2927C6009EEA20 /* AtAGlanceNeutral.swift */; };
 		B32554562C2930FC009EEA20 /* AtAGlanceQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554552C2930FC009EEA20 /* AtAGlanceQueue.swift */; };
 		B32554582C293111009EEA20 /* AtAGlanceWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554572C293111009EEA20 /* AtAGlanceWin.swift */; };
@@ -22,6 +22,7 @@
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
 		B3502EC02C279C5B00A65640 /* Preview Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */; };
 		B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */; };
+		B35F94A92C76C5380053ADDC /* TeamOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F94A82C76C5380053ADDC /* TeamOverviewView.swift */; };
 		B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959A2C754DF6003F65A0 /* NetworkRequests.swift */; };
 		B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959D2C755F4A003F65A0 /* ErrorView.swift */; };
 		B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */; };
@@ -69,7 +70,7 @@
 		B31FBF6D2B83054800850E8A /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
 		B31FBF732B83077800850E8A /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		B31FBF752B8308D600850E8A /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
-		B31FBF772B8308E100850E8A /* MyTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamView.swift; sourceTree = "<group>"; };
+		B31FBF772B8308E100850E8A /* TeamFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFullView.swift; sourceTree = "<group>"; };
 		B32554522C2927C6009EEA20 /* AtAGlanceNeutral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceNeutral.swift; sourceTree = "<group>"; };
 		B32554552C2930FC009EEA20 /* AtAGlanceQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceQueue.swift; sourceTree = "<group>"; };
 		B32554572C293111009EEA20 /* AtAGlanceWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceWin.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
 		B3502EBF2C279C5B00A65640 /* Preview Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview Extensions.swift"; sourceTree = "<group>"; };
 		B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeNationalsMatchlist.json; sourceTree = "<group>"; };
+		B35F94A82C76C5380053ADDC /* TeamOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverviewView.swift; sourceTree = "<group>"; };
 		B365959A2C754DF6003F65A0 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		B365959D2C755F4A003F65A0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
@@ -158,7 +160,8 @@
 		B31FBF722B83076000850E8A /* My team */ = {
 			isa = PBXGroup;
 			children = (
-				B31FBF772B8308E100850E8A /* MyTeamView.swift */,
+				B31FBF772B8308E100850E8A /* TeamFullView.swift */,
+				B35F94A82C76C5380053ADDC /* TeamOverviewView.swift */,
 			);
 			path = "My team";
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */,
 				B31FBF6C2B83047A00850E8A /* SmallMatchRow.swift in Sources */,
 				B3502EC02C279C5B00A65640 /* Preview Extensions.swift in Sources */,
+				B35F94A92C76C5380053ADDC /* TeamOverviewView.swift in Sources */,
 				B39B3F822C26B3BF00249F7D /* MatchModels.swift in Sources */,
 				B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */,
 				B32554562C2930FC009EEA20 /* AtAGlanceQueue.swift in Sources */,
@@ -473,7 +477,7 @@
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
 				B31FBF6A2B82FDBF00850E8A /* AllianceTileView.swift in Sources */,
 				B31FBF762B8308D600850E8A /* WatchlistView.swift in Sources */,
-				B31FBF782B8308E100850E8A /* MyTeamView.swift in Sources */,
+				B31FBF782B8308E100850E8A /* TeamFullView.swift in Sources */,
 				B31FBF742B83077800850E8A /* EventView.swift in Sources */,
 				B39E65E72C51CBD200FC8D92 /* APIResources.swift in Sources */,
 				B32554532C2927C6009EEA20 /* AtAGlanceNeutral.swift in Sources */,

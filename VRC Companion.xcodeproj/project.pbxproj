@@ -157,13 +157,13 @@
 			path = Watchlist;
 			sourceTree = "<group>";
 		};
-		B31FBF722B83076000850E8A /* My team */ = {
+		B31FBF722B83076000850E8A /* Team */ = {
 			isa = PBXGroup;
 			children = (
 				B31FBF772B8308E100850E8A /* TeamFullView.swift */,
 				B35F94A82C76C5380053ADDC /* TeamOverviewView.swift */,
 			);
-			path = "My team";
+			path = Team;
 			sourceTree = "<group>";
 		};
 		B32554512C2926FF009EEA20 /* Main Screen */ = {
@@ -206,7 +206,7 @@
 				B31FBF6F2B83073D00850E8A /* Upcoming */,
 				B31FBF702B83075100850E8A /* Event */,
 				B31FBF712B83075900850E8A /* Watchlist */,
-				B31FBF722B83076000850E8A /* My team */,
+				B31FBF722B83076000850E8A /* Team */,
 				B3C185FA2C095E43001D6F17 /* Lookup */,
 				B365959C2C755F19003F65A0 /* Errors */,
 			);

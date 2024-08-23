@@ -9,26 +9,39 @@ import SwiftUI
 
 struct BannerView: View {
     @EnvironmentObject var state: StateController
-    var match: MatchModel
+    var match: MatchModel?
+    var systemImage: String?
+    var message: String?
+    var color: Color?
 
     var body: some View {
-        if let alliance = match.allianceForTeam(id: state.userTeamInfo.id, side: .team) {
-            if alliance.color == "blue" {
-                HStack {
-                    Image(systemName: "info.circle")
-                        .foregroundStyle(.blueAllianceSolid)
-                        .fontWeight(.bold)
-                    Text("You are part of the Blue Alliance")
+        if let match {
+            if let alliance = match.allianceForTeam(id: state.userTeamInfo.id, side: .team) {
+                if alliance.color == "blue" {
+                    HStack {
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(.blueAllianceSolid)
+                            .fontWeight(.bold)
+                        Text("You are part of the Blue Alliance")
+                    }
+                    .listRowBackground(Color(.blueAlliance).opacity(0.5))
+                } else {
+                    HStack {
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(.redAllianceSolid)
+                            .fontWeight(.bold)
+                        Text("You are part of the Red Alliance")
+                    }
+                    .listRowBackground(Color(.redAlliance).opacity(0.5))
                 }
-                .listRowBackground(Color(.blueAlliance).opacity(0.5))
-            } else {
+            }
+        } else {
+            if let systemName = systemImage, let message, let color {
                 HStack {
-                    Image(systemName: "info.circle")
-                        .foregroundStyle(.redAllianceSolid)
-                        .fontWeight(.bold)
-                    Text("You are part of the Red Alliance")
+                    Image(systemName: systemName)
+                    Text(message)
                 }
-                .listRowBackground(Color(.redAlliance).opacity(0.5))
+                .listRowBackground(color)
             }
         }
     }

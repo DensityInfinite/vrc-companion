@@ -12,6 +12,7 @@ struct TeamFullView: View {
     @State private var apiData = APIModel()
     @State private var statsSelection: StatsTypes = .matches
     @State private var error: ErrorWrapper?
+    @State private var hasAppeared = false
     var title: String
     var teamID: Int
     var teamRankings: RankingsModel
@@ -75,9 +76,11 @@ struct TeamFullView: View {
                 }
                 .task {
                     do {
+                        guard !hasAppeared else { return }
                         try await apiData.fetchTeamInfo(teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
+                        hasAppeared = true
                     } catch {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update info.")
                     }

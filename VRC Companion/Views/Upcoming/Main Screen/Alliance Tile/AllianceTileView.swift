@@ -11,6 +11,7 @@ struct AllianceTileView: View {
     @EnvironmentObject var state: StateController
     @State private var topTeamRanking = APIModel()
     @State private var bottomTeamRanking = APIModel()
+    @State private var hasAppeared = false
     var alliance: AllianceModel
 
     var body: some View {
@@ -33,7 +34,7 @@ struct AllianceTileView: View {
                 Text(alliance.teams[1].number)
                     .font(.callout)
                 Spacer()
-                if topTeamRanking.isLoading {
+                if bottomTeamRanking.isLoading {
                     ProgressView()
                         .controlSize(.mini)
                 }
@@ -58,10 +59,13 @@ struct AllianceTileView: View {
             }
         )
         .task {
-            try? await topTeamRanking.fetchRankings(state: state, teamID: alliance.teams[0].id)
-        }
-        .task {
-            try? await bottomTeamRanking.fetchRankings(state: state, teamID: alliance.teams[1].id)
+            if !hasAppeared || topTeamRanking.rankings == nil || bottomTeamRanking.rankings == nil {
+                try? await topTeamRanking.fetchRankings(state: state, teamID: alliance.teams[0].id)
+                try? await bottomTeamRanking.fetchRankings(state: state, teamID: alliance.teams[1].id)
+                hasAppeared = true
+            } else {
+                return
+            }
         }
     }
 }

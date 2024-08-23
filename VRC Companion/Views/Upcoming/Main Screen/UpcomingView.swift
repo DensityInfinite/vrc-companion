@@ -11,6 +11,7 @@ struct UpcomingView: View {
     @EnvironmentObject var state: StateController
     @State private var matchlist = APIModel()
     @State private var error: ErrorWrapper?
+    @State private var hasAppeared = false
 
     var body: some View {
         NavigationStack {
@@ -40,8 +41,10 @@ struct UpcomingView: View {
                 .navigationTitle("Upcoming")
                 .task {
                     do {
+                        guard !hasAppeared else { return }
                         try await matchlist.fetchMatchlist(state: state)
                         self.error = nil
+                        hasAppeared = true
                     } catch {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update matchlist.")
                     }

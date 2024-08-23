@@ -33,21 +33,17 @@ struct TeamOverviewView: View {
                     Text("#\(rank)")
                         .font(.system(size: 60, weight: .regular))
                         .fontWidth(.condensed)
-                        .padding(.top, 10)
                         .padding(.bottom, -15)
                     Text("Seeding Rank")
                         .font(.subheadline)
                         .fontWidth(.condensed)
                         .foregroundStyle(.gray)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
-                        .padding(.bottom, 10)
                 }
+                .frame(width: 100, height: 110)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(.success)
                 )
-                .padding(.trailing, 4)
             }
         }
     }

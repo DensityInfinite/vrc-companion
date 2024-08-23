@@ -63,7 +63,7 @@ struct RankingsModel: Decodable {
     let ties: Int?
     
     let highScore: Int?
-    let average: Float?
+    let average: Double?
     let total: Int?
 }
 

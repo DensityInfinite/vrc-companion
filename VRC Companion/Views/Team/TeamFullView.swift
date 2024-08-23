@@ -10,22 +10,23 @@ import SwiftUI
 struct TeamFullView: View {
     @EnvironmentObject var state: StateController
     @State private var statsSelection: StatsTypes = .matches
+    @State private var isResearch: Bool = false
     var title: String
     var teamInfo: TeamInfoModel
     var teamRankings: RankingsModel
     var matchlist: MatchlistModel
-    
+
     enum StatsTypes {
         case matches, global, local
     }
-    
+
     var body: some View {
         NavigationStack {
             List {
                 Section("Overview", content: {
                     TeamOverviewView(teamInfo: teamInfo, teamRankings: teamRankings)
                 })
-                
+
                 Section("Details", content: {
                     Picker("Statistics Level", selection: $statsSelection) {
                         Text("Matches").tag(StatsTypes.matches)
@@ -34,12 +35,12 @@ struct TeamFullView: View {
                     }
                     .pickerStyle(.segmented)
                     .listRowSeparator(.hidden)
-                    
+
                     switch statsSelection {
                     case .matches:
-                        ForEach(matchlist.matches) {match in
+                        ForEach(matchlist.matches) { match in
                             NavigationLink(destination: {
-                                MatchDetails(match: match).environmentObject(state)
+                                MatchDetails(match: match, isResearch: isResearch).environmentObject(state)
                             }, label: {
                                 DetailedMatchRow(team: teamInfo, match: match)
                             })
@@ -50,6 +51,9 @@ struct TeamFullView: View {
                         Text("Local")
                     }
                 })
+            }
+            .onAppear {
+                isResearch = teamInfo.id != state.userTeamInfo.id
             }
             .animation(.default, value: statsSelection)
             .navigationTitle(title)

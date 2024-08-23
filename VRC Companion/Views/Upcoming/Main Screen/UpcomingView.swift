@@ -18,7 +18,7 @@ struct UpcomingView: View {
                 List{
                     ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
                         NavigationLink {
-                            MatchDetails(match: match).environmentObject(state)
+                            MatchDetails(match: match, isResearch: false).environmentObject(state)
                         } label: {
                             if index < 3 {
                                 LargeMatchRow(match: match)

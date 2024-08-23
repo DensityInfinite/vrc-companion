@@ -13,6 +13,7 @@ struct TeamFullView: View {
     var title: String
     var teamInfo: TeamInfoModel
     var teamRankings: RankingsModel
+    var matchlist: MatchlistModel
     
     enum StatsTypes {
         case matches, global, local
@@ -32,17 +33,31 @@ struct TeamFullView: View {
                         Text("Local Stats").tag(StatsTypes.local)
                     }
                     .pickerStyle(.segmented)
-                    .padding(.leading, -14)
-                    .padding(.trailing, -14)
                     .listRowSeparator(.hidden)
+                    
+                    switch statsSelection {
+                    case .matches:
+                        ForEach(matchlist.matches) {match in
+                            NavigationLink(destination: {
+                                MatchDetails(match: match).environmentObject(state)
+                            }, label: {
+                                DetailedMatchRow(team: teamInfo, match: match)
+                            })
+                        }
+                    case .global:
+                        Text("Global")
+                    case .local:
+                        Text("Local")
+                    }
                 })
             }
+            .animation(.default, value: statsSelection)
             .navigationTitle(title)
         }
     }
 }
 
 #Preview {
-    TeamFullView(title: "My Team", teamInfo: .preview, teamRankings: .preview)
+    TeamFullView(title: "My Team", teamInfo: .preview, teamRankings: .preview, matchlist: .preview)
         .environmentObject(StateController())
 }

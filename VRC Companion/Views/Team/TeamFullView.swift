@@ -41,8 +41,8 @@ struct TeamFullView: View {
                         Section("Details", content: {
                             Picker("Statistics Level", selection: $statsSelection) {
                                 Text("Matches").tag(StatsTypes.matches)
-                                Text("Global Stats").tag(StatsTypes.global)
                                 Text("Local Stats").tag(StatsTypes.local)
+                                Text("Global Stats").tag(StatsTypes.global)
                             }
                             .pickerStyle(.segmented)
                             .listRowSeparator(.hidden)
@@ -66,10 +66,10 @@ struct TeamFullView: View {
                                         DetailedMatchRow(team: teamInfo, match: match)
                                     })
                                 }
-                            case .global:
-                                Text("Global")
                             case .local:
                                 Text("Local")
+                            case .global:
+                                Text("Global")
                             }
                         })
                     }
@@ -92,6 +92,11 @@ struct TeamFullView: View {
                         self.error = nil
                     } catch {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update info.")
+                    }
+                }
+                .onAppear {
+                    if teamID == state.userTeamInfo.id && !hasAppeared {
+                        statsSelection = .local
                     }
                 }
                 .animation(.default, value: statsSelection)

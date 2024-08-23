@@ -60,3 +60,22 @@ extension RankingsRequest: APIRequest {
         try await load(resource.url)
     }
 }
+
+class TeamInfoRequest {
+    let resource: TeamInfoResource
+    
+    init(resource: TeamInfoResource) {
+        self.resource = resource
+    }
+}
+
+extension TeamInfoRequest: APIRequest {
+    func decode(_ data: Data) throws -> TeamInfoResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(TeamInfoResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> TeamInfoResource.ModelType {
+        try await load(resource.url)
+    }
+}

@@ -18,11 +18,10 @@ struct UpcomingView: View {
                 List {
                     if error != nil && !matchlist.matches.isEmpty {
                         Section {
-                            HStack {
-                                Image(systemName: "wifi.exclamationmark")
-                                Text("Failed to update matchlist.")
-                            }
+                            BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
+                                .environmentObject(state)
                         }
+                        .listSectionSpacing(.compact)
                     }
                     Section {
                         ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in

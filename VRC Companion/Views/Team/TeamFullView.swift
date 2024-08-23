@@ -27,11 +27,10 @@ struct TeamFullView: View {
                     if let teamInfo = apiData.teamInfo {
                         if error != nil {
                             Section {
-                                HStack {
-                                    Image(systemName: "wifi.exclamationmark")
-                                    Text("Failed to update info.")
-                                }
+                                BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
+                                    .environmentObject(state)
                             }
+                            .listSectionSpacing(.compact)
                         }
                         
                         Section("Overview", content: {
@@ -52,7 +51,11 @@ struct TeamFullView: View {
                                 if apiData.isLoading {
                                     HStack {
                                         ProgressView()
-                                        Text("Fetching matchlist...")
+                                        if apiData.matchlist.isEmpty {
+                                            Text("Fetching matchlist...")
+                                        } else {
+                                            Text("Updating matchlist...")
+                                        }
                                     }
                                 }
                                 ForEach(apiData.matchlist) { match in
@@ -71,6 +74,15 @@ struct TeamFullView: View {
                     }
                 }
                 .task {
+                    do {
+                        try await apiData.fetchTeamInfo(teamID: teamID)
+                        try await apiData.fetchMatchlist(state: state, teamID: teamID)
+                        self.error = nil
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update info.")
+                    }
+                }
+                .refreshable {
                     do {
                         try await apiData.fetchTeamInfo(teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)

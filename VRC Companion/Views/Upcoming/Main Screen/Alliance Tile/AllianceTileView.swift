@@ -50,7 +50,7 @@ struct AllianceTileView: View {
         .padding(.bottom, 10)
         .background(
             Group {
-                if let _ = alliance.indexFor(team: state.userAllianceTeam.id) {
+                if let _ = alliance.indexFor(team: state.userTeamInfo.id) {
                     RoundedRectangle(cornerRadius: 6.0).foregroundStyle(alliance.color == "blue" ? .blueAlliance : .redAlliance)
                 } else {
                     RoundedRectangle(cornerRadius: 6.0).strokeBorder(alliance.color == "blue" ? .blueAlliance : .redAlliance, lineWidth: 2)

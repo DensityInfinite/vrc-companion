@@ -27,14 +27,14 @@ struct MatchDetails: View {
                 }
                 .listSectionSpacing(.compact)
                 
-                Section("Opponents - \(match.allianceForTeam(id: state.userAllianceTeam.id, side: .opposition)!.color.capitalized) Alliance") {
-                    SmallTeamRow(team: match.allianceForTeam(id: state.userAllianceTeam.id, side: .opposition)!.teams[0])
-                    SmallTeamRow(team: match.allianceForTeam(id: state.userAllianceTeam.id, side: .opposition)!.teams[1])
+                Section("Opponents - \(match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)!.color.capitalized) Alliance") {
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)!.teams[0])
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)!.teams[1])
                 }
                 
                 Section("Your Alliance") {
-                    SmallTeamRow(team: match.allianceForTeam(id: state.userAllianceTeam.id, side: .team)!.teams[0])
-                    SmallTeamRow(team: match.allianceForTeam(id: state.userAllianceTeam.id, side: .team)!.teams[1])
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeamInfo.id, side: .team)!.teams[0])
+                    SmallTeamRow(team: match.allianceForTeam(id: state.userTeamInfo.id, side: .team)!.teams[1])
                 }
             }
             .navigationTitle(match.name)

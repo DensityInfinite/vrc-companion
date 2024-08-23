@@ -71,7 +71,7 @@ extension UpcomingView {
             guard !isLoading else { return }
             defer { isLoading = false }
             isLoading = true
-            let resource = MatchlistResource(state.userAllianceTeam.id, state.focusedCompetitionID)
+            let resource = MatchlistResource(state.userTeamInfo.id, state.focusedCompetitionID)
             let request = MatchlistRequest(resource: resource)
             matches = try await request.execute().matches
         }

@@ -9,6 +9,11 @@ import SwiftUI
 
 struct StatsBoard: View {
     var rankings: RankingsModel
+    var representation: Representation
+
+    enum Representation {
+        case full, minimal
+    }
     
     var body: some View {
         VStack(alignment: .center) {
@@ -16,15 +21,33 @@ struct StatsBoard: View {
                 .frame(height: 21)
             HStack {
                 if let wp = rankings.wp {
-                    StatsTile(data: Double(wp), description: "WP", representation: .full)
+                    switch representation {
+                    case .full:
+                        StatsTile(data: Double(wp), description: "WP", representation: .full)
+                    case .minimal:
+                        StatsTile(data: Double(wp), description: "WP", representation: .minimal)
+                            .fontWeight(.bold)
+                    }
                 }
                 Spacer()
                 if let awp = rankings.ap {
-                    StatsTile(data: Double(awp), description: "AWP", representation: .full)
+                    switch representation {
+                    case .full:
+                        StatsTile(data: Double(awp), description: "AWP", representation: .full)
+                    case .minimal:
+                        StatsTile(data: Double(awp), description: "AWP", representation: .minimal)
+                            .fontWeight(.bold)
+                    }
                 }
                 Spacer()
                 if let sp = rankings.sp {
-                    StatsTile(data: Double(sp), description: "SP", representation: .full)
+                    switch representation {
+                    case .full:
+                        StatsTile(data: Double(sp), description: "SP", representation: .full)
+                    case .minimal:
+                        StatsTile(data: Double(sp), description: "SP", representation: .minimal)
+                            .fontWeight(.bold)
+                    }
                 }
             }
             HStack {
@@ -45,5 +68,5 @@ struct StatsBoard: View {
 }
 
 #Preview {
-    StatsBoard(rankings: .preview)
+    StatsBoard(rankings: .preview, representation: .minimal)
 }

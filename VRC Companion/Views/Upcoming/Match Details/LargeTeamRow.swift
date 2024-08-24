@@ -21,11 +21,14 @@ struct LargeTeamRow: View {
                     Text("#\(String(rank))")
                         .foregroundStyle(.gray)
                 }
-                Button("", systemImage: "magnifyingglass", action: {
+                Button(action: {
                     presentingSheet.toggle()
+                }, label: {
+                    Label("Lookup this team", systemImage: "magnifyingglass")
+                        .labelStyle(.iconOnly)
                 })
             }
-            StatsBoard(rankings: rankings)
+            StatsBoard(rankings: rankings, representation: .minimal)
         }
     }
 }

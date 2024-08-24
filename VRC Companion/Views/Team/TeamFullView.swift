@@ -63,7 +63,7 @@ struct TeamFullView: View {
                                     })
                                 }
                             case .local:
-                                StatsBoard(rankings: teamRankings)
+                                StatsBoard(rankings: teamRankings, representation: .full)
                                     .padding(.top, -8)
                             case .global:
                                 SimpleRow(label: "Grade", details: teamInfo.grade)

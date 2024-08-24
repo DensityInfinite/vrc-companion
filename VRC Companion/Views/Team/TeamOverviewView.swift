@@ -17,6 +17,8 @@ struct TeamOverviewView: View {
                 Text(teamInfo.number)
                     .font(.system(size: 60, weight: .black))
                     .italic()
+                    .minimumScaleFactor(0.1)
+                    .lineLimit(0)
                     .padding(.bottom, -15)
                 Text(teamInfo.name)
                     .font(.subheadline)

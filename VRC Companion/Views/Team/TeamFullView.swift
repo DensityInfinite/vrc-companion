@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TeamFullView: View {
     @EnvironmentObject var state: StateController
-    @State private var apiData = APIModel()
     @State private var statsSelection: StatsTypes = .matches
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
+    
+    @State private var apiData = APIModel()
     var title: String
     var teamID: Int
-    var teamRankings: RankingsModel
 
     enum StatsTypes {
         case matches, global, local
@@ -25,7 +25,7 @@ struct TeamFullView: View {
         NavigationStack {
             ZStack {
                 List {
-                    if let teamInfo = apiData.teamInfo {
+                    if let teamInfo = apiData.teamInfo, let teamRankings = apiData.rankings {
                         if error != nil {
                             Section {
                                 BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
@@ -49,14 +49,10 @@ struct TeamFullView: View {
 
                             switch statsSelection {
                             case .matches:
-                                if apiData.isLoading {
+                                if apiData.isLoading && apiData.matchlist.isEmpty {
                                     HStack {
                                         ProgressView()
-                                        if apiData.matchlist.isEmpty {
-                                            Text("Fetching matchlist...")
-                                        } else {
-                                            Text("Updating matchlist...")
-                                        }
+                                        Text("Fetching matchlist...")
                                     }
                                 }
                                 ForEach(apiData.matchlist) { match in
@@ -67,7 +63,8 @@ struct TeamFullView: View {
                                     })
                                 }
                             case .local:
-                                Text("Local")
+                                StatsBoard(rankings: teamRankings)
+                                    .padding(.top, -8)
                             case .global:
                                 Text("Global")
                             }
@@ -78,6 +75,7 @@ struct TeamFullView: View {
                     do {
                         guard !hasAppeared else { return }
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
                         hasAppeared = true
@@ -88,6 +86,7 @@ struct TeamFullView: View {
                 .refreshable {
                     do {
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
                     } catch {
@@ -99,7 +98,6 @@ struct TeamFullView: View {
                         statsSelection = .local
                     }
                 }
-                .animation(.default, value: statsSelection)
                 .navigationTitle(title)
                 
                 // Status Feedback
@@ -122,18 +120,10 @@ struct TeamFullView: View {
 
 extension TeamFullView {
     @Observable class APIModel {
-        private(set) var teamInfo: TeamInfoModel?
         private(set) var matchlist: [MatchModel] = []
+        private(set) var teamInfo: TeamInfoModel?
+        private(set) var rankings: RankingsModel?
         private(set) var isLoading = false
-
-        @MainActor func fetchTeamInfo(teamID: Int) async throws {
-            guard !isLoading else { return }
-            defer { isLoading = false }
-            isLoading = true
-            let resource = TeamInfoResource(teamID)
-            let request = TeamInfoRequest(resource: resource)
-            teamInfo = try await request.execute()
-        }
 
         @MainActor func fetchMatchlist(state: StateController, teamID: Int) async throws {
             guard !isLoading else { return }
@@ -143,10 +133,28 @@ extension TeamFullView {
             let request = MatchlistRequest(resource: resource)
             matchlist = try await request.execute().matches
         }
+        
+        @MainActor func fetchTeamInfo(teamID: Int) async throws {
+            guard !isLoading else { return }
+            defer { isLoading = false }
+            isLoading = true
+            let resource = TeamInfoResource(teamID)
+            let request = TeamInfoRequest(resource: resource)
+            teamInfo = try await request.execute()
+        }
+
+        @MainActor func fetchRankings(state: StateController, teamID: Int) async throws {
+            guard !isLoading else { return }
+            defer { isLoading = false }
+            isLoading = true
+            let resource = RankingsResource(teamID, state.focusedCompetitionID)
+            let request = RankingsRequest(resource: resource)
+            rankings = try await request.execute().rankings.first
+        }
     }
 }
 
 #Preview {
-    TeamFullView(title: "My Team", teamID: StateController().userTeamInfo.id, teamRankings: .preview)
+    TeamFullView(title: "My Team", teamID: StateController().userTeamInfo.id)
         .environmentObject(StateController())
 }

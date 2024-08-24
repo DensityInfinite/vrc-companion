@@ -171,8 +171,7 @@
 				B31FBF772B8308E100850E8A /* TeamFullView.swift */,
 				B35F94A82C76C5380053ADDC /* TeamOverviewView.swift */,
 				B3A068022C76EC4C0016BB9B /* DetailedMatchRow.swift */,
-				B37E53452C7951AA000DD4F8 /* StatsBoard.swift */,
-				B37E53472C7951B6000DD4F8 /* StatsTile.swift */,
+				B338464D2C79C53200E7E3A2 /* Statistics */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -199,6 +198,15 @@
 				B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */,
 			);
 			path = "At a Glance";
+			sourceTree = "<group>";
+		};
+		B338464D2C79C53200E7E3A2 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				B37E53452C7951AA000DD4F8 /* StatsBoard.swift */,
+				B37E53472C7951B6000DD4F8 /* StatsTile.swift */,
+			);
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 		B341CA672B881DA3002E1856 /* Match Details */ = {

@@ -19,7 +19,7 @@ struct MatchDetails: View {
     @State private var hasAppeared: Bool = false
     var match: MatchModel
     var isResearch: Bool
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -29,23 +29,27 @@ struct MatchDetails: View {
                         .padding(.top, -8)
                         .padding(.bottom, -8)
                 }
-                
+
                 Section {
                     BannerView(match: match)
                         .environmentObject(state)
-                    if error != nil {
+                }
+                .listSectionSpacing(.compact)
+
+                if error != nil {
+                    Section {
                         BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
                             .environmentObject(state)
                     }
+                    .listSectionSpacing(.compact)
                 }
-                .listSectionSpacing(.compact)
-                
+
                 if isResearch {
                     Section("Red Alliance") {
                         SmallTeamRow(team: match.alliances[1].teams[0])
                         SmallTeamRow(team: match.alliances[1].teams[1])
                     }
-                    
+
                     Section("Blue Alliance") {
                         SmallTeamRow(team: match.alliances[0].teams[0])
                         SmallTeamRow(team: match.alliances[0].teams[1])
@@ -60,18 +64,38 @@ struct MatchDetails: View {
                                 }
                             } else if let rankings = opponentTopData.rankings {
                                 LargeTeamRow(team: opposingAlliance.teams[0], rankings: rankings, presentingSheet: $presentTeam1Sheet)
+                            } else {
+                                HStack {
+                                    SmallTeamRow(team: opposingAlliance.teams[0])
+                                    Button(action: {
+                                        presentTeam1Sheet.toggle()
+                                    }, label: {
+                                        Label("Lookup this team", systemImage: "magnifyingglass")
+                                            .labelStyle(.iconOnly)
+                                    })
+                                }
                             }
-                            if opponentBottomData.isLoading && opponentBottomData.rankings == nil {
+                            if (opponentBottomData.isLoading || opponentTopData.isLoading) && opponentBottomData.rankings == nil {
                                 HStack {
                                     SmallTeamRow(team: opposingAlliance.teams[1])
                                     ProgressView()
                                 }
                             } else if let rankings = opponentBottomData.rankings {
                                 LargeTeamRow(team: opposingAlliance.teams[1], rankings: rankings, presentingSheet: $presentTeam2Sheet)
+                            } else {
+                                HStack {
+                                    SmallTeamRow(team: opposingAlliance.teams[1])
+                                    Button(action: {
+                                        presentTeam2Sheet.toggle()
+                                    }, label: {
+                                        Label("Lookup this team", systemImage: "magnifyingglass")
+                                            .labelStyle(.iconOnly)
+                                    })
+                                }
                             }
                         }
                     }
-                    
+
                     if let teamAlliance = match.allianceForTeam(id: state.userTeamInfo.id, side: .team) {
                         Section("Your Alliance") {
                             HStack {
@@ -178,7 +202,7 @@ extension MatchDetails {
     @Observable class APIModel {
         private(set) var rankings: RankingsModel?
         private(set) var isLoading = false
-        
+
         @MainActor func fetchRankings(state: StateController, teamID: Int) async throws {
             guard !isLoading else { return }
             defer { isLoading = false }

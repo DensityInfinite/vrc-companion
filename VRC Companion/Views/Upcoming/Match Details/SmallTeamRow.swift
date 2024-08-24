@@ -14,16 +14,8 @@ struct SmallTeamRow: View {
         HStack {
             VStack {
                 Text(team.number)
-//                if let name = team.name {
-//                    Text(name)
-//                        .font(.subheadline)
-//                        .foregroundStyle(Color(.gray))
-//                }
-            }
+           }
             Spacer()
-//            if let ranking = team.localRanking {
-//                Text("#\(String(ranking))")
-//            }
         }
     }
 }

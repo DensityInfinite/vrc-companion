@@ -18,6 +18,8 @@
 		B32554562C2930FC009EEA20 /* AtAGlanceQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554552C2930FC009EEA20 /* AtAGlanceQueue.swift */; };
 		B32554582C293111009EEA20 /* AtAGlanceWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554572C293111009EEA20 /* AtAGlanceWin.swift */; };
 		B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */; };
+		B338464F2C79C79800E7E3A2 /* WinLossTieGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338464E2C79C79700E7E3A2 /* WinLossTieGraph.swift */; };
+		B33846512C79C7AA00E7E3A2 /* WinLossTieBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33846502C79C7AA00E7E3A2 /* WinLossTieBar.swift */; };
 		B33DC9572C7896C60048A9B6 /* AtAGlanceResearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */; };
 		B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341CA682B881DCD002E1856 /* MatchDetails.swift */; };
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
@@ -79,6 +81,8 @@
 		B32554552C2930FC009EEA20 /* AtAGlanceQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceQueue.swift; sourceTree = "<group>"; };
 		B32554572C293111009EEA20 /* AtAGlanceWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceWin.swift; sourceTree = "<group>"; };
 		B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceLoss.swift; sourceTree = "<group>"; };
+		B338464E2C79C79700E7E3A2 /* WinLossTieGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLossTieGraph.swift; sourceTree = "<group>"; };
+		B33846502C79C7AA00E7E3A2 /* WinLossTieBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLossTieBar.swift; sourceTree = "<group>"; };
 		B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceResearch.swift; sourceTree = "<group>"; };
 		B341CA682B881DCD002E1856 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			children = (
 				B37E53452C7951AA000DD4F8 /* StatsBoard.swift */,
 				B37E53472C7951B6000DD4F8 /* StatsTile.swift */,
+				B338464E2C79C79700E7E3A2 /* WinLossTieGraph.swift */,
+				B33846502C79C7AA00E7E3A2 /* WinLossTieBar.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -499,6 +505,8 @@
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
 				B3A068032C76EC4C0016BB9B /* DetailedMatchRow.swift in Sources */,
 				B31FBF6A2B82FDBF00850E8A /* AllianceTileView.swift in Sources */,
+				B33846512C79C7AA00E7E3A2 /* WinLossTieBar.swift in Sources */,
+				B338464F2C79C79800E7E3A2 /* WinLossTieGraph.swift in Sources */,
 				B31FBF762B8308D600850E8A /* WatchlistView.swift in Sources */,
 				B31FBF782B8308E100850E8A /* TeamFullView.swift in Sources */,
 				B31FBF742B83077800850E8A /* EventView.swift in Sources */,

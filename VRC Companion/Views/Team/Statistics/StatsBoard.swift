@@ -11,7 +11,9 @@ struct StatsBoard: View {
     var rankings: RankingsModel
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
+            WinLossTieGraph(wins: rankings.wins ?? 0, losses: rankings.losses ?? 0, ties: rankings.ties ?? 0)
+                .frame(height: 21)
             HStack {
                 if let wp = rankings.wp {
                     StatsTile(data: Double(wp), description: "WP", representation: .full)

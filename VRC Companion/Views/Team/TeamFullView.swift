@@ -10,7 +10,7 @@ import SwiftUI
 struct TeamFullView: View {
     @EnvironmentObject var state: StateController
     @State private var statsSelection: StatsTypes = .matches
-    @State private var titleStyle: NavigationBarItem.TitleDisplayMode = .automatic
+    @State private var titleStyle: NavigationBarItem.TitleDisplayMode = .inline
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
     
@@ -101,8 +101,8 @@ struct TeamFullView: View {
                     if teamID == state.userTeamInfo.id && !hasAppeared {
                         statsSelection = .local
                     }
-                    if title != "My Team" {
-                        titleStyle = .inline
+                    if title == "My Team" {
+                        titleStyle = .automatic
                     }
                 }
                 .navigationTitle(title)

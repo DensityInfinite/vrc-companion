@@ -43,8 +43,18 @@ struct TeamOverviewView: View {
                 }
                 .frame(width: 100, height: 110)
                 .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.success)
+                    Group {
+                        if rank <= 10 {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.success)
+                        } else if rank <= 20 {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.warning)
+                        } else {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.failed)
+                        }
+                    }
                 )
             }
         }

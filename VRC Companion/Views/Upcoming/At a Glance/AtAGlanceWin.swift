@@ -12,11 +12,11 @@ struct AtAGlanceWin: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Text("\(match.alliances[0].score) - \(match.alliances[1].score)")
+            Text("\(match.alliances[1].score!) - \(match.alliances[0].score!)")
                 .fontWidth(.condensed)
                 .opacity(0.4)
             
-            if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
+            if abs(match.alliances[0].score! - match.alliances[1].score!) != 0 {
                 Text("Victory")
                     .font(.system(size: 65))
                     .fontWidth(.compressed)
@@ -29,7 +29,7 @@ struct AtAGlanceWin: View {
             }
             
             if match.name.localizedStandardContains("Qualifier") {
-                if abs(match.alliances[0].score - match.alliances[1].score) != 0 {
+                if abs(match.alliances[0].score! - match.alliances[1].score!) != 0 {
                     Text("+2 WP (and maybe 1 AWP)")
                         .fontWidth(.condensed)
                         .opacity(0.4)

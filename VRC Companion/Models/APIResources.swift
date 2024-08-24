@@ -43,3 +43,13 @@ struct RankingsResource: APIResource {
         self.eventID = eventID
     }
 }
+
+struct TeamInfoResource: APIResource {
+    typealias ModelType = TeamInfoModel
+    var methodPath: String
+    var eventID: Int?
+    
+    init(_ teamID: Int) {
+        methodPath = "/teams/\(teamID)"
+    }
+}

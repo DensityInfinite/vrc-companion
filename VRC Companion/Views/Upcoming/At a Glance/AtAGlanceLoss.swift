@@ -12,14 +12,14 @@ struct AtAGlanceLoss: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Text("\(match.alliances[0].score) - \(match.alliances[1].score)")
+            Text("\(match.alliances[1].score!) - \(match.alliances[0].score!)")
                 .fontWidth(.condensed)
                 .opacity(0.4)
             Text("Unlucky")
                 .font(.system(size: 65))
                 .fontWidth(.compressed)
                 .shadow(radius: 8)
-            Text("Lost by \(abs(match.alliances[0].score - match.alliances[1].score))")
+            Text("Lost by \(abs(match.alliances[0].score! - match.alliances[1].score!))")
                 .fontWidth(.condensed)
                 .opacity(0.4)
         }

@@ -8,32 +8,38 @@
 import SwiftUI
 
 struct AtAGlanceView: View {
-    var match: MatchModel
     @EnvironmentObject var state: StateController
+    var match: MatchModel
+    var isResearch: Bool
 
     var body: some View {
-        if let time = match.scheduledTime {
-            if time.timeIntervalSinceNow.isLess(than: 300) {
-                if time.timeIntervalSinceNow > 0 {
-                    AtAGlanceQueue(match: match)
-                } else {
-                    if let userAlliance = match.allianceForTeam(id: state.userTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userTeam.id, side: .opposition) {
-                        if userAlliance.score >= oppositionAlliance.score {
-                            AtAGlanceWin(match: match)
-                        } else {
-                            AtAGlanceLoss(match: match)
+        if isResearch {
+            AtAGlanceResearch(redScore: match.alliances[1].score, blueScore: match.alliances[0].score)
+        } else {
+            // TODO: Refactor to be more concice
+            if let time = match.scheduledTime {
+                if time.timeIntervalSinceNow.isLess(than: 300) {
+                    if time.timeIntervalSinceNow > 0 {
+                        AtAGlanceQueue(match: match)
+                    } else {
+                        if let userAllianceScore = match.allianceForTeam(id: state.userTeamInfo.id, side: .team)?.score, let oppositionAllianceScore = match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)?.score {
+                            if userAllianceScore >= oppositionAllianceScore {
+                                AtAGlanceWin(match: match)
+                            } else {
+                                AtAGlanceLoss(match: match)
+                            }
                         }
                     }
+                } else {
+                    AtAGlanceNeutral(match: match)
                 }
             } else {
-                AtAGlanceNeutral(match: match)
-            }
-        } else {
-            if let userAlliance = match.allianceForTeam(id: state.userTeam.id, side: .team), let oppositionAlliance = match.allianceForTeam(id: state.userTeam.id, side: .opposition) {
-                if userAlliance.score >= oppositionAlliance.score {
-                    AtAGlanceWin(match: match)
-                } else {
-                    AtAGlanceLoss(match: match)
+                if let userAllianceScore = match.allianceForTeam(id: state.userTeamInfo.id, side: .team)?.score, let oppositionAllianceScore = match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)?.score {
+                    if userAllianceScore >= oppositionAllianceScore {
+                        AtAGlanceWin(match: match)
+                    } else {
+                        AtAGlanceLoss(match: match)
+                    }
                 }
             }
         }
@@ -41,6 +47,6 @@ struct AtAGlanceView: View {
 }
 
 #Preview {
-    AtAGlanceView(match: .preview)
+    AtAGlanceView(match: .preview, isResearch: false)
         .environmentObject(StateController())
 }

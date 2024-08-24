@@ -15,6 +15,7 @@ protocol APIRequest: AnyObject {
 
 extension APIRequest {
     func load(_ url: URL) async throws -> ModelType {
+        // var token = <add your token here>
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -57,6 +58,25 @@ extension RankingsRequest: APIRequest {
     }
 
     func execute() async throws -> RankingsResource.ModelType {
+        try await load(resource.url)
+    }
+}
+
+class TeamInfoRequest {
+    let resource: TeamInfoResource
+    
+    init(resource: TeamInfoResource) {
+        self.resource = resource
+    }
+}
+
+extension TeamInfoRequest: APIRequest {
+    func decode(_ data: Data) throws -> TeamInfoResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(TeamInfoResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> TeamInfoResource.ModelType {
         try await load(resource.url)
     }
 }

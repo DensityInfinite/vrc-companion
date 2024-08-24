@@ -10,7 +10,7 @@ import Foundation
 // MARK: - AllianceModel
 struct AllianceModel: Decodable {
     let color: String
-    let score: Int
+    let score: Int?
     let teams: [AllianceTeamModel]
     
     func indexFor(team id: Int) -> Int? {
@@ -63,7 +63,7 @@ struct RankingsModel: Decodable {
     let ties: Int?
     
     let highScore: Int?
-    let average: Float?
+    let average: Double?
     let total: Int?
 }
 

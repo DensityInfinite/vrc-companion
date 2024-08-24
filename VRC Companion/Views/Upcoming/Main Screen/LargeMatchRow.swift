@@ -29,12 +29,12 @@ struct LargeMatchRow: View {
             }
             HStack {
                 if !match.name.localizedStandardContains("Qualifier") && !match.name.localizedStandardContains("Practice") {
-                    AllianceTileView(alliance: match.allianceForTeam(id: state.userTeam.id, side: .opposition)!)
+                    AllianceTileView(alliance: match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)!)
                         .environmentObject(state)
                 } else {
-                    AllianceTileView(alliance: match.alliances[0])
-                        .environmentObject(state)
                     AllianceTileView(alliance: match.alliances[1])
+                        .environmentObject(state)
+                    AllianceTileView(alliance: match.alliances[0])
                         .environmentObject(state)
 
                 }

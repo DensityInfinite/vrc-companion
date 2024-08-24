@@ -47,10 +47,10 @@ extension AllianceTeamModel {
 
 extension RankingsModel {
     static var preview: RankingsModel {
-        let url = Bundle.main.url(forResource: "SiegeNationalsRanking", withExtension: "json")!
+        let url = Bundle.main.url(forResource: "SiegeNationalsRankings", withExtension: "json")!
         let data = try! Data(contentsOf: url)
-        let rankings = try! JSONDecoder.apiDecoder.decode(RankingsModel.self, from: data)
-        return rankings
+        let rankings = try! JSONDecoder.apiDecoder.decode(APIRankingsModel.self, from: data)
+        return rankings.rankings.first!
     }
 }
 

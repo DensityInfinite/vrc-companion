@@ -29,10 +29,12 @@ struct ContentView: View {
                     Label("Watchlist", systemImage: "star")
                 }
             
-            MyTeamView()
+            TeamFullView(title: "My Team", teamID: state.userTeamInfo.id)
                 .tabItem {
                     Label("My team", systemImage: "person")
                 }
+                .environmentObject(state)
+            
             LookupView()
                 .tabItem {
                     Label("Lookup", systemImage: "magnifyingglass")

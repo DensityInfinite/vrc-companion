@@ -83,7 +83,7 @@ struct TeamFullView: View {
                         self.error = nil
                         hasAppeared = true
                     } catch {
-                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update info.")
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch info.")
                     }
                 }
                 .refreshable {

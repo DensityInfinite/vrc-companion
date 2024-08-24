@@ -21,6 +21,7 @@
 		B338464F2C79C79800E7E3A2 /* WinLossTieGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338464E2C79C79700E7E3A2 /* WinLossTieGraph.swift */; };
 		B33846512C79C7AA00E7E3A2 /* WinLossTieBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33846502C79C7AA00E7E3A2 /* WinLossTieBar.swift */; };
 		B33846532C79E77800E7E3A2 /* SimpleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33846522C79E77800E7E3A2 /* SimpleRow.swift */; };
+		B33846552C79F50C00E7E3A2 /* LargeTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33846542C79F50C00E7E3A2 /* LargeTeamRow.swift */; };
 		B33DC9572C7896C60048A9B6 /* AtAGlanceResearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */; };
 		B341CA692B881DCD002E1856 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341CA682B881DCD002E1856 /* MatchDetails.swift */; };
 		B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */; };
@@ -85,6 +86,7 @@
 		B338464E2C79C79700E7E3A2 /* WinLossTieGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLossTieGraph.swift; sourceTree = "<group>"; };
 		B33846502C79C7AA00E7E3A2 /* WinLossTieBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLossTieBar.swift; sourceTree = "<group>"; };
 		B33846522C79E77800E7E3A2 /* SimpleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRow.swift; sourceTree = "<group>"; };
+		B33846542C79F50C00E7E3A2 /* LargeTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTeamRow.swift; sourceTree = "<group>"; };
 		B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceResearch.swift; sourceTree = "<group>"; };
 		B341CA682B881DCD002E1856 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		B34B835C2B82FA27008F83CD /* LargeMatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMatchRow.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				B341CA682B881DCD002E1856 /* MatchDetails.swift */,
 				B3AEE7CB2C2A714700788A53 /* BannerView.swift */,
 				B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */,
+				B33846542C79F50C00E7E3A2 /* LargeTeamRow.swift */,
 			);
 			path = "Match Details";
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				B37E53482C7951B6000DD4F8 /* StatsTile.swift in Sources */,
 				B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */,
 				B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */,
+				B33846552C79F50C00E7E3A2 /* LargeTeamRow.swift in Sources */,
 				B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */,
 				B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */,
 				B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */,

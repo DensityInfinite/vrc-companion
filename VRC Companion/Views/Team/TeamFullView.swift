@@ -66,7 +66,10 @@ struct TeamFullView: View {
                                 StatsBoard(rankings: teamRankings)
                                     .padding(.top, -8)
                             case .global:
-                                Text("Global")
+                                SimpleRow(label: "Grade", details: teamInfo.grade)
+                                SimpleRow(label: "Organisation", details: teamInfo.organization)
+                                SimpleRow(label: "Robot", details: teamInfo.robotName)
+                                SimpleRow(label: "Origin", details: teamInfo.location.city + ", " + teamInfo.location.country)
                             }
                         })
                     }

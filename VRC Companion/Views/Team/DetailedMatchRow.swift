@@ -56,20 +56,35 @@ struct DetailedMatchRow: View {
             Spacer()
             
             VStack {
-                ForEach(match.alliances[0].teams) { team in
+                ForEach(match.alliances[1].teams) { team in
                     if team.number == self.team.number {
                         Text(team.number)
                             .font(.subheadline)
-                            .foregroundStyle(.blueAllianceSolid)
+                            .foregroundStyle(.redAllianceSolid)
                             .underline()
                     } else {
                         Text(team.number)
                             .font(.subheadline)
-                            .foregroundStyle(.blueAllianceSolid)
+                            .foregroundStyle(.redAllianceSolid)
                     }
                 }
             }
             .frame(width: 70)
+            Spacer()
+
+            if let redScore = match.alliances[1].score {
+                VStack() {
+                    if match.allianceForTeam(id: team.id, side: .team)?.color == "red" {
+                        Text(String(redScore))
+                            .foregroundStyle(.redAllianceSolid)
+                            .underline()
+                    } else {
+                        Text(String(redScore))
+                            .foregroundStyle(.redAllianceSolid)
+                    }
+                }
+                .frame(width: 35)
+            }
             Spacer()
             
             if let blueScore = match.alliances[0].score {
@@ -86,33 +101,18 @@ struct DetailedMatchRow: View {
                 .frame(width: 35)
             }
             Spacer()
-            
-            if let redScore = match.alliances[1].score {
-                VStack() {
-                    if match.allianceForTeam(id: team.id, side: .team)?.color == "red" {
-                        Text(String(redScore))
-                            .foregroundStyle(.redAllianceSolid)
-                            .underline()
-                    } else {
-                        Text(String(redScore))
-                            .foregroundStyle(.redAllianceSolid)
-                    }
-                }
-                .frame(width: 35)
-            }
-            Spacer()
-            
+
             VStack {
-                ForEach(match.alliances[1].teams) { team in
+                ForEach(match.alliances[0].teams) { team in
                     if team.number == self.team.number {
                         Text(team.number)
                             .font(.subheadline)
-                            .foregroundStyle(.redAllianceSolid)
+                            .foregroundStyle(.blueAllianceSolid)
                             .underline()
                     } else {
                         Text(team.number)
                             .font(.subheadline)
-                            .foregroundStyle(.redAllianceSolid)
+                            .foregroundStyle(.blueAllianceSolid)
                     }
                 }
             }

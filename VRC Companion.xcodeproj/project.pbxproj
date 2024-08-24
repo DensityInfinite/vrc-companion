@@ -205,8 +205,8 @@
 				B32554522C2927C6009EEA20 /* AtAGlanceNeutral.swift */,
 				B32554552C2930FC009EEA20 /* AtAGlanceQueue.swift */,
 				B32554572C293111009EEA20 /* AtAGlanceWin.swift */,
-				B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */,
 				B32554592C29311D009EEA20 /* AtAGlanceLoss.swift */,
+				B33DC9562C7896C60048A9B6 /* AtAGlanceResearch.swift */,
 			);
 			path = "At a Glance";
 			sourceTree = "<group>";

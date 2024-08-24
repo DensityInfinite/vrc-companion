@@ -32,9 +32,9 @@ struct LargeMatchRow: View {
                     AllianceTileView(alliance: match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)!)
                         .environmentObject(state)
                 } else {
-                    AllianceTileView(alliance: match.alliances[0])
-                        .environmentObject(state)
                     AllianceTileView(alliance: match.alliances[1])
+                        .environmentObject(state)
+                    AllianceTileView(alliance: match.alliances[0])
                         .environmentObject(state)
 
                 }

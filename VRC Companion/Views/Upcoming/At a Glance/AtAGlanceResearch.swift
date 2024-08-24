@@ -20,7 +20,7 @@ struct AtAGlanceResearch: View {
     var body: some View {
         VStack(alignment: .center) {
             if matchWinner != .unscored {
-                Text("\(blueScore!) - \(redScore!)")
+                Text("\(redScore!) - \(blueScore!)")
                     .fontWidth(.condensed)
                     .opacity(0.4)
             }

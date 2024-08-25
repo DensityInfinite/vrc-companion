@@ -94,7 +94,7 @@ struct TeamInfoModel: Decodable {
     let number, name, robotName, organization: String
     let location: LocationModel
     let registered: Bool
-    let program: ProgramModel
+    let program: IDInfoModel
     let grade: String
     
     enum CodingKeys: String, CodingKey {
@@ -129,7 +129,7 @@ struct CoordinatesModel: Decodable {
 }
 
 // MARK: - ProgramModel
-struct ProgramModel: Decodable {
+struct IDInfoModel: Decodable {
     let id: Int
     let name, code: String
 }

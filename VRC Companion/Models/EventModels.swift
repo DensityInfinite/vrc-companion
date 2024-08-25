@@ -27,7 +27,7 @@ struct EventInfoModel: Decodable {
 }
 
 // MARK: - DivisionInfoModel
-struct DivisionInfoModel: Codable {
+struct DivisionInfoModel: Codable, Identifiable {
     let id: Int
     let name: String
     let order: Int

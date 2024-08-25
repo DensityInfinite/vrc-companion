@@ -63,6 +63,15 @@ extension TeamInfoModel {
     }
 }
 
+extension EventInfoModel {
+    static var preview: EventInfoModel {
+        let url = Bundle.main.url(forResource: "NationalsEvent", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let info = try! JSONDecoder.apiDecoder.decode(EventInfoModel.self, from: data)
+        return info
+    }
+}
+
 extension ErrorWrapper {
     static var preview: ErrorWrapper {
         enum SampleError: Error {

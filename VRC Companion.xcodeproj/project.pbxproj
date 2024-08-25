@@ -46,6 +46,7 @@
 		B3AEE7CC2C2A714700788A53 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEE7CB2C2A714700788A53 /* BannerView.swift */; };
 		B3C185FC2C095E68001D6F17 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C185FB2C095E68001D6F17 /* LookupView.swift */; };
 		B3C278D22C7B29120035DB4F /* EventModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C278D12C7B29120035DB4F /* EventModels.swift */; };
+		B3C278D82C7B3BB60035DB4F /* NationalsEvent.json in Resources */ = {isa = PBXBuildFile; fileRef = B3C278D62C7B3B960035DB4F /* NationalsEvent.json */; };
 		B3C72D092B82F71600AAE764 /* VRC_CompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */; };
 		B3C72D0B2B82F71600AAE764 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D0A2B82F71600AAE764 /* ContentView.swift */; };
 		B3C72D0F2B82F71800AAE764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C72D0E2B82F71800AAE764 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 		B3AEE7CB2C2A714700788A53 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B3C185FB2C095E68001D6F17 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
 		B3C278D12C7B29120035DB4F /* EventModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModels.swift; sourceTree = "<group>"; };
+		B3C278D62C7B3B960035DB4F /* NationalsEvent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NationalsEvent.json; sourceTree = "<group>"; };
 		B3C72D052B82F71600AAE764 /* VRC Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VRC Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C72D082B82F71600AAE764 /* VRC_CompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRC_CompanionApp.swift; sourceTree = "<group>"; };
 		B3C72D0A2B82F71600AAE764 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				B3502EC12C2807A300A65640 /* SiegeNationalsMatchlist.json */,
 				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */,
 				B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */,
+				B3C278D62C7B3B960035DB4F /* NationalsEvent.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C278D82C7B3BB60035DB4F /* NationalsEvent.json in Resources */,
 				B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */,
 				B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */,
 				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,

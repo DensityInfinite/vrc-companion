@@ -40,6 +40,7 @@ struct TeamOverviewView: View {
                         .font(.subheadline)
                         .fontWidth(.condensed)
                         .foregroundStyle(.secondary)
+                        .opacity(0.8)
                 }
                 .frame(width: 100, height: 110)
                 .background(

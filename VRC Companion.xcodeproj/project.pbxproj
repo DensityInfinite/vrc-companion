@@ -32,6 +32,7 @@
 		B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959A2C754DF6003F65A0 /* NetworkRequests.swift */; };
 		B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959D2C755F4A003F65A0 /* ErrorView.swift */; };
 		B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */; };
+		B36E8C7B2C7B3FFC00CD614C /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */; };
 		B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */; };
 		B37E53462C7951AA000DD4F8 /* StatsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53452C7951AA000DD4F8 /* StatsBoard.swift */; };
 		B37E53482C7951B6000DD4F8 /* StatsTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53472C7951B6000DD4F8 /* StatsTile.swift */; };
@@ -100,6 +101,7 @@
 		B365959A2C754DF6003F65A0 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		B365959D2C755F4A003F65A0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTeamRow.swift; sourceTree = "<group>"; };
 		B37E53452C7951AA000DD4F8 /* StatsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBoard.swift; sourceTree = "<group>"; };
 		B37E53472C7951B6000DD4F8 /* StatsTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTile.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				B33846572C7A005600E7E3A2 /* Grabber.swift */,
+				B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */,
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
 				B33846582C7A005600E7E3A2 /* Grabber.swift in Sources */,
+				B36E8C7B2C7B3FFC00CD614C /* DemoView.swift in Sources */,
 				B3A068032C76EC4C0016BB9B /* DetailedMatchRow.swift in Sources */,
 				B31FBF6A2B82FDBF00850E8A /* AllianceTileView.swift in Sources */,
 				B33846512C79C7AA00E7E3A2 /* WinLossTieBar.swift in Sources */,

@@ -80,3 +80,22 @@ extension TeamInfoRequest: APIRequest {
         try await load(resource.url)
     }
 }
+
+class EventInfoRequest {
+    let resource: EventInfoResource
+    
+    init(resource: EventInfoResource) {
+        self.resource = resource
+    }
+}
+
+extension EventInfoRequest: APIRequest {
+    func decode(_ data: Data) throws -> EventInfoResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(EventInfoResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> EventInfoResource.ModelType {
+        try await load(resource.url)
+    }
+}

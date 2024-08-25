@@ -131,6 +131,7 @@ struct CoordinatesModel: Decodable {
 // MARK: - ProgramModel
 struct IDInfoModel: Decodable {
     let id: Int
-    let name, code: String
+    let name: String
+    let code: String?
 }
 

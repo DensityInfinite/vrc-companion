@@ -107,7 +107,7 @@ struct TeamFullView: View {
                 .navigationBarTitleDisplayMode(title == "My team" ? .automatic : .inline)
                 
                 // Status Feedback
-                if apiData.teamInfo == nil {
+                if apiData.teamInfo == nil || apiData.rankings == nil {
                     if apiData.isLoading {
                         VStack {
                             ProgressView()

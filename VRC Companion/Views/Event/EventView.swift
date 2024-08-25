@@ -29,7 +29,7 @@ struct EventView: View {
                             NavigationLink {
                                 DemoView(title: "Event skills", titleStyle: .inline)
                             } label: {
-                                Text("Event-level rankings")
+                                Text("Local Rankings")
                             }
                         }
 
@@ -48,12 +48,12 @@ struct EventView: View {
                                 TeamListView(teamList: .preview)
                                     .environmentObject(state)
                             } label: {
-                                Text("All teams")
+                                Text("All Teams")
                             }
                             NavigationLink {
                                 EventAboutView(eventInfo: eventInfo)
                             } label: {
-                                Text("About this event")
+                                Text("About this Event")
                             }
                         }
                     }

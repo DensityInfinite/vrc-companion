@@ -24,7 +24,7 @@ struct EventAboutView: View {
                 }
             }
             .padding(.top, -30)
-            .navigationTitle("About")
+            .navigationTitle("About this Event")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

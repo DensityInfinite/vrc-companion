@@ -23,7 +23,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("Event", systemImage: "calendar")
                 }
-            
+                .environmentObject(state)
+
             WatchlistView()
                 .tabItem {
                     Label("Watchlist", systemImage: "star")

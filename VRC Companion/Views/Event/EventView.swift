@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventView: View {
+    @EnvironmentObject var state: StateController
     var eventInfo: EventInfoModel
     
     var body: some View {
@@ -32,8 +33,13 @@ struct EventView: View {
                 }
                 
                 Section("About") {
-                    Text("All teams")
                     Text("About this event")
+                    NavigationLink {
+                        TeamListView(teamList: .preview)
+                            .environmentObject(state)
+                    } label: {
+                        Text("All teams")
+                    }
                 }
             }
             .navigationTitle("Event")
@@ -43,4 +49,5 @@ struct EventView: View {
 
 #Preview {
     EventView(eventInfo: .preview)
+        .environmentObject(StateController())
 }

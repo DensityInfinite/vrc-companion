@@ -23,4 +23,5 @@ struct ErrorWrapper: Identifiable {
 
 enum Errors: Error {
     case apiError
+    case noSearchResults
 }

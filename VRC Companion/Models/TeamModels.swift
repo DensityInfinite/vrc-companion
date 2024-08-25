@@ -89,7 +89,7 @@ extension APIRankingsModel {
 }
 
 // MARK: - TeamInfoModel
-struct TeamInfoModel: Decodable {
+struct TeamInfoModel: Decodable, Identifiable {
     let id: Int
     let number, name: String
     let robotName: String?

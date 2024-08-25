@@ -44,6 +44,16 @@ struct RankingsResource: APIResource {
     }
 }
 
+struct EventTeamListResource: APIResource {
+    typealias ModelType = EventTeamListModel
+    var methodPath: String
+    var eventID: Int?
+    
+    init(_ eventID: Int) {
+        methodPath = "/events/\(eventID)/teams"
+    }
+}
+
 struct TeamInfoResource: APIResource {
     typealias ModelType = TeamInfoModel
     var methodPath: String

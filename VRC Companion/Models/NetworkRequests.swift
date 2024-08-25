@@ -62,6 +62,25 @@ extension RankingsRequest: APIRequest {
     }
 }
 
+class EventTeamListRequest {
+    let resource: EventTeamListResource
+    
+    init(resource: EventTeamListResource) {
+        self.resource = resource
+    }
+}
+
+extension EventTeamListRequest: APIRequest {
+    func decode(_ data: Data) throws -> EventTeamListResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(EventTeamListResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> EventTeamListResource.ModelType {
+        try await load(resource.url)
+    }
+}
+
 class TeamInfoRequest {
     let resource: TeamInfoResource
     

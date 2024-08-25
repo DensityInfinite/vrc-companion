@@ -54,6 +54,15 @@ extension RankingsModel {
     }
 }
 
+extension EventTeamListModel {
+    static var preview: EventTeamListModel {
+        let url = Bundle.main.url(forResource: "NationalsTeamList", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let info = try! JSONDecoder.apiDecoder.decode(EventTeamListModel.self, from: data)
+        return info
+    }
+}
+
 extension TeamInfoModel {
     static var preview: TeamInfoModel {
         let url = Bundle.main.url(forResource: "SiegeTeam", withExtension: "json")!
@@ -77,7 +86,7 @@ extension ErrorWrapper {
         enum SampleError: Error {
             case errorRequired
         }
-        
+
         return ErrorWrapper(error: SampleError.errorRequired,
                             image: "wifi.exclamationmark", guidance: "API request failed.")
     }

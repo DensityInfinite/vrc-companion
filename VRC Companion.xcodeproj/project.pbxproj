@@ -33,6 +33,7 @@
 		B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959D2C755F4A003F65A0 /* ErrorView.swift */; };
 		B36595A02C755FCB003F65A0 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */; };
 		B36E8C7B2C7B3FFC00CD614C /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */; };
+		B36E8C7D2C7B470C00CD614C /* NationalsTeamList.json in Resources */ = {isa = PBXBuildFile; fileRef = B36E8C7C2C7B470C00CD614C /* NationalsTeamList.json */; };
 		B370A8272C2B96B3005A4C55 /* SmallTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */; };
 		B37E53462C7951AA000DD4F8 /* StatsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53452C7951AA000DD4F8 /* StatsBoard.swift */; };
 		B37E53482C7951B6000DD4F8 /* StatsTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53472C7951B6000DD4F8 /* StatsTile.swift */; };
@@ -102,6 +103,7 @@
 		B365959D2C755F4A003F65A0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B365959F2C755FCB003F65A0 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		B36E8C7C2C7B470C00CD614C /* NationalsTeamList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NationalsTeamList.json; sourceTree = "<group>"; };
 		B370A8262C2B96B3005A4C55 /* SmallTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTeamRow.swift; sourceTree = "<group>"; };
 		B37E53452C7951AA000DD4F8 /* StatsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBoard.swift; sourceTree = "<group>"; };
 		B37E53472C7951B6000DD4F8 /* StatsTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTile.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */,
 				B39E65E42C51BEE300FC8D92 /* SiegeTeam.json */,
 				B3C278D62C7B3B960035DB4F /* NationalsEvent.json */,
+				B36E8C7C2C7B470C00CD614C /* NationalsTeamList.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -477,13 +480,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C278D82C7B3BB60035DB4F /* NationalsEvent.json in Resources */,
-				B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */,
-				B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */,
-				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,
 				B3C72D122B82F71800AAE764 /* Preview Assets.xcassets in Resources */,
 				B3C72D0F2B82F71800AAE764 /* Assets.xcassets in Resources */,
+				B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */,
 				B3502EC22C2807A300A65640 /* SiegeNationalsMatchlist.json in Resources */,
+				B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */,
+				B39E65E52C51BEE300FC8D92 /* SiegeTeam.json in Resources */,
+				B3C278D82C7B3BB60035DB4F /* NationalsEvent.json in Resources */,
+				B36E8C7D2C7B470C00CD614C /* NationalsTeamList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

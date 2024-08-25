@@ -1,0 +1,692 @@
+{
+    "meta": {
+        "current_page": 1,
+        "first_page_url": "https://www.robotevents.com/api/v2/events/52110/teams?page=1",
+        "from": 1,
+        "last_page": 2,
+        "last_page_url": "https://www.robotevents.com/api/v2/events/52110/teams?page=2",
+        "next_page_url": "https://www.robotevents.com/api/v2/events/52110/teams?page=2",
+        "path": "https://www.robotevents.com/api/v2/events/52110/teams",
+        "per_page": 25,
+        "prev_page_url": null,
+        "to": 25,
+        "total": 36
+    },
+    "data": [
+        {
+            "id": 128562,
+            "number": "58A",
+            "team_name": "Dream Rover",
+            "robot_name": "",
+            "organization": "5D college",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Chatswood",
+                "region": null,
+                "postcode": "2067",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.799999999999997,
+                    "lon": 151.19999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 112703,
+            "number": "1002F",
+            "team_name": "The Rustacean",
+            "robot_name": "Crab",
+            "organization": "Templestowe College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Templestowe Lower",
+                "region": null,
+                "postcode": "3107",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -37.799999999999997,
+                    "lon": 145.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 135580,
+            "number": "1002T",
+            "team_name": "[ ʟᴇᴛʜᴀʟ ᴘʀᴇꜱᴇɴᴄᴇ ]",
+            "robot_name": "ㅤ",
+            "organization": "Templestowe College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Templestowe Lower",
+                "region": null,
+                "postcode": "3107",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -37.799999999999997,
+                    "lon": 145.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 128435,
+            "number": "1002X",
+            "team_name": "THE SHADOW",
+            "robot_name": "",
+            "organization": "Templestowe College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Templestowe Lower",
+                "region": null,
+                "postcode": "3107",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -37.799999999999997,
+                    "lon": 145.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 150122,
+            "number": "1051X",
+            "team_name": "Siege",
+            "robot_name": "Scot",
+            "organization": "The Scots College Sydney",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Sydney",
+                "region": null,
+                "postcode": "2023",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.899999999999999,
+                    "lon": 151.30000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 153841,
+            "number": "1831F",
+            "team_name": "King's Team Foxtrot",
+            "robot_name": "",
+            "organization": "The King's School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "North Parramatta",
+                "region": null,
+                "postcode": "2151",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.799999999999997,
+                    "lon": 151
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 129368,
+            "number": "4557A",
+            "team_name": "ACME - MCSHS",
+            "robot_name": "ACME",
+            "organization": "Mountain Creek State High School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Mountain Creek",
+                "region": null,
+                "postcode": "4557",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -26.699999999999999,
+                    "lon": 153.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 110192,
+            "number": "4613R",
+            "team_name": "Barker Redbacks",
+            "robot_name": "",
+            "organization": "Barker College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Hornsby",
+                "region": null,
+                "postcode": "2077",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.700000000000003,
+                    "lon": 151.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 128201,
+            "number": "7479C",
+            "team_name": "Rising Phoenix",
+            "robot_name": "Rebirth",
+            "organization": "Hillcrest Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Clyde North",
+                "region": null,
+                "postcode": "3978",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -38.100000000000001,
+                    "lon": 145.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 137898,
+            "number": "7479D",
+            "team_name": "Girri's Bargan",
+            "robot_name": "Nulla Nulla",
+            "organization": "Hillcrest Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Clyde North",
+                "region": null,
+                "postcode": "3978",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -38.100000000000001,
+                    "lon": 145.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 154359,
+            "number": "7479Y",
+            "team_name": "Bushrangers",
+            "robot_name": "Ned",
+            "organization": "Hillcrest Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Clyde North",
+                "region": null,
+                "postcode": "3978",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -38.100000000000001,
+                    "lon": 145.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 112051,
+            "number": "12223A",
+            "team_name": "Wireless",
+            "robot_name": "",
+            "organization": "Pembroke School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Kensington Gardens",
+                "region": null,
+                "postcode": "5068",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.899999999999999,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 122638,
+            "number": "12223B",
+            "team_name": "Operation Ultra Kirby",
+            "robot_name": "Pembots",
+            "organization": "Pembroke School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Kensington Gardens",
+                "region": null,
+                "postcode": "5068",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.899999999999999,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 139372,
+            "number": "12223E",
+            "team_name": "Operation Smashbots",
+            "robot_name": "",
+            "organization": "Pembroke School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Kensington Gardens",
+                "region": null,
+                "postcode": "5068",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.899999999999999,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 139183,
+            "number": "12906A",
+            "team_name": "Slipgear",
+            "robot_name": "",
+            "organization": "Salisbury East High School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Salisbury East",
+                "region": null,
+                "postcode": "5109",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.799999999999997,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 160143,
+            "number": "13818A",
+            "team_name": "QRCA",
+            "robot_name": null,
+            "organization": "Queensland Robotics and Coding Academy",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Varsity Lakes",
+                "region": null,
+                "postcode": "4227",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -28.100000000000001,
+                    "lon": 153.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 141222,
+            "number": "31260A",
+            "team_name": "Biblically Accurate Angel",
+            "robot_name": "",
+            "organization": "Camberwell Grammar School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Canterbury",
+                "region": null,
+                "postcode": "3126",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -37.799999999999997,
+                    "lon": 145.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 103789,
+            "number": "34565A",
+            "team_name": "Phoenix Robotics 1",
+            "robot_name": "",
+            "organization": "Merrimac State High School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Mermaid Waters",
+                "region": null,
+                "postcode": "4218",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -28,
+                    "lon": 153.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 104086,
+            "number": "34565B",
+            "team_name": "Phoenix Robotics 2",
+            "robot_name": "",
+            "organization": "Merrimac State High School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Mermaid Waters",
+                "region": null,
+                "postcode": "4218",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -28,
+                    "lon": 153.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 104085,
+            "number": "34565C",
+            "team_name": "Phoenix Robotics 3",
+            "robot_name": "",
+            "organization": "Merrimac State High School",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Mermaid Waters",
+                "region": null,
+                "postcode": "4218",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -28,
+                    "lon": 153.40000000000001
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 135774,
+            "number": "41103A",
+            "team_name": "NextGen",
+            "robot_name": "",
+            "organization": "Pedare Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Golden Grove",
+                "region": null,
+                "postcode": "5125",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.799999999999997,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 135775,
+            "number": "41103B",
+            "team_name": "ASDF",
+            "robot_name": null,
+            "organization": "Pedare Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Golden Grove",
+                "region": null,
+                "postcode": "5125",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.799999999999997,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 143407,
+            "number": "41103T",
+            "team_name": "Vanguard",
+            "robot_name": null,
+            "organization": "Pedare Christian College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Golden Grove",
+                "region": null,
+                "postcode": "5125",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -34.799999999999997,
+                    "lon": 138.69999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 154731,
+            "number": "46131E",
+            "team_name": "Terminator Waffle Reborn",
+            "robot_name": "",
+            "organization": "Barker College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Hornsby",
+                "region": null,
+                "postcode": "2077",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.700000000000003,
+                    "lon": 151.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        },
+        {
+            "id": 154733,
+            "number": "46131G",
+            "team_name": "Barker Greybacks",
+            "robot_name": "",
+            "organization": "Barker College",
+            "location": {
+                "venue": null,
+                "address_1": "",
+                "address_2": null,
+                "city": "Hornsby",
+                "region": null,
+                "postcode": "2077",
+                "country": "Australia",
+                "coordinates": {
+                    "lat": -33.700000000000003,
+                    "lon": 151.09999999999999
+                }
+            },
+            "registered": false,
+            "program": {
+                "id": 1,
+                "name": "VEX V5 Robotics Competition",
+                "code": "V5RC"
+            },
+            "grade": "High School"
+        }
+    ]
+}

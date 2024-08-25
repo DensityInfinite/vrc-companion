@@ -32,3 +32,15 @@ struct DivisionInfoModel: Codable, Identifiable {
     let name: String
     let order: Int
 }
+
+struct EventTeamListModel {
+    let meta: Meta
+    let teams: [TeamInfoModel]
+}
+
+extension EventTeamListModel: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case teams = "data"
+        case meta
+    }
+}

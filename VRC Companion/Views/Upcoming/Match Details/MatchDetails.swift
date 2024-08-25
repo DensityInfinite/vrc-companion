@@ -110,7 +110,7 @@ struct MatchDetails: View {
                             HStack {
                                 SmallTeamRow(team: teamAlliance.teams[1])
                                 Button(action: {
-                                    presentTeam3Sheet.toggle()
+                                    presentTeam4Sheet.toggle()
                                 }, label: {
                                     Label("Lookup this team", systemImage: "magnifyingglass")
                                         .labelStyle(.iconOnly)

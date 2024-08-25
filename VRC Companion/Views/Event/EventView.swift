@@ -33,12 +33,16 @@ struct EventView: View {
                 }
                 
                 Section("About") {
-                    Text("About this event")
                     NavigationLink {
                         TeamListView(teamList: .preview)
                             .environmentObject(state)
                     } label: {
                         Text("All teams")
+                    }
+                    NavigationLink {
+                        EventAboutView(eventInfo: eventInfo)
+                    } label: {
+                        Text("About this event")
                     }
                 }
             }

@@ -68,7 +68,9 @@ struct TeamFullView: View {
                             case .global:
                                 SimpleRow(label: "Grade", details: teamInfo.grade)
                                 SimpleRow(label: "Organisation", details: teamInfo.organization)
-                                SimpleRow(label: "Robot", details: teamInfo.robotName)
+                                if let robotName = teamInfo.robotName {
+                                    SimpleRow(label: "Robot", details: robotName)
+                                }
                                 SimpleRow(label: "Origin", details: teamInfo.location.city + ", " + teamInfo.location.country)
                             }
                         })

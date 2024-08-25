@@ -64,7 +64,7 @@ struct UpcomingView: View {
                         VStack {
                             ProgressView()
                             Text("Fetching matchlist...")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     if let error {

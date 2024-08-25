@@ -16,7 +16,7 @@ struct SmallMatchRow: View {
             Spacer()
             if let time = match.scheduledTime {
                 Text(time.formatted(date: .omitted, time: .shortened))
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }
         }
     }

@@ -16,7 +16,7 @@ struct SimpleRow: View {
             Text(label)
             Spacer()
             Text(details)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
         }
     }
 }

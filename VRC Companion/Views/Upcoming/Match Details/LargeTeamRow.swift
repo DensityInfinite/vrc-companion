@@ -19,7 +19,7 @@ struct LargeTeamRow: View {
                 Spacer()
                 if let rank = rankings.rank {
                     Text("#\(String(rank))")
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
                 Button(action: {
                     presentingSheet.toggle()

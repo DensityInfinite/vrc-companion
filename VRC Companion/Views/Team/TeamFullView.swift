@@ -112,7 +112,7 @@ struct TeamFullView: View {
                         VStack {
                             ProgressView()
                             Text("Fetching info...")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     if let error {

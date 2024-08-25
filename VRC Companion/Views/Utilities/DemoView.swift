@@ -21,7 +21,7 @@ struct DemoView: View {
                     .font(.headline)
                 Text("Development continues after task submission.")
                     .font(.subheadline)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(titleStyle)

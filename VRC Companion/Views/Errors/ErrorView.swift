@@ -15,9 +15,9 @@ struct ErrorView: View {
             Image(systemName: error.image)
                 .font(.largeTitle)
                 .imageScale(.large)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
             Text(error.guidance)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
         }
     }
 }

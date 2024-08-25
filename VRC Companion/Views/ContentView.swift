@@ -19,7 +19,7 @@ struct ContentView: View {
                 }
                 .environmentObject(state)
             
-            EventView(eventInfo: .preview)
+            EventView()
                 .tabItem {
                     Label("Event", systemImage: "calendar")
                 }

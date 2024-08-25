@@ -9,49 +9,111 @@ import SwiftUI
 
 struct EventView: View {
     @EnvironmentObject var state: StateController
-    var eventInfo: EventInfoModel
-    
+    @State private var eventInfo = APIModel()
+    @State private var error: ErrorWrapper?
+    @State private var hasAppeared = false
+
     var body: some View {
         NavigationStack {
-            List {
-                Section("Skills") {
-                    NavigationLink {
-                        DemoView(title: "Event skills", titleStyle: .inline)
-                    } label: {
-                        Text("Event-level rankings")
+            ZStack {
+                List {
+                    if error != nil && eventInfo.info != nil {
+                        Section {
+                            BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
+                                .environmentObject(state)
+                        }
+                        .listSectionSpacing(.compact)
                     }
-                }
-                
-                Section("Divisions") {
-                    ForEach(eventInfo.divisions) { division in
-                        NavigationLink {
-                            DemoView(title: division.name, titleStyle: .inline)
-                        } label: {
-                            Text(division.name.contains("Default") ? "Default" : division.name)
+                    if let eventInfo = eventInfo.info {
+                        Section("Skills") {
+                            NavigationLink {
+                                DemoView(title: "Event skills", titleStyle: .inline)
+                            } label: {
+                                Text("Event-level rankings")
+                            }
+                        }
+
+                        Section("Divisions") {
+                            ForEach(eventInfo.divisions) { division in
+                                NavigationLink {
+                                    DemoView(title: division.name, titleStyle: .inline)
+                                } label: {
+                                    Text(division.name.contains("Default") ? "Default" : division.name)
+                                }
+                            }
+                        }
+
+                        Section("About") {
+                            NavigationLink {
+                                TeamListView(teamList: .preview)
+                                    .environmentObject(state)
+                            } label: {
+                                Text("All teams")
+                            }
+                            NavigationLink {
+                                EventAboutView(eventInfo: eventInfo)
+                            } label: {
+                                Text("About this event")
+                            }
                         }
                     }
                 }
-                
-                Section("About") {
-                    NavigationLink {
-                        TeamListView(teamList: .preview)
-                            .environmentObject(state)
-                    } label: {
-                        Text("All teams")
+                .navigationTitle("Event")
+                .task {
+                    do {
+                        guard !hasAppeared else { return }
+                        try await eventInfo.fetchInfo(state: state)
+                        self.error = nil
+                        hasAppeared = true
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch info.")
                     }
-                    NavigationLink {
-                        EventAboutView(eventInfo: eventInfo)
-                    } label: {
-                        Text("About this event")
+                }
+                .refreshable {
+                    do {
+                        try await eventInfo.fetchInfo(state: state)
+                        self.error = nil
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update info.")
+                    }
+                }
+
+                // Status Feedback
+                if eventInfo.info == nil {
+                    if eventInfo.isLoading {
+                        VStack {
+                            ProgressView()
+                            Text("Fetching info...")
+                                .foregroundStyle(.gray)
+                        }
+                    }
+                    if let error {
+                        ErrorView(error: error)
+                            .containerRelativeFrame(.horizontal, alignment: .center)
                     }
                 }
             }
-            .navigationTitle("Event")
+        }
+    }
+}
+
+extension EventView {
+    @Observable class APIModel {
+        private(set) var info: EventInfoModel?
+        private(set) var isLoading = false
+
+        @MainActor func fetchInfo(state: StateController) async throws {
+            guard !isLoading else { return }
+            defer { isLoading = false }
+            isLoading = true
+            let resource = EventInfoResource(state.focusedCompetitionID ?? -1)
+            let request = EventInfoRequest(resource: resource)
+            info = try await request.execute()
         }
     }
 }
 
 #Preview {
-    EventView(eventInfo: .preview)
+    EventView()
         .environmentObject(StateController())
 }

@@ -19,7 +19,7 @@ struct EventView: View {
                 List {
                     if error != nil && eventInfo.info != nil {
                         Section {
-                            BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
+                            BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
                                 .environmentObject(state)
                         }
                         .listSectionSpacing(.compact)

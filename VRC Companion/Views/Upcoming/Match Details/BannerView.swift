@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BannerView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     var match: MatchModel?
     var systemImage: String?
     var message: String?
@@ -49,5 +49,5 @@ struct BannerView: View {
 
 #Preview {
     BannerView(match: .preview)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

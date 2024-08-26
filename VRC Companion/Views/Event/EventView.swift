@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var apiData = APIModel()
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
@@ -20,7 +20,7 @@ struct EventView: View {
                     if error != nil && (apiData.info != nil || !apiData.teamList.isEmpty) {
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
-                                .environmentObject(state)
+                                .environment(state)
                         }
                         .listSectionSpacing(.compact)
                     }
@@ -53,7 +53,7 @@ struct EventView: View {
                             } else if !apiData.teamList.isEmpty {
                                 NavigationLink {
                                     TeamListView(teamList: apiData.teamList)
-                                        .environmentObject(state)
+                                        .environment(state)
                                 } label: {
                                     Text("All Teams")
                                 }
@@ -153,5 +153,5 @@ extension EventView {
 
 #Preview {
     EventView()
-        .environmentObject(StateController())
+        .environment(StateController())
 }

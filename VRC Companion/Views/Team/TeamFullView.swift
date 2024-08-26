@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamFullView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var statsSelection: StatsTypes = .matches
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
@@ -29,7 +29,7 @@ struct TeamFullView: View {
                         if error != nil {
                             Section {
                                 BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
-                                    .environmentObject(state)
+                                    .environment(state)
                             }
                             .listSectionSpacing(.compact)
                         }
@@ -162,5 +162,5 @@ extension TeamFullView {
 
 #Preview {
     TeamFullView(title: "My Team", teamID: StateController().userTeamInfo.id)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

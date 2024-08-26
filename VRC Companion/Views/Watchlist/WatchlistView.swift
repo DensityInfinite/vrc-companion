@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WatchlistView: View {
+    @Environment(StateController.self) var state
     var body: some View {
         NavigationSplitView {
             List {
@@ -24,4 +25,5 @@ struct WatchlistView: View {
 
 #Preview {
     WatchlistView()
+        .environment(StateController())
 }

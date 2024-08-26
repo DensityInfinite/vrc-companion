@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamListView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var searchText: String = ""
     var teamList: [TeamInfoModel]
     
@@ -25,7 +25,7 @@ struct TeamListView: View {
                 ForEach(filteredList) { team in
                     NavigationLink {
                         TeamFullView(title: team.number, teamID: team.id)
-                            .environmentObject(state)
+                            .environment(state)
                     } label: {
                         TeamListRow(team: team)
                         if team.id == state.userTeamInfo.id {
@@ -54,5 +54,5 @@ extension TeamListView {
 
 #Preview {
     TeamListView(teamList: EventTeamListModel.preview.teams)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

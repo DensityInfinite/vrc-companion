@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MatchDetails: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var opponentTopData = APIModel()
     @State private var opponentBottomData = APIModel()
     @State private var presentTeam1Sheet: Bool = false
@@ -25,21 +25,21 @@ struct MatchDetails: View {
             List {
                 Section {
                     AtAGlanceView(match: match, isResearch: isResearch)
-                        .environmentObject(state)
+                        .environment(state)
                         .padding(.top, -8)
                         .padding(.bottom, -8)
                 }
 
                 Section {
                     BannerView(match: match)
-                        .environmentObject(state)
+                        .environment(state)
                 }
                 .listSectionSpacing(.compact)
 
                 if error != nil {
                     Section {
                         BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
-                            .environmentObject(state)
+                            .environment(state)
                     }
                     .listSectionSpacing(.compact)
                 }
@@ -216,5 +216,5 @@ extension MatchDetails {
 
 #Preview {
     MatchDetails(match: .preview, isResearch: false)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

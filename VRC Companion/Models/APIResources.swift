@@ -62,13 +62,18 @@ struct RankingsResource: APIResource {
     }
 }
 
-struct EventTeamListResource: APIResource {
+struct EventTeamListResource: APIResource, Paginated {
     typealias ModelType = EventTeamListModel
     var methodPath: String
     var eventID: Int?
+    var page: Int?
     
     init(_ eventID: Int) {
         methodPath = "/events/\(eventID)/teams"
+    }
+    
+    mutating func updateToPagedURL(for pageURL: String, in eventID: Int) {
+        page = Int(pageURL.components(separatedBy: "?").last?.components(separatedBy: "=").last ?? "1")
     }
 }
 

@@ -6,22 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
+    @Query var watchlist: [TeamInfoModel]
 
     var body: some View {
         NavigationStack {
             ZStack {
                 List {
                     Section {
-                        ForEach(state.watchlist) { team in
+                        ForEach(watchlist) { team in
                             Text(team.number)
                         }
                     }
                 }
                 .navigationTitle("Watchlist")
-                if state.watchlist.isEmpty {
+                if watchlist.isEmpty {
                     VStack {
                         Image(systemName: "star")
                             .font(.title)

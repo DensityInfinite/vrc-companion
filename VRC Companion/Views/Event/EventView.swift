@@ -17,7 +17,7 @@ struct EventView: View {
         NavigationStack {
             ZStack {
                 List {
-                    if error != nil && (apiData.info != nil || apiData.teamList.isEmpty) {
+                    if error != nil && (apiData.info != nil || !apiData.teamList.isEmpty) {
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update info.", color: .failed)
                                 .environmentObject(state)

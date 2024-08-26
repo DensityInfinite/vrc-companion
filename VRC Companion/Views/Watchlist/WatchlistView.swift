@@ -9,16 +9,33 @@ import SwiftUI
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
+
     var body: some View {
-        NavigationSplitView {
-            List {
-                Section("Teams") {
-                    Text("Team Identifier")
+        NavigationStack {
+            ZStack {
+                List {
+                    Section {
+                        ForEach(state.watchlist) { team in
+                            Text(team.number)
+                        }
+                    }
+                }
+                .navigationTitle("Watchlist")
+                if state.watchlist.isEmpty {
+                    VStack {
+                        Image(systemName: "star")
+                            .font(.title)
+                            .imageScale(.large)
+                            .foregroundStyle(.secondary)
+                        Text("Your Watchlist is Empty")
+                            .font(.headline)
+                            .foregroundStyle(.secondary)
+                        Text("Watch teams for quick access to their statistics.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
-            .navigationTitle("Watchlist")
-        } detail: {
-            Text("Select one to view details.")
         }
     }
 }

@@ -161,6 +161,6 @@ extension TeamFullView {
 }
 
 #Preview {
-    TeamFullView(title: "My Team", teamID: StateController().userTeamInfo.id)
+    TeamFullView(title: "My team", teamID: StateController().userTeamInfo.id)
         .environment(StateController())
 }

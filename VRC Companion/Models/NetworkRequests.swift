@@ -15,7 +15,7 @@ protocol APIRequest: AnyObject {
 
 extension APIRequest {
     func load(_ url: URL) async throws -> ModelType {
-        // var token = <add your token here>
+        // let token = <add your token here>
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")

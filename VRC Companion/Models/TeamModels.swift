@@ -89,12 +89,14 @@ extension APIRankingsModel {
 }
 
 // MARK: - TeamInfoModel
-struct TeamInfoModel: Decodable {
+struct TeamInfoModel: Decodable, Identifiable {
     let id: Int
-    let number, name, robotName, organization: String
+    let number, name: String
+    let robotName: String?
+    let organization: String
     let location: LocationModel
     let registered: Bool
-    let program: ProgramModel
+    let program: IDInfoModel
     let grade: String
     
     enum CodingKeys: String, CodingKey {
@@ -129,8 +131,9 @@ struct CoordinatesModel: Decodable {
 }
 
 // MARK: - ProgramModel
-struct ProgramModel: Decodable {
+struct IDInfoModel: Decodable {
     let id: Int
-    let name, code: String
+    let name: String
+    let code: String?
 }
 

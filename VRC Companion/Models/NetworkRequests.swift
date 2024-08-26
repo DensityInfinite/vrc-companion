@@ -15,7 +15,7 @@ protocol APIRequest: AnyObject {
 
 extension APIRequest {
     func load(_ url: URL) async throws -> ModelType {
-        // var token = <add your token here>
+        // let token = <add your token here>
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -62,6 +62,25 @@ extension RankingsRequest: APIRequest {
     }
 }
 
+class EventTeamListRequest {
+    let resource: EventTeamListResource
+    
+    init(resource: EventTeamListResource) {
+        self.resource = resource
+    }
+}
+
+extension EventTeamListRequest: APIRequest {
+    func decode(_ data: Data) throws -> EventTeamListResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(EventTeamListResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> EventTeamListResource.ModelType {
+        try await load(resource.url)
+    }
+}
+
 class TeamInfoRequest {
     let resource: TeamInfoResource
     
@@ -77,6 +96,25 @@ extension TeamInfoRequest: APIRequest {
     }
     
     func execute() async throws -> TeamInfoResource.ModelType {
+        try await load(resource.url)
+    }
+}
+
+class EventInfoRequest {
+    let resource: EventInfoResource
+    
+    init(resource: EventInfoResource) {
+        self.resource = resource
+    }
+}
+
+extension EventInfoRequest: APIRequest {
+    func decode(_ data: Data) throws -> EventInfoResource.ModelType {
+        return try JSONDecoder.apiDecoder
+            .decode(EventInfoResource.ModelType.self, from: data)
+    }
+    
+    func execute() async throws -> EventInfoResource.ModelType {
         try await load(resource.url)
     }
 }

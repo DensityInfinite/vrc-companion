@@ -68,7 +68,9 @@ struct TeamFullView: View {
                             case .global:
                                 SimpleRow(label: "Grade", details: teamInfo.grade)
                                 SimpleRow(label: "Organisation", details: teamInfo.organization)
-                                SimpleRow(label: "Robot", details: teamInfo.robotName)
+                                if let robotName = teamInfo.robotName {
+                                    SimpleRow(label: "Robot", details: robotName)
+                                }
                                 SimpleRow(label: "Origin", details: teamInfo.location.city + ", " + teamInfo.location.country)
                             }
                         })
@@ -105,12 +107,12 @@ struct TeamFullView: View {
                 .navigationBarTitleDisplayMode(title == "My team" ? .automatic : .inline)
                 
                 // Status Feedback
-                if apiData.teamInfo == nil {
+                if apiData.teamInfo == nil || apiData.rankings == nil {
                     if apiData.isLoading {
                         VStack {
                             ProgressView()
                             Text("Fetching info...")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     if let error {

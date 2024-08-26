@@ -28,7 +28,7 @@ struct StatsTile: View {
                         .fontWidth(.condensed)
                     Text(description)
                         .fontWidth(.condensed)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
                 .padding(.top)
                 .padding(.bottom)
@@ -45,7 +45,7 @@ struct StatsTile: View {
                 Text(description)
                     .font(.subheadline)
                     .fontWidth(.condensed)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                 Spacer()
                 Text(String(data.formatted()))
                     .font(.subheadline)

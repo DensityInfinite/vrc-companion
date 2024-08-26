@@ -46,7 +46,7 @@ struct UpcomingView: View {
                         self.error = nil
                         hasAppeared = true
                     } catch {
-                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update matchlist.")
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch matchlist.")
                     }
                 }
                 .refreshable {
@@ -64,7 +64,7 @@ struct UpcomingView: View {
                         VStack {
                             ProgressView()
                             Text("Fetching matchlist...")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     if let error {

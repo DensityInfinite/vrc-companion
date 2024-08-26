@@ -18,12 +18,12 @@ struct LargeMatchRow: View {
                 Spacer()
                 if let time = match.scheduledTime {
                     if time.timeIntervalSinceNow.isLess(than: 300) {
-                        Text("Queue now")
-                            .foregroundStyle(.gray)
+                        Text("Queue Now")
+                            .foregroundStyle(.secondary)
                             .fontWeight(.medium)
                     } else {
                         Text(time.formatted(.relative(presentation: .numeric)))
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                     }
                 }
             }

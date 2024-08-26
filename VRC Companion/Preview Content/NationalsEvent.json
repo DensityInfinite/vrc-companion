@@ -1,0 +1,56 @@
+{
+    "id": 52110,
+    "sku": "RE-VRC-23-2110",
+    "name": "VEX Robotics 2023-24 Australian National Championships - VRC High School",
+    "start": "2023-12-02T00:00:00-05:00",
+    "end": "2023-12-03T00:00:00-05:00",
+    "season": {
+        "id": 181,
+        "name": "VRC 2023-2024: Over Under",
+        "code": null
+    },
+    "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+    },
+    "location": {
+        "venue": "Adelaide Convention Centre",
+        "address_1": "North Terrace",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": null,
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+            "lat": -34.921194999999997,
+            "lon": 138.60532000000001
+        }
+    },
+    "locations": {
+        "2023-12-02": {
+            "venue": "Adelaide Convention Centre",
+            "address_1": "North Terrace",
+            "address_2": null,
+            "city": "Adelaide",
+            "region": null,
+            "postcode": "5000",
+            "country": "Australia",
+            "coordinates": {
+                "lat": -34.921194999999997,
+                "lon": 138.60532000000001
+            }
+        }
+    },
+    "divisions": [
+        {
+            "id": 1,
+            "name": "Default Division",
+            "order": 1
+        }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+}

@@ -22,6 +22,24 @@ extension APIResource {
     }
 }
 
+protocol Paginated: APIResource {
+    var page: Int? { get }
+}
+
+extension Paginated {
+    var url: URL {
+        var url = URL(string: "https://www.robotevents.com/api/v2")!
+            .appendingPathComponent(methodPath)
+        if let eventID {
+            url = url.appending(queryItems: [URLQueryItem(name: "event[]", value: String(eventID))])
+        }
+        if let page {
+            url = url.appending(queryItems: [URLQueryItem(name: "page", value: String(page))])
+        }
+        return url
+    }
+}
+
 struct MatchlistResource: APIResource {
     typealias ModelType = MatchlistModel
     var methodPath: String
@@ -44,6 +62,21 @@ struct RankingsResource: APIResource {
     }
 }
 
+struct EventTeamListResource: APIResource, Paginated {
+    typealias ModelType = EventTeamListModel
+    var methodPath: String
+    var eventID: Int?
+    var page: Int?
+    
+    init(_ eventID: Int) {
+        methodPath = "/events/\(eventID)/teams"
+    }
+    
+    mutating func updateToPagedURL(for pageURL: String, in eventID: Int) {
+        page = Int(pageURL.components(separatedBy: "?").last?.components(separatedBy: "=").last ?? "1")
+    }
+}
+
 struct TeamInfoResource: APIResource {
     typealias ModelType = TeamInfoModel
     var methodPath: String
@@ -51,5 +84,15 @@ struct TeamInfoResource: APIResource {
     
     init(_ teamID: Int) {
         methodPath = "/teams/\(teamID)"
+    }
+}
+
+struct EventInfoResource: APIResource {
+    typealias ModelType = EventInfoModel
+    var methodPath: String
+    var eventID: Int?
+    
+    init(_ eventID: Int) {
+        methodPath = "/events/\(eventID)"
     }
 }

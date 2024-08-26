@@ -39,7 +39,8 @@ struct TeamOverviewView: View {
                     Text("Seeding Rank")
                         .font(.subheadline)
                         .fontWidth(.condensed)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
+                        .opacity(0.8)
                 }
                 .frame(width: 100, height: 110)
                 .background(

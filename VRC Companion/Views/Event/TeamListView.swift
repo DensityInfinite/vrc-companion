@@ -10,11 +10,11 @@ import SwiftUI
 struct TeamListView: View {
     @EnvironmentObject var state: StateController
     @State private var searchText: String = ""
-    var teamList: EventTeamListModel
+    var teamList: [TeamInfoModel]
     
     var body: some View {
         NavigationStack {
-            let filteredList = filter(teamList.teams, for: searchText)
+            let filteredList = filter(teamList, for: searchText)
             if filteredList.isEmpty {
                 VStack {
                     Spacer()
@@ -53,6 +53,6 @@ extension TeamListView {
 }
 
 #Preview {
-    TeamListView(teamList: .preview)
+    TeamListView(teamList: EventTeamListModel.preview.teams)
         .environmentObject(StateController())
 }

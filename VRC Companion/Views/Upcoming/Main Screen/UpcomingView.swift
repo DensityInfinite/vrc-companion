@@ -12,12 +12,22 @@ struct UpcomingView: View {
     @State private var matchlist = APIModel()
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
+    
+    @State private var isSearchPresented: Bool = false
+    @State private var searchText: String = ""
 
     var body: some View {
         NavigationStack {
+            let filteredMatches = filter(matchlist.matches, for: searchText)
+            if filteredMatches.isEmpty && isSearchPresented {
+                VStack {
+                    Spacer()
+                    ErrorView(error: ErrorWrapper(error: Errors.noSearchResults, image: "exclamationmark.magnifyingglass", guidance: "No matching matches."))
+                }
+            }
             ZStack {
                 List {
-                    if error != nil && !matchlist.matches.isEmpty {
+                    if error != nil && !matchlist.matches.isEmpty && !isSearchPresented{
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
                                 .environment(state)
@@ -25,20 +35,33 @@ struct UpcomingView: View {
                         .listSectionSpacing(.compact)
                     }
                     Section {
-                        ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
-                            NavigationLink {
-                                MatchDetails(match: match, isResearch: false).environment(state)
-                            } label: {
-                                if index < 3 {
-                                    LargeMatchRow(match: match)
-                                } else {
-                                    SmallMatchRow(match: match)
+                        if !isSearchPresented {
+                            ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
+                                NavigationLink {
+                                    MatchDetails(match: match, isResearch: false).environment(state)
+                                } label: {
+                                    if index < 3 {
+                                        LargeMatchRow(match: match)
+                                    } else {
+                                        SmallMatchRow(match: match)
+                                    }
+                                }
+                            }
+                        } else {
+                            ForEach(Array(zip(filteredMatches.indices, filteredMatches)), id: \.0) { index, match in
+                                NavigationLink {
+                                    MatchDetails(match: match, isResearch: false).environment(state)
+                                } label: {
+                                    if index < 2 {
+                                        LargeMatchRow(match: match, presentingWLT: false)
+                                    } else {
+                                        SmallMatchRow(match: match)
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                .navigationTitle("Upcoming")
                 .task {
                     do {
                         guard !hasAppeared else { return }
@@ -57,6 +80,8 @@ struct UpcomingView: View {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update matchlist.")
                     }
                 }
+                .searchable(text: $searchText, isPresented: $isSearchPresented, prompt: "Matches and teams...")
+                .navigationTitle("Upcoming")
 
                 // Status Feedback
                 if matchlist.matches.isEmpty {
@@ -73,6 +98,20 @@ struct UpcomingView: View {
                     }
                 }
             }
+        }
+    }
+}
+
+extension UpcomingView {
+    func filter(_ matchlist: [MatchModel], for searchText: String) -> [MatchModel] {
+        guard !searchText.isEmpty else { return matchlist }
+        let searchText = searchText.lowercased()
+        return matchlist.filter { match in
+            match.name.lowercased().contains(searchText) ||
+            match.alliances[0].teams[0].number.lowercased().contains(searchText) ||
+            match.alliances[0].teams[1].number.lowercased().contains(searchText) ||
+            match.alliances[1].teams[0].number.lowercased().contains(searchText) ||
+            match.alliances[1].teams[1].number.lowercased().contains(searchText)
         }
     }
 }

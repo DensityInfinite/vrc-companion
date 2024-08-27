@@ -23,7 +23,7 @@ struct LookupView: View {
                     ZStack {
                         Text("Show Welcome on Next Launch")
                             .font(.headline)
-                            .foregroundStyle(.background)
+                            .foregroundStyle(.blue)
                             .frame(height: 45)
                             .containerRelativeFrame(.horizontal, { length, axis in
                                 if axis == .vertical {
@@ -32,7 +32,7 @@ struct LookupView: View {
                                     return length / 1.3
                                 }
                             })
-                            .background(RoundedRectangle(cornerRadius: 12))
+                            .background(RoundedRectangle(cornerRadius: 12).foregroundStyle(.secondary).opacity(0.3))
                     }
                 })
                 .padding(.bottom, 35)

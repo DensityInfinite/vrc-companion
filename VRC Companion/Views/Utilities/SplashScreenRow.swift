@@ -16,10 +16,9 @@ struct SplashScreenRow: View {
         HStack {
             Image(systemName: image)
                 .font(.largeTitle)
-                .foregroundStyle(.accent)
+                .foregroundStyle(.blue)
                 .imageScale(.medium)
                 .frame(width: 55, height: 55)
-//                .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.blue))
             VStack(alignment: .leading) {
                 Text(headline)
                     .font(.headline)

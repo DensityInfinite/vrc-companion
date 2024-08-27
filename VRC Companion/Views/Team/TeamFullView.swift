@@ -195,6 +195,18 @@ extension TeamFullView {
 }
 
 #Preview {
-    TeamFullView(title: "My team", teamID: StateController().userTeamInfo.id)
-        .environment(StateController())
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let schema = Schema([
+            TeamInfoModel.self,
+            LocationModel.self,
+            IDInfoModel.self
+        ])
+        let container = try ModelContainer(for: schema, configurations: config)
+        return TeamFullView(title: "My team", teamID: StateController().userTeamInfo.id)
+            .environment(StateController())
+            .modelContainer(container)
+    } catch {
+        fatalError("Could not create ModelContainer: \(error)")
+    }
 }

@@ -11,7 +11,8 @@ import SwiftData
 struct TeamFullView: View {
     @Environment(StateController.self) var state
     @Environment(\.modelContext) private var context
-    @Query var watchlist: [TeamInfoModel]
+    @Query private var watchlist: [TeamInfoModel]
+    
     @State private var statsSelection: StatsTypes = .matches
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false

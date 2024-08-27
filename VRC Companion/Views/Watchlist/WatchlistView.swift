@@ -5,36 +5,93 @@
 //  Created by Douglas Jiang on 19/2/2024.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
     @Environment(\.modelContext) private var context
-    @Query(sort: \TeamInfoModel.number) var watchlist: [TeamInfoModel]
+    @Query(sort: \TeamInfoModel.number) private var watchlist: [TeamInfoModel]
+
+    @State private var error: ErrorWrapper?
+    @State private var apiData: [APIModel] = []
 
     var body: some View {
         NavigationStack {
             ZStack {
                 List {
-                    Section {
-                        ForEach(watchlist) { team in
-                            HStack {
-                                Text(team.number)
-                                Spacer()
-                                Text(team.name)
-                                    .foregroundStyle(.secondary)
-                            }
+                    if let error {
+                        Section {
+                            BannerView(systemImage: error.image, message: error.guidance, color: .failed)
+                                .environment(state)
                         }
-                        .onDelete(perform: { indexSet in
-                            for index in indexSet {
-                                let team = watchlist[index]
-                                context.delete(team)
+                        .listSectionSpacing(.compact)
+                    }
+
+                    Section {
+                        if apiData.isEmpty {
+                            ForEach(watchlist) { team in
+                                HStack {
+                                    Text(team.number)
+                                    Spacer()
+                                    Text(team.name)
+                                        .foregroundStyle(.secondary)
+                                }
                             }
-                        })
+                            .onDelete(perform: { indexSet in
+                                for index in indexSet {
+                                    let team = watchlist[index]
+                                    context.delete(team)
+                                }
+                            })
+                        } else {
+                            ForEach(apiData) { data in
+                                NavigationLink {
+                                    TeamFullView(title: data.associatedTeam.number, teamID: data.associatedTeam.id)
+                                } label: {
+                                    if let rankings = data.rankings {
+                                        WatchlistTeamRow(team: data.associatedTeam, rankings: rankings)
+                                    } else {
+                                        HStack {
+                                            Text(data.associatedTeam.number)
+                                            Spacer()
+                                            Text(data.associatedTeam.name)
+                                                .foregroundStyle(.secondary)
+                                            if data.isLoading {
+                                                ProgressView()
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .onDelete(perform: { indexSet in
+                                for index in indexSet {
+                                    let team = watchlist[index]
+                                    context.delete(team)
+                                }
+                            })
+                        }
+                    }
+                }
+                .task {
+                    do {
+                        try await refreshAPIData(with: watchlist)
+                        error = nil
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch stats.")
+                    }
+                }
+                .refreshable {
+                    do {
+                        try await refreshAPIData(with: watchlist)
+                        error = nil
+                    } catch {
+                        self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch stats.")
                     }
                 }
                 .navigationTitle("Watchlist")
+
+                // Empty prompt
                 if watchlist.isEmpty {
                     VStack {
                         Image(systemName: "star")
@@ -54,7 +111,66 @@ struct WatchlistView: View {
     }
 }
 
+extension WatchlistView {
+    func refreshAPIData(with watchlist: [TeamInfoModel]) async throws {
+        for team in watchlist {
+            if !apiData.contains(where: { $0.associatedTeam.id == team.id }) {
+                apiData.append(APIModel(associatedTeam: team))
+            }
+        }
+
+        apiData.removeAll { data in
+            !watchlist.contains(where: { $0.id == data.associatedTeam.id })
+        }
+
+        for data in apiData {
+            try await data.fetchRankings(state: state)
+        }
+
+        apiData.sort {
+            if let rank0 = $0.rankings?.rank, let rank1 = $1.rankings?.rank {
+                return rank0 < rank1
+            }
+            return false
+        }
+    }
+}
+
+extension WatchlistView {
+    @Observable class APIModel: Identifiable {
+        var id = UUID()
+        var associatedTeam: TeamInfoModel
+        private(set) var rankings: RankingsModel?
+        private(set) var isLoading = false
+
+        @MainActor func fetchRankings(state: StateController) async throws {
+            guard !isLoading else { return }
+            defer { isLoading = false }
+            isLoading = true
+            let resource = RankingsResource(associatedTeam.id, state.focusedCompetitionID)
+            let request = RankingsRequest(resource: resource)
+            rankings = try await request.execute().rankings.first
+        }
+
+        init(associatedTeam: TeamInfoModel) {
+            self.associatedTeam = associatedTeam
+        }
+    }
+}
+
 #Preview {
-    WatchlistView()
-        .environment(StateController())
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let schema = Schema([
+            TeamInfoModel.self,
+            LocationModel.self,
+            IDInfoModel.self
+        ])
+        let container = try ModelContainer(for: schema, configurations: config)
+        return WatchlistView()
+            .environment(StateController())
+            .modelContainer(container)
+    } catch {
+        fatalError("Could not create ModelContainer: \(error)")
+    }
 }

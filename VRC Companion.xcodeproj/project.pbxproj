@@ -41,6 +41,7 @@
 		B37E53462C7951AA000DD4F8 /* StatsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53452C7951AA000DD4F8 /* StatsBoard.swift */; };
 		B37E53482C7951B6000DD4F8 /* StatsTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E53472C7951B6000DD4F8 /* StatsTile.swift */; };
 		B37F27BD2C2939530045DD27 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */; };
+		B38E761D2C7DD55D00824C74 /* WatchlistTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E761C2C7DD55D00824C74 /* WatchlistTeamRow.swift */; };
 		B38EB64D2C2105BF00D14B6C /* SiegeWorldsMatchlist.json in Resources */ = {isa = PBXBuildFile; fileRef = B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */; };
 		B39B3F822C26B3BF00249F7D /* MatchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F812C26B3BF00249F7D /* MatchModels.swift */; };
 		B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */; };
@@ -114,6 +115,7 @@
 		B37E53452C7951AA000DD4F8 /* StatsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBoard.swift; sourceTree = "<group>"; };
 		B37E53472C7951B6000DD4F8 /* StatsTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTile.swift; sourceTree = "<group>"; };
 		B37F27BC2C2939530045DD27 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
+		B38E761C2C7DD55D00824C74 /* WatchlistTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTeamRow.swift; sourceTree = "<group>"; };
 		B38EB64C2C2105BF00D14B6C /* SiegeWorldsMatchlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiegeWorldsMatchlist.json; sourceTree = "<group>"; };
 		B39B3F812C26B3BF00249F7D /* MatchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModels.swift; sourceTree = "<group>"; };
 		B39B3F832C26B46800249F7D /* RobotEventsMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotEventsMeta.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B31FBF752B8308D600850E8A /* WatchlistView.swift */,
+				B38E761C2C7DD55D00824C74 /* WatchlistTeamRow.swift */,
 			);
 			path = Watchlist;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				B39B3F862C26BA3B00249F7D /* TeamModels.swift in Sources */,
 				B39B3F842C26B46800249F7D /* RobotEventsMeta.swift in Sources */,
 				B365959E2C755F4A003F65A0 /* ErrorView.swift in Sources */,
+				B38E761D2C7DD55D00824C74 /* WatchlistTeamRow.swift in Sources */,
 				B31FBF6C2B83047A00850E8A /* SmallMatchRow.swift in Sources */,
 				B3502EC02C279C5B00A65640 /* Preview Extensions.swift in Sources */,
 				B35F94A92C76C5380053ADDC /* TeamOverviewView.swift in Sources */,

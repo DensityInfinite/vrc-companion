@@ -10,6 +10,7 @@ import SwiftUI
 struct WatchlistTeamRow: View {
     var team: TeamInfoModel
     var rankings: RankingsModel
+    var presentingBoard: Bool
     
     var body: some View {
         VStack {
@@ -26,11 +27,13 @@ struct WatchlistTeamRow: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            StatsBoard(rankings: rankings, representation: .minimal)
+            if presentingBoard {
+                StatsBoard(rankings: rankings, representation: .minimal)
+            }
         }
     }
 }
 
 #Preview {
-    WatchlistTeamRow(team: .preview, rankings: .preview)
+    WatchlistTeamRow(team: .preview, rankings: .preview, presentingBoard: true)
 }

@@ -10,7 +10,8 @@ import SwiftData
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
-    @Query var watchlist: [TeamInfoModel]
+    @Environment(\.modelContext) private var context
+    @Query(sort: \TeamInfoModel.number) var watchlist: [TeamInfoModel]
 
     var body: some View {
         NavigationStack {
@@ -18,8 +19,19 @@ struct WatchlistView: View {
                 List {
                     Section {
                         ForEach(watchlist) { team in
-                            Text(team.number)
+                            HStack {
+                                Text(team.number)
+                                Spacer()
+                                Text(team.name)
+                                    .foregroundStyle(.secondary)
+                            }
                         }
+                        .onDelete(perform: { indexSet in
+                            for index in indexSet {
+                                let team = watchlist[index]
+                                context.delete(team)
+                            }
+                        })
                     }
                 }
                 .navigationTitle("Watchlist")

@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TeamFullView: View {
     @Environment(StateController.self) var state
+    @Environment(\.modelContext) private var context
+    @Query var watchlist: [TeamInfoModel]
     @State private var statsSelection: StatsTypes = .matches
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
@@ -80,6 +83,14 @@ struct TeamFullView: View {
                     do {
                         guard !hasAppeared else { return }
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        if let apiTeam = apiData.teamInfo {
+                            for team in watchlist {
+                                if team.id == apiTeam.id && team != apiTeam {
+                                    context.delete(team)
+                                    context.insert(apiTeam)
+                                }
+                            }
+                        }
                         try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
@@ -91,6 +102,14 @@ struct TeamFullView: View {
                 .refreshable {
                     do {
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        if let apiTeam = apiData.teamInfo {
+                            for team in watchlist {
+                                if team.id == apiTeam.id && team != apiTeam {
+                                    context.delete(team)
+                                    context.insert(apiTeam)
+                                }
+                            }
+                        }
                         try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
@@ -101,6 +120,21 @@ struct TeamFullView: View {
                 .onAppear {
                     if teamID == state.userTeamInfo.id && !hasAppeared {
                         statsSelection = .local
+                    }
+                }
+                .toolbar {
+                    if let teamInfo = apiData.teamInfo {
+                        ToolbarItem {
+                            Button(action: {
+                                if watchlist.contains(teamInfo) {
+                                    context.delete(teamInfo)
+                                } else {
+                                    context.insert(teamInfo)
+                                }
+                            }, label: {
+                                Label(watchlist.contains(teamInfo) ? "Unwatch team" : "Watch team", systemImage: watchlist.contains(teamInfo) ? "star.fill" : "star")
+                            })
+                        }
                     }
                 }
                 .navigationTitle(title)
@@ -127,7 +161,7 @@ struct TeamFullView: View {
 extension TeamFullView {
     @Observable class APIModel {
         private(set) var matchlist: [MatchModel] = []
-        private(set) var teamInfo: TeamInfoModel?
+        var teamInfo: TeamInfoModel?
         private(set) var rankings: RankingsModel?
         private(set) var isLoading = false
 

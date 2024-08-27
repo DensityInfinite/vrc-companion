@@ -13,13 +13,28 @@ struct AllianceTileView: View {
     @State private var bottomTeamRanking = APIModel()
     @State private var hasAppeared = false
     var alliance: AllianceModel
+    var presentingWLT: Bool?
 
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             HStack {
+                if let presentingWLT {
+                    if !presentingWLT {
+                        Spacer()
+                    }
+                }
+                
                 Text(alliance.teams[0].number)
                     .font(.callout)
-                Spacer()
+                
+                if let presentingWLT {
+                    if presentingWLT {
+                        Spacer()
+                    }
+                } else {
+                    Spacer()
+                }
+                
                 if topTeamRanking.isLoading{
                     ProgressView()
                         .controlSize(.mini)
@@ -28,12 +43,32 @@ struct AllianceTileView: View {
                     Text("\(rankings.wins ?? 0)/\(rankings.losses ?? 0)/\(rankings.ties ?? 0)")
                         .font(.subheadline)
                 }
+                
+                if let presentingWLT {
+                    if !presentingWLT {
+                        Spacer()
+                    }
+                }
             }
             .padding(.bottom, -0.2)
             HStack {
+                if let presentingWLT {
+                    if !presentingWLT {
+                        Spacer()
+                    }
+                }
+                
                 Text(alliance.teams[1].number)
                     .font(.callout)
-                Spacer()
+                
+                if let presentingWLT {
+                    if presentingWLT {
+                        Spacer()
+                    }
+                } else {
+                    Spacer()
+                }
+                
                 if bottomTeamRanking.isLoading {
                     ProgressView()
                         .controlSize(.mini)
@@ -41,6 +76,12 @@ struct AllianceTileView: View {
                 if let rankings = bottomTeamRanking.rankings {
                     Text("\(rankings.wins ?? 0)/\(rankings.losses ?? 0)/\(rankings.ties ?? 0)")
                         .font(.subheadline)
+                }
+                
+                if let presentingWLT {
+                    if !presentingWLT {
+                        Spacer()
+                    }
                 }
             }
             .padding(.top, -0.2)
@@ -60,8 +101,15 @@ struct AllianceTileView: View {
         )
         .task {
             if !hasAppeared || topTeamRanking.rankings == nil || bottomTeamRanking.rankings == nil {
-                try? await topTeamRanking.fetchRankings(state: state, teamID: alliance.teams[0].id)
-                try? await bottomTeamRanking.fetchRankings(state: state, teamID: alliance.teams[1].id)
+                if let presentingWLT {
+                    if presentingWLT {
+                        try? await topTeamRanking.fetchRankings(state: state, teamID: alliance.teams[0].id)
+                        try? await bottomTeamRanking.fetchRankings(state: state, teamID: alliance.teams[1].id)
+                    }
+                } else {
+                    try? await topTeamRanking.fetchRankings(state: state, teamID: alliance.teams[0].id)
+                    try? await bottomTeamRanking.fetchRankings(state: state, teamID: alliance.teams[1].id)
+                }
                 hasAppeared = true
             } else {
                 return

@@ -12,9 +12,11 @@ struct UpcomingView: View {
     @State private var matchlist = APIModel()
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
-    
+
     @State private var isSearchPresented: Bool = false
     @State private var searchText: String = ""
+
+    @State private var isSplashScreenPresented: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -27,7 +29,7 @@ struct UpcomingView: View {
             }
             ZStack {
                 List {
-                    if error != nil && !matchlist.matches.isEmpty && !isSearchPresented{
+                    if error != nil && !matchlist.matches.isEmpty && !isSearchPresented {
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
                                 .environment(state)
@@ -80,7 +82,11 @@ struct UpcomingView: View {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update matchlist.")
                     }
                 }
+                .onAppear(perform: checkForUpdate)
                 .searchable(text: $searchText, isPresented: $isSearchPresented, prompt: "Matches and teams...")
+                .sheet(isPresented: $isSplashScreenPresented) {
+                    SplashScreen()
+                }
                 .navigationTitle("Upcoming")
 
                 // Status Feedback
@@ -108,12 +114,32 @@ extension UpcomingView {
         let searchText = searchText.lowercased()
         return matchlist.filter { match in
             match.name.lowercased().contains(searchText) ||
-            match.alliances[0].teams[0].number.lowercased().contains(searchText) ||
-            match.alliances[0].teams[1].number.lowercased().contains(searchText) ||
-            match.alliances[1].teams[0].number.lowercased().contains(searchText) ||
-            match.alliances[1].teams[1].number.lowercased().contains(searchText)
+                match.alliances[0].teams[0].number.lowercased().contains(searchText) ||
+                match.alliances[0].teams[1].number.lowercased().contains(searchText) ||
+                match.alliances[1].teams[0].number.lowercased().contains(searchText) ||
+                match.alliances[1].teams[1].number.lowercased().contains(searchText)
         }
     }
+
+    func getCurrentAppVersion() -> String {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+        let version = (appVersion as! String)
+
+        return version
+    }
+
+    // Function to watch the app version/fresh install and present the welcome screen
+    func checkForUpdate() {
+        let version = getCurrentAppVersion()
+        let savedVersion = UserDefaults.standard.string(forKey: "savedVersion")
+
+        if savedVersion != version {
+            // Toogle to show WhatsNew Screen as Modal
+            isSplashScreenPresented.toggle()
+            UserDefaults.standard.set(version, forKey: "savedVersion")
+        }
+    }
+
 }
 
 extension UpcomingView {

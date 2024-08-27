@@ -61,6 +61,8 @@
 		B3C72D262B82F71900AAE764 /* VRC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D252B82F71900AAE764 /* VRC_CompanionUITests.swift */; };
 		B3C72D282B82F71900AAE764 /* VRC_CompanionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72D272B82F71900AAE764 /* VRC_CompanionUITestsLaunchTests.swift */; };
 		B3E909BF2C76B2A200E55812 /* SiegeNationalsRankings.json in Resources */ = {isa = PBXBuildFile; fileRef = B39E65E32C51BE8000FC8D92 /* SiegeNationalsRankings.json */; };
+		B3F925212C7DF19B00C3ABC0 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F925202C7DF19B00C3ABC0 /* SplashScreen.swift */; };
+		B3F925232C7DF72F00C3ABC0 /* SplashScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F925222C7DF72F00C3ABC0 /* SplashScreenRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		B3C72D212B82F71900AAE764 /* VRC CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VRC CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C72D252B82F71900AAE764 /* VRC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRC_CompanionUITests.swift; sourceTree = "<group>"; };
 		B3C72D272B82F71900AAE764 /* VRC_CompanionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRC_CompanionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3F925202C7DF19B00C3ABC0 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		B3F925222C7DF72F00C3ABC0 /* SplashScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,8 @@
 			children = (
 				B33846572C7A005600E7E3A2 /* Grabber.swift */,
 				B36E8C7A2C7B3FFC00CD614C /* DemoView.swift */,
+				B3F925202C7DF19B00C3ABC0 /* SplashScreen.swift */,
+				B3F925222C7DF72F00C3ABC0 /* SplashScreenRow.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 				B311676B2C191D5900250066 /* StateController.swift in Sources */,
 				B3C72D0B2B82F71600AAE764 /* ContentView.swift in Sources */,
 				B365959B2C754DF6003F65A0 /* NetworkRequests.swift in Sources */,
+				B3F925232C7DF72F00C3ABC0 /* SplashScreenRow.swift in Sources */,
 				B33DC9572C7896C60048A9B6 /* AtAGlanceResearch.swift in Sources */,
 				B37F27BD2C2939530045DD27 /* AtAGlanceView.swift in Sources */,
 				B34B835D2B82FA27008F83CD /* LargeMatchRow.swift in Sources */,
@@ -552,6 +559,7 @@
 				B325545A2C29311D009EEA20 /* AtAGlanceLoss.swift in Sources */,
 				B33846582C7A005600E7E3A2 /* Grabber.swift in Sources */,
 				B36E8C7B2C7B3FFC00CD614C /* DemoView.swift in Sources */,
+				B3F925212C7DF19B00C3ABC0 /* SplashScreen.swift in Sources */,
 				B3A068032C76EC4C0016BB9B /* DetailedMatchRow.swift in Sources */,
 				B36E8C812C7B49C500CD614C /* TeamListRow.swift in Sources */,
 				B36E8C7F2C7B478600CD614C /* TeamListView.swift in Sources */,

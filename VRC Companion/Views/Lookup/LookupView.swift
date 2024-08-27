@@ -9,16 +9,10 @@ import SwiftUI
 
 struct LookupView: View {
     @State private var searchText: String = ""
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                Section("Teams") {
-                    Text("Team Identifier")
-                }
-            }
-            .navigationTitle("Lookup")
-        } detail: {
-            Text("Select one to view details.")
+        NavigationStack {
+            DemoView(title: "Lookup", titleStyle: .automatic)
         }
         .searchable(text: $searchText)
     }

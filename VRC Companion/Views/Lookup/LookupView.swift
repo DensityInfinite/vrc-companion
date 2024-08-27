@@ -45,7 +45,7 @@ struct LookupView: View {
 extension LookupView {
     // FOR DEMONSTRATION PURPOSES ONLY. A function to clear the saved key and allows presentation of the welcome screen again.
     func removeSavedVersion() {
-        UserDefaults.standard.removeObject(forKey: "savedVersion")
+        UserDefaults.standard.removeObject(forKey: "oldInstall")
     }
 }
 

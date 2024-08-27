@@ -82,7 +82,7 @@ struct UpcomingView: View {
                         self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to update matchlist.")
                     }
                 }
-                .onAppear(perform: checkForUpdate)
+                .onAppear(perform: checkForNewInstall)
                 .searchable(text: $searchText, isPresented: $isSearchPresented, prompt: "Matches and teams...")
                 .sheet(isPresented: $isSplashScreenPresented) {
                     SplashScreen()
@@ -121,22 +121,14 @@ extension UpcomingView {
         }
     }
 
-    func getCurrentAppVersion() -> String {
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
-        let version = (appVersion as! String)
+    // Function to detect fresh install and present the welcome screen
+    func checkForNewInstall() {
+        let isOldInstall = UserDefaults.standard.bool(forKey: "oldInstall")
 
-        return version
-    }
-
-    // Function to watch the app version/fresh install and present the welcome screen
-    func checkForUpdate() {
-        let version = getCurrentAppVersion()
-        let savedVersion = UserDefaults.standard.string(forKey: "savedVersion")
-
-        if savedVersion != version {
-            // Toogle to show WhatsNew Screen as Modal
+        if !isOldInstall {
+            // Toogle to show SplashScreen as Modal
             isSplashScreenPresented.toggle()
-            UserDefaults.standard.set(version, forKey: "savedVersion")
+            UserDefaults.standard.set(true, forKey: "oldInstall")
         }
     }
 

@@ -22,6 +22,12 @@ struct WatchlistView: View {
     var body: some View {
         NavigationStack {
             let filteredData = filter(apiData, for: searchText)
+            if filteredData.isEmpty && isSearchPresented {
+                VStack {
+                    Spacer()
+                    ErrorView(error: ErrorWrapper(error: Errors.noSearchResults, image: "exclamationmark.magnifyingglass", guidance: "No matching teams."))
+                }
+            }
             ZStack {
                 List {
                     if let error {

@@ -19,9 +19,15 @@ struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             let filteredMatches = filter(matchlist.matches, for: searchText)
+            if filteredMatches.isEmpty && isSearchPresented {
+                VStack {
+                    Spacer()
+                    ErrorView(error: ErrorWrapper(error: Errors.noSearchResults, image: "exclamationmark.magnifyingglass", guidance: "No matching matches."))
+                }
+            }
             ZStack {
                 List {
-                    if error != nil && !matchlist.matches.isEmpty {
+                    if error != nil && !matchlist.matches.isEmpty && !isSearchPresented{
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
                                 .environment(state)

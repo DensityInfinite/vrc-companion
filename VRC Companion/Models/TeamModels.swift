@@ -56,6 +56,7 @@ extension AllianceTeamModel: Decodable {
 // MARK: - RankingsModel
 
 struct RankingsModel: Decodable {
+    let team: IDInfoModel
     let rank: Int?
 
     let wp: Int?
@@ -73,7 +74,7 @@ struct RankingsModel: Decodable {
 
 extension RankingsModel {
     enum CodingKeys: String, CodingKey {
-        case rank, wp, ap, sp, wins, losses, ties
+        case team, rank, wp, ap, sp, wins, losses, ties
         case highScore = "high_score"
         case average = "average_points"
         case total = "total_points"

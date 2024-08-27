@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AllianceTileView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var topTeamRanking = APIModel()
     @State private var bottomTeamRanking = APIModel()
     @State private var hasAppeared = false
@@ -88,5 +88,5 @@ extension AllianceTileView {
 
 #Preview {
     AllianceTileView(alliance: .preview)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

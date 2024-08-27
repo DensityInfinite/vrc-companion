@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @StateObject var state = StateController()
+    @State var state = StateController()
     
     var body: some View {
         TabView {
@@ -17,24 +16,25 @@ struct ContentView: View {
                 .tabItem {
                     Label("Upcoming", systemImage: "chevron.forward.2")
                 }
-                .environmentObject(state)
+                .environment(state)
             
             EventView()
                 .tabItem {
                     Label("Event", systemImage: "calendar")
                 }
-                .environmentObject(state)
+                .environment(state)
 
             WatchlistView()
                 .tabItem {
                     Label("Watchlist", systemImage: "star")
                 }
+                .environment(state)
             
             TeamFullView(title: "My team", teamID: state.userTeamInfo.id)
                 .tabItem {
                     Label("My team", systemImage: "person")
                 }
-                .environmentObject(state)
+                .environment(state)
             
             LookupView()
                 .tabItem {

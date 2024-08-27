@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UpcomingView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     @State private var matchlist = APIModel()
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
@@ -20,14 +20,14 @@ struct UpcomingView: View {
                     if error != nil && !matchlist.matches.isEmpty {
                         Section {
                             BannerView(systemImage: "wifi.exclamationmark", message: "Failed to update matchlist.", color: .failed)
-                                .environmentObject(state)
+                                .environment(state)
                         }
                         .listSectionSpacing(.compact)
                     }
                     Section {
                         ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
                             NavigationLink {
-                                MatchDetails(match: match, isResearch: false).environmentObject(state)
+                                MatchDetails(match: match, isResearch: false).environment(state)
                             } label: {
                                 if index < 3 {
                                     LargeMatchRow(match: match)
@@ -95,5 +95,5 @@ extension UpcomingView {
 
 #Preview {
     UpcomingView()
-        .environmentObject(StateController())
+        .environment(StateController())
 }

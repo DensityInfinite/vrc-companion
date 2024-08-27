@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct VRC_CompanionApp: App {
-    /*var sharedModelContainer: ModelContainer = {
+    var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            TeamInfoModel.self,
+            LocationModel.self,
+            IDInfoModel.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -21,11 +23,12 @@ struct VRC_CompanionApp: App {
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-    }()*/
+    }()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(sharedModelContainer)
         }
     }
 }

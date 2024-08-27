@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AtAGlanceView: View {
-    @EnvironmentObject var state: StateController
+    @Environment(StateController.self) var state
     var match: MatchModel
     var isResearch: Bool
 
@@ -48,5 +48,5 @@ struct AtAGlanceView: View {
 
 #Preview {
     AtAGlanceView(match: .preview, isResearch: false)
-        .environmentObject(StateController())
+        .environment(StateController())
 }

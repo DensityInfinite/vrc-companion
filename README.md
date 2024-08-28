@@ -14,7 +14,7 @@ Expect closed beta testing to start by the end of the year through [TestFlight](
 
 Contributions are welcome. Please note that this codebase was initially written as a Year 12 Major Work project - expect some janky code and bad practices. Open a PR if you find some. **For markers, be rest assured that no one apart from the student himself has contributed to this codebase prior to submission.** You can verify this in the commit history.
 
-If you are to fork the repository, please follow the licence agreement.
+If you are to fork the repository, please follow the license agreement.
 
 ### Building From Source
 
@@ -37,7 +37,7 @@ It is recommended to test a full build on an iOS device. Alternatively, you can 
 
 To initiate a run, simply select your preferred device/simulator in the toolbar and press `⌘R`.
 
-If you have never done this before, please follow [Apple's guide on setting up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes.
+If you have never done this before, please follow [Apple's guide to set up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes.
 
 ## Credits
 

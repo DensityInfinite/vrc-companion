@@ -10,13 +10,13 @@ import SwiftUI
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
-    
+
     /// The model context provided by the SwiftData container, allows manipulation of persisted data.
     @Environment(\.modelContext) private var context
-    
+
     /// The persisted watchlist from storage.
     @Query(sort: \TeamInfoModel.number) private var watchlist: [TeamInfoModel]
-    
+
     @State private var isSearchPresented: Bool = false
     @State private var searchText: String = ""
 
@@ -25,7 +25,7 @@ struct WatchlistView: View {
 
     var body: some View {
         NavigationStack {
-            let filteredData = filter(apiData, for: searchText)
+            var filteredData = filter(apiData, for: searchText)
             if filteredData.isEmpty && isSearchPresented {
                 VStack {
                     Spacer()
@@ -82,8 +82,14 @@ struct WatchlistView: View {
                             }
                             .onDelete(perform: { indexSet in
                                 for index in indexSet {
-                                    let team = watchlist[index]
-                                    context.delete(team)
+                                    let filterData = filteredData[index]
+                                    for (index, data) in apiData.enumerated() where data.associatedTeam.id == filterData.associatedTeam.id {
+                                        apiData.remove(at: index)
+                                    }
+                                    filteredData.remove(at: index)
+                                    for team in watchlist where team.id == filterData.associatedTeam.id {
+                                        context.delete(team)
+                                    }
                                 }
                             })
                         }
@@ -132,7 +138,7 @@ extension WatchlistView {
     /// Updates and syncs the API data array property with the given watchlist.
     func refreshAPIData(with watchlist: [TeamInfoModel]) async throws {
         // TODO: Currently this has high energy impact. Consider optimisation in the future.
-        
+
         // Adds API data for newly-watched teams
         for team in watchlist {
             if !apiData.contains(where: { $0.associatedTeam.id == team.id }) {
@@ -165,7 +171,7 @@ extension WatchlistView {
         guard !searchText.isEmpty else { return data }
         return data.filter { data in
             data.associatedTeam.number.lowercased().contains(searchText.lowercased()) ||
-            data.associatedTeam.name.lowercased().contains(searchText.lowercased())
+                data.associatedTeam.name.lowercased().contains(searchText.lowercased())
         }
     }
 }

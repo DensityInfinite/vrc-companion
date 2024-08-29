@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     /// The shared global state, holds the single source of truth of the application.
@@ -46,5 +47,18 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let schema = Schema([
+            TeamInfoModel.self,
+            LocationModel.self,
+            IDInfoModel.self
+        ])
+        let container = try ModelContainer(for: schema, configurations: config)
+        return ContentView()
+            .environment(StateController())
+            .modelContainer(container)
+    } catch {
+        fatalError("Could not create ModelContainer: \(error)")
+    }
 }

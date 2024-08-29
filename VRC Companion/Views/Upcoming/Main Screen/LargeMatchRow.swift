@@ -22,7 +22,10 @@ struct LargeMatchRow: View {
                 Spacer()
                 if let time = match.scheduledTime {
                     // Displays the "queue now" text if the match is scheduled to begin in the next 5 minutes. Otherwise displays the time.
-                    if time.timeIntervalSinceNow.isLess(than: 300) {
+                    if time.timeIntervalSinceNow.isLess(than: 0) {
+                        Text(time.formatted(date: .omitted, time: .shortened))
+                            .foregroundStyle(.secondary)
+                    } else if time.timeIntervalSinceNow.isLess(than: 300) {
                         Text("Queue Now")
                             .foregroundStyle(.secondary)
                             .fontWeight(.medium)

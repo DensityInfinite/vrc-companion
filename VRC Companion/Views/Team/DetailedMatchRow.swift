@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DetailedMatchRow: View {
+    /// The short form of the official match name.
     @State private var shortMatchName = ""
+    
     var team: TeamInfoModel
     var match: MatchModel
 
@@ -39,6 +41,7 @@ struct DetailedMatchRow: View {
             }
             .frame(width: 65, alignment: .leading)
             .onAppear {
+                // Setup the short form name.
                 if match.name.contains("Qualifier") || match.name.contains("Final") {
                     var separatedName = match.name.components(separatedBy: " ")
                     separatedName[1].removeFirst()
@@ -55,6 +58,7 @@ struct DetailedMatchRow: View {
             }
             Spacer()
             
+            // TODO: Use a better alignment method to allow for more Dynamic Type sizes. Can improve inclusivity.
             VStack {
                 ForEach(match.alliances[1].teams) { team in
                     if team.number == self.team.number {

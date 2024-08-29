@@ -10,7 +10,11 @@ import SwiftUI
 
 struct WatchlistView: View {
     @Environment(StateController.self) var state
+    
+    /// The model context provided by the SwiftData container, allows manipulation of persisted data.
     @Environment(\.modelContext) private var context
+    
+    /// The persisted watchlist from storage.
     @Query(sort: \TeamInfoModel.number) private var watchlist: [TeamInfoModel]
     
     @State private var isSearchPresented: Bool = false
@@ -125,14 +129,18 @@ struct WatchlistView: View {
 }
 
 extension WatchlistView {
+    /// Updates and syncs the API data array property with the given watchlist.
     func refreshAPIData(with watchlist: [TeamInfoModel]) async throws {
-        // Currently this has high energy impact. Consider optimisation in the future.
+        // TODO: Currently this has high energy impact. Consider optimisation in the future.
+        
+        // Adds API data for newly-watched teams
         for team in watchlist {
             if !apiData.contains(where: { $0.associatedTeam.id == team.id }) {
                 apiData.append(APIModel(associatedTeam: team))
             }
         }
 
+        // Removes API data for teams that were recently unwatched
         apiData.removeAll { data in
             !watchlist.contains(where: { $0.id == data.associatedTeam.id })
         }
@@ -141,6 +149,7 @@ extension WatchlistView {
             try await data.fetchRankings(state: state)
         }
 
+        // Sorts the API data array using the rank so it matches the order of the persisted team array
         apiData.sort {
             if let rank0 = $0.rankings?.rank, let rank1 = $1.rankings?.rank {
                 return rank0 < rank1
@@ -149,6 +158,9 @@ extension WatchlistView {
         }
     }
 
+    /// Returns a filtered team list using the provided search text.
+    ///
+    /// This method matches the search text with each given team's number and name.
     func filter(_ data: [APIModel], for searchText: String) -> [APIModel] {
         guard !searchText.isEmpty else { return data }
         return data.filter { data in

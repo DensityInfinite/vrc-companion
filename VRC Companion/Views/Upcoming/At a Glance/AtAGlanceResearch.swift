@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct AtAGlanceResearch: View {
-    @State private var matchWinner: MatchWinner = .tied
+    @State private var matchResult: MatchResults = .tied
     @State private var background: Color = .neutral
     var redScore: Int?
     var blueScore: Int?
     
-    enum MatchWinner {
+    enum MatchResults {
         case red, blue, tied, unscored
     }
 
     var body: some View {
         VStack(alignment: .center) {
-            if matchWinner != .unscored {
+            if matchResult != .unscored {
                 Text("\(redScore!) - \(blueScore!)")
                     .fontWidth(.condensed)
                     .opacity(0.4)
             }
 
-            switch matchWinner {
+            switch matchResult {
             case .red:
                 Text("Red Alliance")
                     .font(.system(size: 65))
@@ -55,14 +55,14 @@ struct AtAGlanceResearch: View {
         .onAppear {
             if let blueScore = blueScore, let redScore = redScore {
                 if blueScore < redScore {
-                    matchWinner = .red
+                    matchResult = .red
                     background = Color(.redAlliance)
                 } else if blueScore > redScore {
-                    matchWinner = .blue
+                    matchResult = .blue
                     background = Color(.blueAlliance)
                 }
             } else {
-                matchWinner = .unscored
+                matchResult = .unscored
             }
         }
         .frame(maxWidth: .infinity)

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct WinLossTieGraph: View {
+    /// Minimal bar length used when the value associated with the bar is 0 to maintain its visibility.
     private let minBarLength: CGFloat = 10
+    
     var wins: Int
     var losses: Int
     var ties: Int
@@ -23,11 +25,12 @@ struct WinLossTieGraph: View {
             let availableWidth = totalWidth - CGFloat(numOfZeroes) * minBarLength - 2 * (totalWidth / 300)
             
             // Calculate the proportional lengths
+            // TODO: Fix total length not using the entire width of the container.
             let winLength = CGFloat(wins) / CGFloat(max(totals, 1)) * availableWidth
             let lossLength = CGFloat(losses) / CGFloat(max(totals, 1)) * availableWidth
             let tieLength = CGFloat(ties) / CGFloat(max(totals, 1)) * availableWidth
             
-            HStack(alignment: .center, spacing: totalWidth / 300) {
+            HStack(alignment: .center, spacing: totalWidth / 300) { // There might be a more elegant way to calculate bar spacing
                 VStack {
                     Text(String(wins))
                         .font(.caption)

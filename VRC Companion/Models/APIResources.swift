@@ -72,6 +72,7 @@ struct EventTeamListResource: APIResource, Paginated {
         methodPath = "/events/\(eventID)/teams"
     }
     
+    /// Updates the page property to allow for the pulling of another page for the same API endpoint.
     mutating func updateToPagedURL(for pageURL: String, in eventID: Int) {
         page = Int(pageURL.components(separatedBy: "?").last?.components(separatedBy: "=").last ?? "1")
     }

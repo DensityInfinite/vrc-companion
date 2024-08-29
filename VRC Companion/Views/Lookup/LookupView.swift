@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This view is a stub/dev view. Development for this is in progress.
 struct LookupView: View {
     @State private var searchText: String = ""
     
@@ -16,9 +17,9 @@ struct LookupView: View {
                 Spacer()
                 DemoView(title: "Lookup", titleStyle: .automatic)
                 Spacer()
-                // Button to reset the saved version and show the welcome screen on next launch or when the user opens ContentView() again. (For marking and demonstration purposes only)
+                
                 Button(action: {
-                    removeSavedVersion()
+                    markAsNewInstall()
                 }, label: {
                     ZStack {
                         Text("Show Welcome on Next Launch")
@@ -27,7 +28,7 @@ struct LookupView: View {
                             .frame(height: 45)
                             .containerRelativeFrame(.horizontal, { length, axis in
                                 if axis == .vertical {
-                                    return length / 3.0
+                                    return 45
                                 } else {
                                     return length / 1.3
                                 }
@@ -43,8 +44,10 @@ struct LookupView: View {
 }
 
 extension LookupView {
-    // FOR DEMONSTRATION PURPOSES ONLY. A function to clear the saved key and allows presentation of the welcome screen again.
-    func removeSavedVersion() {
+    /// Clears the saved key to present the welcome screen on next appearance of `UpcomingView`.
+    ///
+    /// This method should only be used for demonstration and marking purposes only. It will be moved into a settings view in the future.
+    func markAsNewInstall() {
         UserDefaults.standard.removeObject(forKey: "oldInstall")
     }
 }

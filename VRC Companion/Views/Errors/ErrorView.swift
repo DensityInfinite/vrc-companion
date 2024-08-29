@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Presents a large, grayscale error message.
 struct ErrorView: View {
     let error: ErrorWrapper
 

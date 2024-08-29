@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    /// The shared global state, holds the single source of truth of the application.
     @State var state = StateController()
     
     var body: some View {

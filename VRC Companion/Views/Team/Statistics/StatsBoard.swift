@@ -9,9 +9,9 @@ import SwiftUI
 
 struct StatsBoard: View {
     var rankings: RankingsModel
-    var representation: Representation
+    var appearance: Appearance
 
-    enum Representation {
+    enum Appearance {
         case full, minimal
     }
     
@@ -21,46 +21,46 @@ struct StatsBoard: View {
                 .frame(height: 21)
             HStack {
                 if let wp = rankings.wp {
-                    switch representation {
+                    switch appearance {
                     case .full:
-                        StatsTile(data: Double(wp), description: "WP", representation: .full)
+                        StatsTile(data: Double(wp), description: "WP", appearance: .full)
                     case .minimal:
-                        StatsTile(data: Double(wp), description: "WP", representation: .minimal)
+                        StatsTile(data: Double(wp), description: "WP", appearance: .minimal)
                             .fontWeight(.bold)
                     }
                 }
                 Spacer()
                 if let awp = rankings.ap {
-                    switch representation {
+                    switch appearance {
                     case .full:
-                        StatsTile(data: Double(awp), description: "AWP", representation: .full)
+                        StatsTile(data: Double(awp), description: "AWP", appearance: .full)
                     case .minimal:
-                        StatsTile(data: Double(awp), description: "AWP", representation: .minimal)
+                        StatsTile(data: Double(awp), description: "AWP", appearance: .minimal)
                             .fontWeight(.bold)
                     }
                 }
                 Spacer()
                 if let sp = rankings.sp {
-                    switch representation {
+                    switch appearance {
                     case .full:
-                        StatsTile(data: Double(sp), description: "SP", representation: .full)
+                        StatsTile(data: Double(sp), description: "SP", appearance: .full)
                     case .minimal:
-                        StatsTile(data: Double(sp), description: "SP", representation: .minimal)
+                        StatsTile(data: Double(sp), description: "SP", appearance: .minimal)
                             .fontWeight(.bold)
                     }
                 }
             }
             HStack {
                 if let highScore = rankings.highScore {
-                    StatsTile(data: Double(highScore), description: "HIGH", representation: .minimal)
+                    StatsTile(data: Double(highScore), description: "HIGH", appearance: .minimal)
                 }
                 Spacer()
                 if let average = rankings.average {
-                    StatsTile(data: Double(average), description: "AVG", representation: .minimal)
+                    StatsTile(data: Double(average), description: "AVG", appearance: .minimal)
                 }
                 Spacer()
                 if let total = rankings.total {
-                    StatsTile(data: Double(total), description: "TTL", representation: .minimal)
+                    StatsTile(data: Double(total), description: "TTL", appearance: .minimal)
                 }
             }
         }
@@ -68,5 +68,5 @@ struct StatsBoard: View {
 }
 
 #Preview {
-    StatsBoard(rankings: .preview, representation: .minimal)
+    StatsBoard(rankings: .preview, appearance: .minimal)
 }

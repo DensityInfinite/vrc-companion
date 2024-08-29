@@ -14,6 +14,7 @@ protocol APIRequest: AnyObject {
 }
 
 extension APIRequest {
+    /// Pulls and decodes the data from the given url endpoint.
     func load(_ url: URL) async throws -> ModelType {
         // let token = <add your token here>
         var request = URLRequest(url: url)
@@ -23,6 +24,8 @@ extension APIRequest {
         return try decode(data)
     }
 }
+
+// TODO: A generic type can be created to reduce duplicated code here.
 
 class MatchlistRequest {
     let resource: MatchlistResource

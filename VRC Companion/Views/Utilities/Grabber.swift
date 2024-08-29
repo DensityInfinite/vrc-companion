@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// TODO: Make this mimic accurate to the actual iOS grabber.
+/// An iOS sheet grabber mimic.
 struct Grabber: View {
     var body: some View {
         Capsule()

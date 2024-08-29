@@ -10,14 +10,14 @@ import SwiftUI
 struct StatsTile: View {
     var data: Double
     var description: String
-    var representation: Representation
+    var appearance: Appearance
     
-    enum Representation {
+    enum Appearance {
         case full, minimal
     }
     
     var body: some View {
-        switch representation {
+        switch appearance {
         case .full:
             HStack{
                 Spacer()
@@ -64,5 +64,5 @@ struct StatsTile: View {
 }
 
 #Preview {
-    StatsTile(data: 141, description: "HIGH", representation: .full)
+    StatsTile(data: 141, description: "HIGH", appearance: .full)
 }

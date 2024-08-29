@@ -21,12 +21,15 @@ struct UpcomingView: View {
     var body: some View {
         NavigationStack {
             let filteredMatches = filter(matchlist.matches, for: searchText)
+
+            // Provides a prompt to the user when their search has no results
             if filteredMatches.isEmpty && isSearchPresented {
                 VStack {
                     Spacer()
-                    ErrorView(error: ErrorWrapper(error: Errors.noSearchResults, image: "exclamationmark.magnifyingglass", guidance: "No matching matches."))
+                    ErrorView(error: ErrorWrapper(error: Errors.noSearchResults, image: "exclamationmark.magnifyingglass", guidance: "No matches."))
                 }
             }
+
             ZStack {
                 List {
                     if error != nil && !matchlist.matches.isEmpty && !isSearchPresented {
@@ -36,15 +39,16 @@ struct UpcomingView: View {
                         }
                         .listSectionSpacing(.compact)
                     }
+
                     Section {
                         if !isSearchPresented {
                             ForEach(Array(zip(matchlist.matches.indices, matchlist.matches)), id: \.0) { index, match in
                                 NavigationLink {
                                     MatchDetails(match: match, isResearch: false).environment(state)
                                 } label: {
-                                    if index < 3 {
+                                    if index < 3 { // First 3 rows will use a Large presentation because these are the primary focus of the user
                                         LargeMatchRow(match: match)
-                                    } else {
+                                    } else { // The rest uses a minimal appearance to save space and API pulls.
                                         SmallMatchRow(match: match)
                                     }
                                 }
@@ -54,10 +58,10 @@ struct UpcomingView: View {
                                 NavigationLink {
                                     MatchDetails(match: match, isResearch: false).environment(state)
                                 } label: {
-                                    if index < 2 {
+                                    if index < 2 { // First 2 rows (instead of 3) is enlarged here to allow space for displaying more matches beneath it.
                                         LargeMatchRow(match: match, presentingWLT: false)
                                     } else {
-                                        SmallMatchRow(match: match)
+                                        SmallMatchRow(match: match) // Although not displayed here, teams in those matches remain searchable.
                                     }
                                 }
                             }
@@ -89,7 +93,7 @@ struct UpcomingView: View {
                 }
                 .navigationTitle("Upcoming")
 
-                // Status Feedback
+                // Feedback to the user about the loading status, when no content has already been pulled.
                 if matchlist.matches.isEmpty {
                     if matchlist.isLoading {
                         VStack {
@@ -109,6 +113,11 @@ struct UpcomingView: View {
 }
 
 extension UpcomingView {
+    /// Returns a filtered matchlist using the provided search text.
+    ///
+    /// This method matches the search text with:
+    /// 1. Each given match name.
+    /// 2. The team numbers of all teams attending each given match.
     func filter(_ matchlist: [MatchModel], for searchText: String) -> [MatchModel] {
         guard !searchText.isEmpty else { return matchlist }
         let searchText = searchText.lowercased()
@@ -121,17 +130,15 @@ extension UpcomingView {
         }
     }
 
-    // Function to detect fresh install and present the welcome screen
+    /// Detects a fresh install of the application and (if yes) presents the welcome splash screen.
     func checkForNewInstall() {
         let isOldInstall = UserDefaults.standard.bool(forKey: "oldInstall")
 
         if !isOldInstall {
-            // Toogle to show SplashScreen as Modal
             isSplashScreenPresented.toggle()
             UserDefaults.standard.set(true, forKey: "oldInstall")
         }
     }
-
 }
 
 extension UpcomingView {

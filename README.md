@@ -27,7 +27,7 @@ Xcode is required to build/modify *VRC Companion*.
 2. Follow [Apple's guide to authenticate your GitHub account in Xcode](https://developer.apple.com/documentation/xcode/configuring-your-xcode-project-to-use-source-control#Get-a-project-from-a-remote-repository).
 3. At the start menu, select "Clone Git Repository...".
 4. Clone this repository using the URL.
-5. Obtain and put your [RobotEvents API key](https://www.robotevents.com/api/v2/) in ./VRC Companion/Models/NetworkRequests.swift, line 18. I acknowledge that this is very unsafe, and a better method is in the works. For now, please take caution to NEVER commit your API key onto the repository. **If you are an assessment marker, you do not need to request a key - an API key has already been given to you as part of the submitted documents.**
+5. Obtain and put your [RobotEvents API token](https://www.robotevents.com/api/v2/) in `./VRC Companion/Models/NetworkRequests.swift`, line 18. I acknowledge that this is very unsafe, and a better method is in the works. For now, please take caution to NEVER commit your token onto the repository. **If you are an assessment marker, you do not need to request a token - one has already been provided to you in submitted documents.**
 
 Initiate a build for running using `⌘B`.
 

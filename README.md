@@ -37,7 +37,7 @@ It is recommended to test a full build on an iOS device. Alternatively, you can 
 
 To initiate a run, simply select your preferred device/simulator in the toolbar and press `⌘R`.
 
-If you have never done this before, please follow [Apple's guide to set up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes to setup an iOS device.
+If you have never done this before, please follow [Apple's guide to set up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes.
 
 ## Credits
 

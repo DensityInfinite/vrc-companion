@@ -13,6 +13,8 @@ struct AllianceTileView: View {
     @State private var bottomTeamRanking = APIModel()
     @State private var hasAppeared = false
     var alliance: AllianceModel
+    
+    /// Whether this view should present the Win-Loss-Tie stats.
     var presentingWLT: Bool?
 
     var body: some View {

@@ -24,6 +24,7 @@ struct EventView: View {
                         }
                         .listSectionSpacing(.compact)
                     }
+                    
                     if let eventInfo = apiData.info {
                         Section("Skills") {
                             NavigationLink {
@@ -78,7 +79,7 @@ struct EventView: View {
                 .task {
                     do {
                         guard !hasAppeared else { return }
-                        try await apiData.fetchInfo(state: state)
+                        try await apiData.fetchEventInfo(state: state)
                         try await apiData.fetchTeamList(state: state)
                         self.error = nil
                         hasAppeared = true
@@ -88,7 +89,7 @@ struct EventView: View {
                 }
                 .refreshable {
                     do {
-                        try await apiData.fetchInfo(state: state)
+                        try await apiData.fetchEventInfo(state: state)
                         try await apiData.fetchTeamList(state: state)
                         self.error = nil
                     } catch {
@@ -96,7 +97,7 @@ struct EventView: View {
                     }
                 }
 
-                // Status Feedback
+                // Feedback to the user about the loading status, when no content has already been pulled.
                 if apiData.info == nil {
                     if apiData.isLoading {
                         VStack {
@@ -121,7 +122,7 @@ extension EventView {
         private(set) var teamList: [TeamInfoModel] = []
         private(set) var isLoading = false
 
-        @MainActor func fetchInfo(state: StateController) async throws {
+        @MainActor func fetchEventInfo(state: StateController) async throws {
             guard !isLoading else { return }
             defer { isLoading = false }
             isLoading = true

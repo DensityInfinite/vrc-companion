@@ -14,8 +14,8 @@
             filePath = "VRC Companion/Views/Upcoming/Main Screen/Alliance Tile/AllianceTileView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "fetchRankings(state:teamID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "VRC Companion/Views/Upcoming/Main Screen/Alliance Tile/AllianceTileView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "fetchRankings(state:teamID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,10 +46,10 @@
             filePath = "VRC Companion/Models/NetworkRequests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "APIRequest"
-            landmarkType = "21">
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +62,8 @@
             filePath = "VRC Companion/Models/NetworkRequests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "RankingsRequest"
             landmarkType = "21">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "VRC Companion/Models/NetworkRequests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "RankingsRequest"
             landmarkType = "21">
          </BreakpointContent>

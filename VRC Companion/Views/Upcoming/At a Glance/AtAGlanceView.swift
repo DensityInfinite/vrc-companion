@@ -10,13 +10,15 @@ import SwiftUI
 struct AtAGlanceView: View {
     @Environment(StateController.self) var state
     var match: MatchModel
+    
+    /// Whether this view is presented under a research context, i.e. unrelated to the user team.
     var isResearch: Bool
 
     var body: some View {
         if isResearch {
             AtAGlanceResearch(redScore: match.alliances[1].score, blueScore: match.alliances[0].score)
         } else {
-            // TODO: Refactor to be more concice
+            // TODO: HUGE refactoring potential here. Very good first PR.
             if let time = match.scheduledTime {
                 if time.timeIntervalSinceNow.isLess(than: 300) {
                     if time.timeIntervalSinceNow > 0 {

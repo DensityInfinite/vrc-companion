@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: This might be redundant. Consider modifying the app structure to allow for more efficient code reuse.
 struct SimpleRow: View {
     var label: String
     var details: String

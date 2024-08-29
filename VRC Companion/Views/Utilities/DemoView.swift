@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Presents a full screen demo reminder.
+///
+/// - Parameters:
+///   - title: The title of the full screen view.
+///   - titleStyle: The desired display style for the nagivation bar title.
 struct DemoView: View {
     var title: String
     var titleStyle: NavigationBarItem.TitleDisplayMode

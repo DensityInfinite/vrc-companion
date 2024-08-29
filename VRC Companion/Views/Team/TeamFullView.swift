@@ -10,14 +10,21 @@ import SwiftData
 
 struct TeamFullView: View {
     @Environment(StateController.self) var state
+    
+    /// The model context provided by the SwiftData container, allows manipulation of persisted data.
     @Environment(\.modelContext) private var context
+    
+    /// The persisted watchlist from storage.
     @Query private var watchlist: [TeamInfoModel]
     
+    /// The current selected tile on the details segmented control.
     @State private var statsSelection: StatsTypes = .matches
+    
     @State private var error: ErrorWrapper?
     @State private var hasAppeared = false
     
     @State private var apiData = APIModel()
+    
     var title: String
     var teamID: Int
 
@@ -51,6 +58,7 @@ struct TeamFullView: View {
                             .pickerStyle(.segmented)
                             .listRowSeparator(.hidden)
 
+                            // Conditionally present views based on the selected tile
                             switch statsSelection {
                             case .matches:
                                 if apiData.isLoading && apiData.matchlist.isEmpty {
@@ -67,7 +75,7 @@ struct TeamFullView: View {
                                     })
                                 }
                             case .local:
-                                StatsBoard(rankings: teamRankings, representation: .full)
+                                StatsBoard(rankings: teamRankings, appearance: .full)
                                     .padding(.top, -8)
                             case .global:
                                 SimpleRow(label: "Grade", details: teamInfo.grade)
@@ -84,6 +92,13 @@ struct TeamFullView: View {
                     do {
                         guard !hasAppeared else { return }
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        
+                        // This view's APIModel class methods creates a new TeamInfoModel object with every API pull.
+                        // SwiftData regards this newly-pulled object as a unique one, consequently it can't be used to locate an existing entry
+                        // in the persisted watchlist.
+                        // Additionally, if this new object is saved, there can potentially be some virtually duplicated entries in the matchlist.
+                        // The workaround I have found is the following, to remove the existing object and insert the new one with every API pull.
+                        // I think this is a bit cursed, but I could not find a better way myself. If you have an elegant solution to this, feel free to open a PR.
                         if let apiTeam = apiData.teamInfo {
                             for team in watchlist {
                                 if team.id == apiTeam.id && team != apiTeam {
@@ -92,6 +107,7 @@ struct TeamFullView: View {
                                 }
                             }
                         }
+                        
                         try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
@@ -103,6 +119,8 @@ struct TeamFullView: View {
                 .refreshable {
                     do {
                         try await apiData.fetchTeamInfo(teamID: teamID)
+                        
+                        // Same reason as above.
                         if let apiTeam = apiData.teamInfo {
                             for team in watchlist {
                                 if team.id == apiTeam.id && team != apiTeam {
@@ -111,6 +129,7 @@ struct TeamFullView: View {
                                 }
                             }
                         }
+                        
                         try await apiData.fetchRankings(state: state, teamID: teamID)
                         try await apiData.fetchMatchlist(state: state, teamID: teamID)
                         self.error = nil
@@ -119,6 +138,9 @@ struct TeamFullView: View {
                     }
                 }
                 .onAppear {
+                    // The user usually knows their own matchlist very well for a number of good reasons. Displaying their own matchlist here is redundant.
+                    // Therfore, if the requrested teamID matches that of the user's (such as when this view is displayed in the "My team" tab),
+                    // this view proritises presenting the user their own local stats, which is the thing they usually care more about.
                     if teamID == state.userTeamInfo.id && !hasAppeared {
                         statsSelection = .local
                     }
@@ -141,7 +163,7 @@ struct TeamFullView: View {
                 .navigationTitle(title)
                 .navigationBarTitleDisplayMode(title == "My team" ? .automatic : .inline)
                 
-                // Status Feedback
+                // Feedback to the user about the loading status, when no content has already been pulled.
                 if apiData.teamInfo == nil || apiData.rankings == nil {
                     if apiData.isLoading {
                         VStack {

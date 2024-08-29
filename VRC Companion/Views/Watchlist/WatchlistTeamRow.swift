@@ -10,6 +10,8 @@ import SwiftUI
 struct WatchlistTeamRow: View {
     var team: TeamInfoModel
     var rankings: RankingsModel
+    
+    /// Whether this view should present the team statistics board.
     var presentingBoard: Bool
     
     var body: some View {
@@ -28,7 +30,7 @@ struct WatchlistTeamRow: View {
                 }
             }
             if presentingBoard {
-                StatsBoard(rankings: rankings, representation: .minimal)
+                StatsBoard(rankings: rankings, appearance: .minimal)
             }
         }
     }

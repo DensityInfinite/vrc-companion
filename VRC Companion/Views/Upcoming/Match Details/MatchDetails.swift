@@ -18,6 +18,8 @@ struct MatchDetails: View {
     @State private var error: ErrorWrapper?
     @State private var hasAppeared: Bool = false
     var match: MatchModel
+    
+    /// Whether this view is presented under a research context, i.e. unrelated to the user team.
     var isResearch: Bool
 
     var body: some View {
@@ -55,6 +57,7 @@ struct MatchDetails: View {
                         SmallTeamRow(team: match.alliances[0].teams[1])
                     }
                 } else {
+                    // Presents the opposing teams using more detailed LargeTeamRow views.
                     if let opposingAlliance = match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition) {
                         Section("Opponents - \(opposingAlliance.color.capitalized) Alliance") {
                             if opponentTopData.isLoading && opponentTopData.rankings == nil {
@@ -147,6 +150,8 @@ struct MatchDetails: View {
                     self.error = ErrorWrapper(error: Errors.apiError, image: "wifi.exclamationmark", guidance: "Failed to fetch info.")
                 }
             }
+            // TODO: Need to also allow sheet presentation under a research context.
+            // TODO: Lots of refactoring potential for a more efficient way of presenting these sheets.
             .sheet(isPresented: $presentTeam1Sheet, content: {
                 ZStack {
                     if let team = match.allianceForTeam(id: state.userTeamInfo.id, side: .opposition)?.teams[0] {

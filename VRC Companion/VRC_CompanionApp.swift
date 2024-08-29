@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct VRC_CompanionApp: App {
+    // Model container is initiated before declaring ContentView to avoid crashes below
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             TeamInfoModel.self,

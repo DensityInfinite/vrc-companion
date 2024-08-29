@@ -10,6 +10,8 @@ import SwiftUI
 struct LargeTeamRow: View {
     var team: AllianceTeamModel
     var rankings: RankingsModel
+    
+    /// Controls the presentation of the associated sheet in the parent view.
     @Binding var presentingSheet: Bool
 
     var body: some View {
@@ -28,7 +30,7 @@ struct LargeTeamRow: View {
                         .labelStyle(.iconOnly)
                 })
             }
-            StatsBoard(rankings: rankings, representation: .minimal)
+            StatsBoard(rankings: rankings, appearance: .minimal)
         }
     }
 }

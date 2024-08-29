@@ -43,6 +43,9 @@ struct TeamListView: View {
 }
 
 extension TeamListView {
+    /// Returns a filtered team list using the provided search text.
+    ///
+    /// This method matches the search text with each given team's number and name.
     func filter(_ teams: [TeamInfoModel], for searchText: String) -> [TeamInfoModel] {
         guard !searchText.isEmpty else { return teams }
         return teams.filter { team in

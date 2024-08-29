@@ -6,9 +6,9 @@ It is also the submission for Assessment Task 3 (2024 Major Work).
 
 ## For Competitors and Coaches
 
-No public builds are available at the moment.
+VRC Companion is still in development. No public releases are available at the moment.
 
-Expect closed beta testing to start early next year.
+Expect closed beta testing to start early next year. This page will be updated when the time comes.
 
 ## For Developers (and Markers)
 
@@ -37,7 +37,7 @@ It is recommended to test a full build on an iOS device. Alternatively, you can 
 
 To initiate a run, simply select your preferred device/simulator in the toolbar and press `⌘R`.
 
-If you have never done this before, please follow [Apple's guide to set up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes.
+If you have never done this before, please follow [Apple's guide to set up your simulator and iOS device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device). It should take no more than 15 minutes to setup an iOS device.
 
 ## Credits
 

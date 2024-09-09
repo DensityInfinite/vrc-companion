@@ -31,7 +31,6 @@
             "scheduled": null,
             "started": null,
             "field": "NASA",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #6",
             "alliances": [
@@ -79,7 +78,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658890,
@@ -99,7 +99,6 @@
             "scheduled": null,
             "started": null,
             "field": "NASA",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #30",
             "alliances": [
@@ -147,7 +146,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658911,
@@ -167,7 +167,6 @@
             "scheduled": null,
             "started": null,
             "field": "NASA",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #51",
             "alliances": [
@@ -215,7 +214,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658925,
@@ -235,7 +235,6 @@
             "scheduled": null,
             "started": null,
             "field": "NGF",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #65",
             "alliances": [
@@ -283,7 +282,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658961,
@@ -303,7 +303,6 @@
             "scheduled": null,
             "started": null,
             "field": "NGF",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #101",
             "alliances": [
@@ -351,7 +350,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658978,
@@ -371,7 +371,6 @@
             "scheduled": null,
             "started": null,
             "field": "Eaton",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #118",
             "alliances": [
@@ -419,7 +418,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81658995,
@@ -439,7 +439,6 @@
             "scheduled": null,
             "started": null,
             "field": "NASA",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #135",
             "alliances": [
@@ -487,7 +486,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81659012,
@@ -507,7 +507,6 @@
             "scheduled": null,
             "started": null,
             "field": "NGF",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #152",
             "alliances": [
@@ -555,7 +554,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81659032,
@@ -575,7 +575,6 @@
             "scheduled": null,
             "started": null,
             "field": "Eaton",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #172",
             "alliances": [
@@ -623,7 +622,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81659046,
@@ -643,7 +643,6 @@
             "scheduled": null,
             "started": null,
             "field": "NASA",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #186",
             "alliances": [
@@ -691,7 +690,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         },
         {
             "id": 81659068,
@@ -711,7 +711,6 @@
             "scheduled": null,
             "started": null,
             "field": null,
-            "session": 1,
             "scored": false,
             "name": "R16 #3-1",
             "alliances": [
@@ -759,7 +758,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2024-04-27T19:54:56-04:00"
         }
     ]
 }

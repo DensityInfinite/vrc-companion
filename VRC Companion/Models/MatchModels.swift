@@ -19,10 +19,11 @@ struct MatchModel: Identifiable {
     let scheduledTime: Date?
     let startedTime: Date?
     let field: String?
-    let session: Int
     let scored: Bool
     
     let alliances: [AllianceModel]
+    
+    let lastUpdated: Date?
     
     enum MatchSides {
         case team
@@ -72,7 +73,8 @@ extension MatchModel: Decodable {
         case matchNum = "matchnum"
         case scheduledTime = "scheduled"
         case startedTime = "started"
-        case id, name, event, division, round, instance, field, session, scored, alliances
+        case lastUpdated = "updated_at"
+        case id, name, event, division, round, instance, field, scored, alliances
     }
     
     init(from decoder: Decoder) throws {
@@ -89,10 +91,10 @@ extension MatchModel: Decodable {
         scheduledTime = try container.decodeIfPresent(Date.self, forKey: .scheduledTime)
         startedTime = try container.decodeIfPresent(Date.self, forKey: .startedTime)
         field = try container.decodeIfPresent(String.self, forKey: .field)
-        session = try container.decode(Int.self, forKey: .session)
         scored = try container.decode(Bool.self, forKey: .scored)
         
         alliances = try container.decode([AllianceModel].self, forKey: .alliances)
+        lastUpdated = try container.decodeIfPresent(Date.self, forKey: .lastUpdated)
     }
 }
 

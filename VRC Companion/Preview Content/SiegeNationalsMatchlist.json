@@ -31,7 +31,6 @@
             "scheduled": "2023-12-01T18:30:00-05:00",
             "started": "2023-12-01T18:31:52-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #1",
             "alliances": [
@@ -79,7 +78,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158710,
@@ -99,7 +99,6 @@
             "scheduled": "2023-12-01T20:12:00-05:00",
             "started": "2023-12-01T20:06:57-05:00",
             "field": "SAPN",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #18",
             "alliances": [
@@ -147,7 +146,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158714,
@@ -167,7 +167,6 @@
             "scheduled": "2023-12-01T21:06:00-05:00",
             "started": "2023-12-01T21:06:11-05:00",
             "field": "SAPN",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #22",
             "alliances": [
@@ -215,7 +214,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158727,
@@ -235,7 +235,6 @@
             "scheduled": "2023-12-01T22:24:00-05:00",
             "started": "2023-12-01T22:22:31-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #35",
             "alliances": [
@@ -283,7 +282,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158735,
@@ -303,7 +303,6 @@
             "scheduled": "2023-12-01T23:12:00-05:00",
             "started": "2023-12-01T23:10:30-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #43",
             "alliances": [
@@ -351,7 +350,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158739,
@@ -371,7 +371,6 @@
             "scheduled": "2023-12-01T23:36:00-05:00",
             "started": "2023-12-01T23:35:42-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #47",
             "alliances": [
@@ -419,7 +418,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158752,
@@ -439,7 +439,6 @@
             "scheduled": "2023-12-02T17:54:00-05:00",
             "started": "2023-12-02T17:54:31-05:00",
             "field": "SAPN",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #60",
             "alliances": [
@@ -487,7 +486,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158756,
@@ -507,7 +507,6 @@
             "scheduled": "2023-12-02T18:18:00-05:00",
             "started": "2023-12-02T18:31:58-05:00",
             "field": "SAPN",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #64",
             "alliances": [
@@ -555,7 +554,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158765,
@@ -575,7 +575,6 @@
             "scheduled": "2023-12-02T19:12:00-05:00",
             "started": "2023-12-02T19:34:57-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "Qualifier #73",
             "alliances": [
@@ -623,7 +622,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158782,
@@ -643,7 +643,6 @@
             "scheduled": null,
             "started": "2023-12-02T23:10:37-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "QF #1-1",
             "alliances": [
@@ -691,7 +690,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158786,
@@ -711,7 +711,6 @@
             "scheduled": null,
             "started": "2023-12-02T23:40:19-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "SF #1-1",
             "alliances": [
@@ -759,7 +758,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158788,
@@ -779,7 +779,6 @@
             "scheduled": null,
             "started": "2023-12-03T00:16:39-05:00",
             "field": "SAPN",
-            "session": 1,
             "scored": false,
             "name": "Final #1-1",
             "alliances": [
@@ -827,7 +826,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158789,
@@ -847,7 +847,6 @@
             "scheduled": null,
             "started": "2023-12-03T00:30:12-05:00",
             "field": null,
-            "session": 1,
             "scored": false,
             "name": "Final #1-2",
             "alliances": [
@@ -895,7 +894,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         },
         {
             "id": 61158774,
@@ -915,7 +915,6 @@
             "scheduled": null,
             "started": "2023-12-02T22:34:15-05:00",
             "field": "IFI",
-            "session": 1,
             "scored": false,
             "name": "R16 #1-1",
             "alliances": [
@@ -963,7 +962,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "updated_at": "2023-12-05T01:03:32-05:00"
         }
     ]
 }

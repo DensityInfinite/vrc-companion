@@ -23,6 +23,8 @@ struct MatchModel: Identifiable {
     
     let alliances: [AllianceModel]
     
+    let lastUpdated: Date?
+    
     enum MatchSides {
         case team
         case opposition
@@ -71,6 +73,7 @@ extension MatchModel: Decodable {
         case matchNum = "matchnum"
         case scheduledTime = "scheduled"
         case startedTime = "started"
+        case lastUpdated = "updated_at"
         case id, name, event, division, round, instance, field, scored, alliances
     }
     
@@ -91,6 +94,7 @@ extension MatchModel: Decodable {
         scored = try container.decode(Bool.self, forKey: .scored)
         
         alliances = try container.decode([AllianceModel].self, forKey: .alliances)
+        lastUpdated = try container.decodeIfPresent(Date.self, forKey: .lastUpdated)
     }
 }
 

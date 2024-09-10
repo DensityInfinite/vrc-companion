@@ -32,9 +32,9 @@ struct ContentView: View {
                 }
                 .environment(state)
             
-            TeamFullView(title: "My team", teamID: state.userTeamInfo.id)
+            TeamFullView(title: "You", teamID: state.userTeamInfo.id)
                 .tabItem {
-                    Label("My team", systemImage: "person")
+                    Label("You", systemImage: "person")
                 }
                 .environment(state)
             

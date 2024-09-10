@@ -161,7 +161,7 @@ struct TeamFullView: View {
                     }
                 }
                 .navigationTitle(title)
-                .navigationBarTitleDisplayMode(title == "My team" ? .automatic : .inline)
+                .navigationBarTitleDisplayMode(title == "You" ? .automatic : .inline)
                 
                 // Feedback to the user about the loading status, when no content has already been pulled.
                 if apiData.teamInfo == nil || apiData.rankings == nil {

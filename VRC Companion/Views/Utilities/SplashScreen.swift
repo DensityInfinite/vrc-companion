@@ -24,7 +24,7 @@ struct SplashScreen: View {
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding(.bottom)
-            Text("An extremely agile VEX Robotics Competition assistant to you updated on your matches, teams, and events.")
+            Text("An extremely agile VEX Robotics Competition assistant to keep you updated on your matches, teams, and events.")
                 .font(.subheadline)
                 .multilineTextAlignment(.center)
                 .padding(.leading)

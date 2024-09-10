@@ -24,7 +24,7 @@ struct LookupView: View {
                     ZStack {
                         Text("Show Welcome on Next Launch")
                             .font(.headline)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(.accent)
                             .frame(height: 45)
                             .containerRelativeFrame(.horizontal, { length, axis in
                                 if axis == .vertical {

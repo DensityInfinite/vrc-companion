@@ -97,15 +97,15 @@ extension APIRankingsModel {
 
 @Model
 class TeamInfoModel: Decodable, Identifiable {
-    let id: Int
-    let number: String
-    let name: String
-    let robotName: String?
-    let organization: String
-    let location: LocationModel
-    let registered: Bool
-    let program: IDInfoModel
-    let grade: String
+    var id: Int
+    var number: String
+    var name: String
+    var robotName: String?
+    var organization: String
+    var location: LocationModel
+    var registered: Bool
+    var program: IDInfoModel
+    var grade: String
 
     enum CodingKeys: String, CodingKey {
         case id, number
@@ -153,14 +153,14 @@ class TeamInfoModel: Decodable, Identifiable {
 
 @Model
 class LocationModel: Decodable {
-    let venue: String?
-    let address1: String
-    let address2: String?
-    let city: String
-    let region: String?
-    let postcode: String
-    let country: String
-    let coordinates: CoordinatesModel
+    var venue: String?
+    var address1: String
+    var address2: String?
+    var city: String
+    var region: String?
+    var postcode: String
+    var country: String
+    var coordinates: CoordinatesModel
 
     enum CodingKeys: String, CodingKey {
         case venue
@@ -205,8 +205,8 @@ class LocationModel: Decodable {
 
 @Model
 class CoordinatesModel: Decodable {
-    let lat: Double
-    let lon: Double
+    var lat: Double
+    var lon: Double
 
     enum CodingKeys: String, CodingKey {
         case lat
@@ -229,9 +229,9 @@ class CoordinatesModel: Decodable {
 
 @Model
 class IDInfoModel: Decodable {
-    let id: Int
-    let name: String
-    let code: String?
+    var id: Int
+    var name: String
+    var code: String?
 
     enum CodingKeys: String, CodingKey {
         case id

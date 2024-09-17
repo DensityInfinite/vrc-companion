@@ -36,6 +36,6 @@ struct LargeTeamRow: View {
 }
 
 #Preview {
-    @State var binding: Bool = false
+    @Previewable @State var binding: Bool = false
     return LargeTeamRow(team: .preview, rankings: .preview, presentingSheet: $binding)
 }
